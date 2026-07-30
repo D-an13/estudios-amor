@@ -87,35 +87,28 @@
 </head>
 <body class="h-full flex flex-col justify-between max-w-md mx-auto bg-slate-100 text-slate-800 shadow-2xl relative overflow-x-hidden">
 
-   <!-- HEADER (Con transición limpia sin recortes negros) -->
-<header class="bg-landivar-blue text-white pt-10 pb-6 px-5 shadow-md relative z-20">
-    <div class="flex justify-between items-center mb-3">
-        <div class="flex items-center space-x-3">
-            <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner" title="Palabritas de Ánimo">
-    <svg class="w-6 h-6 drop-shadow-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Corazón -->
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#F43F5E"/>
-        <!-- Brillito amarillo -->
-        <path d="M19 2L19.7 3.8L21.5 4.5L19.7 5.2L19 7L18.3 5.2L16.5 4.5L18.3 3.8L19 2Z" fill="#FDE047"/>
-        <!-- Brillito blanco -->
-        <path d="M14.5 1L14.9 2.1L16 2.5L14.9 2.9L14.5 4L14.1 2.9L13 2.5L14.1 2.1L14.5 1Z" fill="#FFFFFF"/>
-    </svg>
-</button>
-            <div>
-                <h1 class="text-xs uppercase tracking-wider text-amber-300 font-semibold">Guía de Estudio URL</h1>
-                <p class="text-lg font-extrabold text-white leading-tight">Espacio de Katy</p>
+    <!-- HEADER (Con transición limpia sin recortes negros) -->
+    <header class="bg-landivar-blue text-white pt-10 pb-6 px-5 shadow-md relative z-20">
+        <div class="flex justify-between items-center mb-3">
+            <div class="flex items-center space-x-3">
+                <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center text-amber-300 font-bold text-xl active:scale-95 transition-transform cursor-pointer shadow-inner" title="Palabritas de Ánimo">
+                    🎓
+                </button>
+                <div>
+                    <h1 class="text-xs uppercase tracking-wider text-amber-300 font-semibold">Guía de Estudio URL</h1>
+                    <p class="text-lg font-extrabold text-white leading-tight">Espacio de Katy</p>
+                </div>
             </div>
+            <button onclick="openResetModal()" title="Reiniciar progreso" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-xs text-white/80 transition active:scale-95">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
         </div>
-        <button onclick="openResetModal()" title="Reiniciar progreso" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-xs text-white/80 transition active:scale-95">
-            <i class="fa-solid fa-rotate-right"></i>
-        </button>
-    </div>
 
-    <div class="bg-white/10 p-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
-        <div class="flex justify-between items-center mb-1.5 text-xs font-semibold">
-            <span class="text-white/80">Tu Progreso General</span>
-            <span id="overall-percentage" class="text-amber-300 font-bold">0%</span>
-        </div>
+        <div class="bg-white/10 p-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
+            <div class="flex justify-between items-center mb-1.5 text-xs font-semibold">
+                <span class="text-white/80">Tu Progreso General</span>
+                <span id="overall-percentage" class="text-amber-300 font-bold">0%</span>
+            </div>
             
             <!-- BARRA DE PROGRESO CON COLORES FEMENINOS DESTACADOS -->
             <div class="w-full h-3 bg-slate-900/40 rounded-full overflow-hidden p-0.5 border border-white/15">
@@ -140,52 +133,47 @@
             </div>
 
             <!-- HUMANIDADES CARD -->
-<div onclick="openCategory('humanidades')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
-    <div class="flex items-start justify-between relative z-10">
-        <div class="flex items-center space-x-3.5 pr-2">
-            <div class="w-12 h-12 min-w-[48px] rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl shrink-0">
-                <i class="fa-solid fa-brain"></i>
+            <div onclick="openCategory('humanidades')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
+                <div class="flex items-start justify-between relative z-10">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-600 text-white flex items-center justify-center text-xl shadow-md">🧠</div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">Humanidades</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Filosofía, Psicología e Investigación</p>
+                        </div>
+                    </div>
+                    <span id="badge-humanidades" class="text-xs font-bold px-2.5 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200">0/15</span>
+                </div>
             </div>
-            <div>
-                <h3 class="font-bold text-slate-900 text-base leading-snug">Humanidades</h3>
-                <p class="text-xs text-slate-500 mt-0.5">Filosofía, Psicología e Investigación</p>
-            </div>
-        </div>
-        <span id="badge-humanidades" class="text-xs font-bold px-2.5 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200 shrink-0">0/15</span>
-    </div>
-</div>
 
-<!-- LENGUAJE CARD -->
-<div onclick="openCategory('lenguaje')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
-    <div class="flex items-start justify-between relative z-10">
-        <div class="flex items-center space-x-3.5 pr-2">
-            <div class="w-12 h-12 min-w-[48px] rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
-                <i class="fa-solid fa-book-bookmark"></i>
+            <!-- LENGUAJE CARD -->
+            <div onclick="openCategory('lenguaje')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
+                <div class="flex items-start justify-between relative z-10">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-xl shadow-md">📚</div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">Lenguaje y Literatura</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Gramática, Redacción y Literatura</p>
+                        </div>
+                    </div>
+                    <span id="badge-lenguaje" class="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200">0/13</span>
+                </div>
             </div>
-            <div>
-                <h3 class="font-bold text-slate-900 text-base leading-snug">Lenguaje y Literatura</h3>
-                <p class="text-xs text-slate-500 mt-0.5">Gramática, Redacción y Literatura</p>
-            </div>
-        </div>
-        <span id="badge-lenguaje" class="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 shrink-0">0/13</span>
-    </div>
-</div>
 
-<!-- COMPRENSIÓN CARD -->
-<div onclick="openCategory('comprension')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
-    <div class="flex items-start justify-between relative z-10">
-        <div class="flex items-center space-x-3.5 pr-2">
-            <div class="w-12 h-12 min-w-[48px] rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
-                <i class="fa-solid fa-book-open-reader"></i>
-            </div>
-            <div>
-                <h3 class="font-bold text-slate-900 text-base leading-snug">Comprensión Lectora</h3>
-                <p class="text-xs text-slate-500 mt-0.5">10 Lecturas con evaluación estricta multi-pregunta</p>
+            <!-- COMPRENSIÓN CARD -->
+            <div onclick="openCategory('comprension')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
+                <div class="flex items-start justify-between relative z-10">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl shadow-md">📖</div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">Comprensión Lectora</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">10 Lecturas con evaluación estricta multi-pregunta</p>
+                        </div>
+                    </div>
+                    <span id="badge-comprension" class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">0/3</span>
+                </div>
             </div>
         </div>
-        <span id="badge-comprension" class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 shrink-0">0/3</span>
-    </div>
-</div>
 
         <!-- TOPICS LIST -->
         <div id="view-topics" class="hidden space-y-3">
