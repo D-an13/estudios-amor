@@ -274,29 +274,35 @@
         </button>
     </footer>
 
-    <!-- MODAL DE ÁNIMO PERSONALIZADO (BOTÓN 🎓) -->
-    <div id="tip-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-pink-100 text-center space-y-4 relative">
-            <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mx-auto shadow-inner">
-                💖
-            </div>
-            <div>
-                <h3 class="font-extrabold text-pink-900 text-base">Un recordatorio de mi para ti</h3>
-                <div class="bg-pink-50/60 rounded-2xl p-4 mt-3 border border-pink-100 shadow-inner">
-                    <p id="tip-text" class="text-xs text-slate-700 leading-relaxed font-medium italic"></p>
-                </div>
-            </div>
-            <div class="space-y-2">
-                <button onclick="showTipModal()" class="w-full py-2.5 bg-pink-100 text-pink-700 text-xs font-bold rounded-xl active:scale-95 transition flex items-center justify-center space-x-1.5">
-                    <i class="fa-solid fa-shuffle"></i>
-                    <span>Ver otra notita</span>
-                </button>
-                <button onclick="closeTipModal()" class="w-full py-3 bg-landivar-blue text-white text-xs font-bold rounded-2xl shadow-md active:scale-95 transition">
-                    ¡Seguir estudiando! ✨
-                </button>
+   <!-- MODAL DE ÁNIMO PERSONALIZADO -->
+<div id="tip-modal" onclick="closeTipModal()" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 cursor-pointer">
+    
+    <!-- Tarjeta central (stopPropaation evita que se cierre al tocar adentro) -->
+    <div onclick="event.stopPropagation()" class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-pink-100 text-center space-y-4 relative cursor-default">
+        
+        <!-- CORAZÓN EASTER EGG (Tap envía a sopa.html) -->
+        <button onclick="window.location.href='sopa.html'" class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mx-auto shadow-inner active:scale-90 transition-transform cursor-pointer border-0 outline-none" title="✨">
+            💖
+        </button>
+
+        <div>
+            <h3 class="font-extrabold text-pink-900 text-base">Un recordatorio de mi para ti</h3>
+            <div class="bg-pink-50/60 rounded-2xl p-4 mt-3 border border-pink-100 shadow-inner">
+                <p id="tip-text" class="text-xs text-slate-700 leading-relaxed font-medium italic"></p>
             </div>
         </div>
+
+        <div class="space-y-2">
+            <button onclick="showTipModal()" class="w-full py-2.5 bg-pink-100 text-pink-700 text-xs font-bold rounded-xl active:scale-95 transition flex items-center justify-center space-x-1.5">
+                <i class="fa-solid fa-shuffle"></i>
+                <span>Ver otra notita</span>
+            </button>
+            <button onclick="closeTipModal()" class="w-full py-3 bg-landivar-blue text-white text-xs font-bold rounded-2xl shadow-md active:scale-95 transition">
+                ¡Seguir estudiando! ✨
+            </button>
+        </div>
     </div>
+</div>
 
     <!-- NUEVO MODAL CUSTOM DE REINICIAR PROGRESO (Reemplaza el de Chrome) -->
     <div id="reset-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -707,22 +713,22 @@
         }
 
         /* MODAL DE ÁNIMO (🎓) */
-        function showTipModal() {
-            const randomNote = loveNotesList[Math.floor(Math.random() * loveNotesList.length)];
-            document.getElementById('tip-text').innerText = `"${randomNote}"`;
-            
-            const modal = document.getElementById('tip-modal');
-            modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-in";
-            modal.classList.remove('hidden');
-        }
+function showTipModal() {
+    const randomNote = loveNotesList[Math.floor(Math.random() * loveNotesList.length)];
+    document.getElementById('tip-text').innerText = `"${randomNote}"`;
+    
+    const modal = document.getElementById('tip-modal');
+    modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-in";
+    modal.classList.remove('hidden');
+}
 
-        function closeTipModal() {
-            const modal = document.getElementById('tip-modal');
-            modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-out";
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 200);
-        }
+function closeTipModal() {
+    const modal = document.getElementById('tip-modal');
+    modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-out";
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 200);
+}
     </script>
 </body>
 </html>
