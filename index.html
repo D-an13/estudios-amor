@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Guía de Estudio</title>
+    
+    <!-- FAVICON (Ícono de la pestaña) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        landivar: { 
+                            blue: '#831843', 
+                            gold: '#D4AF37', 
+                            lightBlue: '#BE185D', 
+                            accent: '#EC4899', 
+                            softBg: '#F1F5F9' 
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; user-select: none; }
+        
+        /* Animaciones dinámicas */
+        .slide-in-right { animation: slideInRight 0.3s forwards cubic-bezier(0.16, 1, 0.3, 1); }
+        .slide-out-right { animation: slideOutRight 0.25s forwards cubic-bezier(0.7, 0, 0.84, 0); }
+        .fade-in { animation: fadeIn 0.3s forwards ease-in-out; }
+        .fade-out { animation: fadeOut 0.2s forwards ease-in-out; }
+
+        @keyframes slideInRight { 
+            from { transform: translateX(100%); opacity: 0; } 
+            to { transform: translateX(0); opacity: 1; } 
+        }
+        @keyframes slideOutRight { 
+            from { transform: translateX(0); opacity: 1; } 
+            to { transform: translateX(100%); opacity: 0; } 
+        }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(8px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        @keyframes fadeOut { 
+            from { opacity: 1; transform: translateY(0); } 
+            to { opacity: 0; transform: translateY(8px); } 
+        }
+
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+        /* Estilo para los botones activos en el footer */
+        .nav-btn-active {
+            color: #831843 !important;
+            font-weight: 800 !important;
+            transform: translateY(-2px);
+        }
+        .nav-btn-active i {
+            transform: scale(1.15);
+        }
+
+/* Oculta la barra de scroll en toda la ventana y en cualquier contenedor */
+* {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge, Opera */
+}
+    </style>
+</head>
+<body class="h-full flex flex-col justify-between max-w-md mx-auto bg-slate-100 text-slate-800 shadow-2xl relative overflow-x-hidden">
+
+    <!-- HEADER (Con transición limpia sin recortes negros) -->
+    <header class="bg-landivar-blue text-white pt-10 pb-6 px-5 shadow-md relative z-20">
+        <div class="flex justify-between items-center mb-3">
+            <div class="flex items-center space-x-3">
+                <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center text-amber-300 font-bold text-xl active:scale-95 transition-transform cursor-pointer shadow-inner" title="Palabritas de Ánimo">
+                    🎓
+                </button>
+                <div>
+                    <h1 class="text-xs uppercase tracking-wider text-amber-300 font-semibold">Guía de Estudio URL</h1>
+                    <p class="text-lg font-extrabold text-white leading-tight">Espacio de Katy</p>
+                </div>
+            </div>
+            <button onclick="openResetModal()" title="Reiniciar progreso" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-xs text-white/80 transition active:scale-95">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+        </div>
+
+        <div class="bg-white/10 p-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
+            <div class="flex justify-between items-center mb-1.5 text-xs font-semibold">
+                <span class="text-white/80">Tu Progreso General</span>
+                <span id="overall-percentage" class="text-amber-300 font-bold">0%</span>
+            </div>
+            
+            <!-- BARRA DE PROGRESO CON COLORES FEMENINOS DESTACADOS -->
+            <div class="w-full h-3 bg-slate-900/40 rounded-full overflow-hidden p-0.5 border border-white/15">
+                <div id="overall-progress-bar" class="h-full bg-gradient-to-r from-emerald-300 via-amber-200 to-rose-300 rounded-full transition-all duration-500 shadow-sm" style="width: 0%"></div>
+            </div>
+            
+            <div class="flex justify-between items-center mt-2 text-[10px] text-slate-300 font-medium">
+                <span id="completed-count">0 de 0 lecciones</span>
+                <span id="streak-badge" class="bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-md border border-amber-400/30 font-semibold">🔥 ¡A darle con todo mi amor!</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main id="main-view" class="flex-1 overflow-y-auto custom-scroll bg-slate-100 p-4 pb-20 relative z-10">
+        
+        <!-- DASHBOARD -->
+        <div id="view-dashboard" class="space-y-4 fade-in">
+            <div class="flex items-center justify-between my-1 px-1">
+                <h2 class="text-sm font-bold text-slate-700 uppercase tracking-wider">Módulos de Estudio</h2>
+                <span class="text-xs text-slate-500 font-medium">Selecciona una materia</span>
+            </div>
+
+            <!-- HUMANIDADES CARD -->
+            <div onclick="openCategory('humanidades')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
+                <div class="flex items-start justify-between relative z-10">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-600 text-white flex items-center justify-center text-xl shadow-md">🧠</div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">Humanidades</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Filosofía, Psicología e Investigación</p>
+                        </div>
+                    </div>
+                    <span id="badge-humanidades" class="text-xs font-bold px-2.5 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200">0/15</span>
+                </div>
+            </div>
+
+            <!-- LENGUAJE CARD -->
+            <div onclick="openCategory('lenguaje')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
+                <div class="flex items-start justify-between relative z-10">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-xl shadow-md">📚</div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">Lenguaje y Literatura</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Gramática, Redacción y Literatura</p>
+                        </div>
+                    </div>
+                    <span id="badge-lenguaje" class="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200">0/13</span>
+                </div>
+            </div>
+
+            <!-- COMPRENSIÓN CARD -->
+            <div onclick="openCategory('comprension')" class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/80 hover:shadow-md transition cursor-pointer relative overflow-hidden group active:scale-[0.98]">
+                <div class="flex items-start justify-between relative z-10">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl shadow-md">📖</div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">Comprensión Lectora</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">10 Lecturas con evaluación estricta multi-pregunta</p>
+                        </div>
+                    </div>
+                    <span id="badge-comprension" class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">0/3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOPICS LIST -->
+        <div id="view-topics" class="hidden space-y-3">
+            <div class="flex items-center justify-between mb-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-200">
+                <button onclick="showDashboard()" class="flex items-center space-x-1.5 text-xs font-bold text-slate-600 hover:text-landivar-blue transition px-2 py-1 rounded-lg bg-slate-100 active:scale-95">
+                    <i class="fa-solid fa-arrow-left"></i><span>Volver</span>
+                </button>
+                <h2 id="topics-title" class="text-sm font-extrabold text-landivar-blue uppercase tracking-wider">Materia</h2>
+            </div>
+            <div id="topics-list-container" class="space-y-2.5"></div>
+        </div>
+
+        <!-- LESSON DETAIL -->
+        <div id="view-lesson" class="hidden">
+            <div class="flex items-center justify-between mb-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-200">
+                <button onclick="backToTopicsList()" class="flex items-center space-x-1.5 text-xs font-bold text-slate-600 hover:text-landivar-blue transition px-2 py-1 rounded-lg bg-slate-100 active:scale-95">
+                    <i class="fa-solid fa-arrow-left"></i><span>Volver a la lista</span>
+                </button>
+                <span id="lesson-status-badge" class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">⚪ No completado</span>
+            </div>
+
+            <div class="bg-white rounded-3xl p-5 shadow-md border border-slate-200 space-y-5">
+                <div>
+                    <span id="lesson-code" class="text-xs font-extrabold text-amber-600 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-md inline-block mb-1.5">Lección 1</span>
+                    <h2 id="lesson-title" class="text-xl font-extrabold text-slate-900 leading-snug">Título</h2>
+                </div>
+
+                <div class="space-y-3">
+                    <div id="lesson-intro-container" class="bg-pink-50/70 rounded-2xl p-4 border border-pink-100">
+                        <div id="lesson-intro-header" class="flex items-center space-x-2 text-pink-900 font-bold text-xs uppercase tracking-wider mb-2">
+                            <i class="fa-solid fa-comments text-pink-600"></i><span>Explicación Sencilla</span>
+                        </div>
+                        <div id="lesson-intro" class="text-xs text-slate-700 leading-relaxed font-medium"></div>
+                    </div>
+
+                    <div id="lesson-visual-container" class="hidden bg-slate-50 rounded-2xl p-4 border border-slate-200"></div>
+
+                    <div id="lesson-keypoints-container" class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80">
+                        <div class="flex items-center space-x-2 text-slate-800 font-bold text-xs uppercase tracking-wider mb-2.5">
+                            <i class="fa-solid fa-bullseye text-amber-500"></i><span>Puntos Clave</span>
+                        </div>
+                        <ul id="lesson-keypoints" class="space-y-2 text-xs text-slate-700"></ul>
+                    </div>
+                </div>
+
+                <!-- QUIZ / BATERÍA DE PREGUNTAS -->
+                <div class="pt-2 border-t border-slate-100">
+                    <div class="bg-amber-500/10 rounded-2xl p-4 border border-amber-400/30">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-2 text-amber-800 font-extrabold text-xs uppercase tracking-wider">
+                                <i class="fa-solid fa-circle-question text-amber-600"></i>
+                                <span>Reto de Evaluación</span>
+                            </div>
+                            <span id="quiz-step-indicator" class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-amber-200 text-amber-900 hidden">Pregunta 1 de 3</span>
+                        </div>
+
+                        <p id="quiz-question" class="text-xs font-bold text-slate-800 mb-3.5 leading-snug"></p>
+                        <div id="quiz-options" class="space-y-2"></div>
+                        <div id="quiz-feedback" class="hidden mt-3 p-3 rounded-xl text-xs font-semibold leading-relaxed"></div>
+                    </div>
+                </div>
+
+                <div class="pt-1">
+                    <button id="btn-complete-lesson" onclick="completeCurrentLesson()" disabled class="w-full py-3.5 bg-slate-300 text-slate-500 font-extrabold rounded-2xl shadow-sm text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition cursor-not-allowed">
+                        <i class="fa-solid fa-check-circle text-sm"></i>
+                        <span>Responde las preguntas para continuar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER NAV -->
+    <footer class="bg-white border-t border-slate-200 py-2.5 px-3 flex justify-around items-center text-slate-400 text-xs font-medium z-20">
+        <button id="nav-home" onclick="showDashboard()" class="flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl">
+            <i class="fa-solid fa-house text-base transition-transform"></i><span class="text-[10px]">Inicio</span>
+        </button>
+        <button id="nav-humanidades" onclick="openCategory('humanidades')" class="flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl">
+            <i class="fa-solid fa-brain text-base transition-transform"></i><span class="text-[10px]">Humanidades</span>
+        </button>
+        <button id="nav-lenguaje" onclick="openCategory('lenguaje')" class="flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl">
+            <i class="fa-solid fa-book text-base transition-transform"></i><span class="text-[10px]">Lenguaje</span>
+        </button>
+        <button id="nav-comprension" onclick="openCategory('comprension')" class="flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl">
+            <i class="fa-solid fa-book-open-reader text-base transition-transform"></i><span class="text-[10px]">Lectura</span>
+        </button>
+    </footer>
+
+    <!-- MODAL DE ÁNIMO PERSONALIZADO (BOTÓN 🎓) -->
+    <div id="tip-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-pink-100 text-center space-y-4 relative">
+            <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mx-auto shadow-inner">
+                💖
+            </div>
+            <div>
+                <h3 class="font-extrabold text-pink-900 text-base">Un recordatorio de mi para ti</h3>
+                <div class="bg-pink-50/60 rounded-2xl p-4 mt-3 border border-pink-100 shadow-inner">
+                    <p id="tip-text" class="text-xs text-slate-700 leading-relaxed font-medium italic"></p>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <button onclick="showTipModal()" class="w-full py-2.5 bg-pink-100 text-pink-700 text-xs font-bold rounded-xl active:scale-95 transition flex items-center justify-center space-x-1.5">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <span>Ver otra notita</span>
+                </button>
+                <button onclick="closeTipModal()" class="w-full py-3 bg-landivar-blue text-white text-xs font-bold rounded-2xl shadow-md active:scale-95 transition">
+                    ¡Seguir estudiando! ✨
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NUEVO MODAL CUSTOM DE REINICIAR PROGRESO (Reemplaza el de Chrome) -->
+    <div id="reset-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-slate-100 text-center space-y-4 relative">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mx-auto shadow-inner">
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <div>
+                <h3 class="font-extrabold text-slate-800 text-base">¿Reiniciar progreso?</h3>
+                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed font-medium">
+                    Se borrarrán las lecciones completadas para que puedas estudiar todo desde cero.
+                </p>
+            </div>
+            <div class="space-y-2 pt-1">
+                <button onclick="confirmResetProgress()" class="w-full py-3 bg-rose-500 hover:bg-rose-600 text-white text-xs font-bold rounded-2xl shadow-md active:scale-95 transition">
+                    Sí, reiniciar todo
+                </button>
+                <button onclick="closeResetModal()" class="w-full py-2.5 bg-slate-100 text-slate-600 text-xs font-bold rounded-xl active:scale-95 transition">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="contenido.js"></script>
+    <script>
+        let currentCategory = null;
+        let currentTopic = null;
+        let currentLessonNum = 1;
+        let currentQuestionIndex = 0;
+        let userProgress = JSON.parse(localStorage.getItem('landivar_study_progress_v3')) || {};
+
+        const loveNotesList = [
+            "¡Estoy orgulloso de ti mi amor! Cada minuto que estudias te acerca más a tu meta. ¡Tú puedes con todo!",
+            "Eres inteligente mujer, vas a lograr cosas increíbles. Siempre cree en tí. ❤️",
+"Yo simplemente puedo decirte que eres lo más bonito que he visto en toda mi vida",
+            "No estás sola en esto. Dios y yo estamos aquí apoyándote en cada paso del camino. ¡A darle con fe!",
+"No me mires con esos ojos, que me deslumbras, me derrumbas",
+            "Si sientes cansancio, tomate una pausa, toma agua y recuerda lo maravillosa que eres. ¡Te amo!",
+"My heart is yours, It's you that I hold on to 🥺",
+"La vergüenza del Sol quien en su resplandor se ve opacado a tu lado",
+"Si te vas, esperaré, y si te quedas nunca olvidaré. Si despegas, despegaré, y si me duermo, te soñaré 🪐",
+"Estoy contento, de tenerte cerca, muy cerca de mi",
+            "Ese examen de admisión no sabe lo que le espera con semejante mujer estudiando. ¡A romperla tierna!",
+            "My heart is yours, it's you that I hold on to...",
+            "Confía en todo lo que sabes y en la capacidad que tienes para aprender. ¡Ánimo que todo vale la pena!",
+"But I promise you this... I'll always look out for you",
+            "Un paso a la vez mi amor. No te presiones, cada lección completada es un triunfo enorme. 💕"
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => { 
+            updateOverallProgress();
+            setActiveNav('nav-home');
+        });
+
+        function setActiveNav(navId) {
+            const buttons = ['nav-home', 'nav-humanidades', 'nav-lenguaje', 'nav-comprension'];
+            buttons.forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) {
+                    if (id === navId) {
+                        btn.className = "flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl nav-btn-active bg-pink-50/80";
+                    } else {
+                        btn.className = "flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl text-slate-400 hover:text-slate-600";
+                    }
+                }
+            });
+        }
+
+        function updateOverallProgress() {
+            let totalTopics = 0, completedTopics = 0;
+            for (let catKey in studyData) {
+                const cat = studyData[catKey];
+                let catCompleted = 0;
+                cat.topics.forEach(t => {
+                    totalTopics++;
+                    if (userProgress[t.id]) { completedTopics++; catCompleted++; }
+                });
+                const badge = document.getElementById(`badge-${catKey}`);
+                if (badge) {
+                    badge.innerText = `${catCompleted}/${cat.topics.length}`;
+                    if (catCompleted === cat.topics.length && cat.topics.length > 0) {
+                        badge.className = "text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300";
+                    }
+                }
+            }
+            const percentage = totalTopics > 0 ? Math.round((completedTopics / totalTopics) * 100) : 0;
+            document.getElementById('overall-percentage').innerText = `${percentage}%`;
+            document.getElementById('overall-progress-bar').style.width = `${percentage}%`;
+            document.getElementById('completed-count').innerText = `${completedTopics} de ${totalTopics} lecciones`;
+        }
+
+        function showDashboard() {
+            setActiveNav('nav-home');
+            const viewTopics = document.getElementById('view-topics');
+            const viewLesson = document.getElementById('view-lesson');
+            const viewDashboard = document.getElementById('view-dashboard');
+
+            if (!viewTopics.classList.contains('hidden')) {
+                viewTopics.className = "space-y-3 slide-out-right";
+                setTimeout(() => {
+                    viewTopics.classList.add('hidden');
+                    viewDashboard.className = "space-y-4 fade-in";
+                    viewDashboard.classList.remove('hidden');
+                }, 200);
+            } else if (!viewLesson.classList.contains('hidden')) {
+                viewLesson.className = "slide-out-right";
+                setTimeout(() => {
+                    viewLesson.classList.add('hidden');
+                    viewDashboard.className = "space-y-4 fade-in";
+                    viewDashboard.classList.remove('hidden');
+                }, 200);
+            } else {
+                viewDashboard.classList.remove('hidden');
+            }
+            updateOverallProgress();
+        }
+
+        function openCategory(catKey) {
+    setActiveNav(`nav-${catKey}`);
+    currentCategory = catKey;
+    const categoryData = studyData[catKey];
+    document.getElementById('topics-title').innerText = categoryData.title;
+    renderTopicsList(categoryData.topics);
+
+    const viewDashboard = document.getElementById('view-dashboard');
+    const viewTopics = document.getElementById('view-topics');
+    const viewLesson = document.getElementById('view-lesson');
+
+    // Identificar cuál vista está activa actualmente para sacarla con animación
+    let activeView = null;
+    if (!viewDashboard.classList.contains('hidden')) activeView = viewDashboard;
+    else if (!viewTopics.classList.contains('hidden')) activeView = viewTopics;
+    else if (!viewLesson.classList.contains('hidden')) activeView = viewLesson;
+
+    if (activeView) {
+        // Si ya estamos dentro de la misma vista de lista de temas (cambiando entre pestañas del nav), usamos fade-out
+        // Si venimos del dashboard o lección, le aplicamos la animación de salida correspondiente
+        activeView.className = (activeView === viewTopics) ? "space-y-3 fade-out" : "space-y-4 fade-out";
+
+        setTimeout(() => {
+            viewDashboard.classList.add('hidden');
+            viewLesson.classList.add('hidden');
+            
+            // Forzamos un reflujo leve y mostramos la nueva lista con animación suave
+            viewTopics.className = "space-y-3 slide-in-right";
+            viewTopics.classList.remove('hidden');
+            document.getElementById('main-view').scrollTop = 0;
+        }, 180);
+    } else {
+        viewDashboard.classList.add('hidden');
+        viewLesson.classList.add('hidden');
+        viewTopics.className = "space-y-3 slide-in-right";
+        viewTopics.classList.remove('hidden');
+        document.getElementById('main-view').scrollTop = 0;
+    }
+}
+
+        function renderTopicsList(topics) {
+            const container = document.getElementById('topics-list-container');
+            container.innerHTML = '';
+            topics.forEach((topic, index) => {
+                const isCompleted = !!userProgress[topic.id];
+                const card = document.createElement('div');
+                card.className = `p-4 rounded-2xl border transition cursor-pointer flex items-center justify-between active:scale-[0.98] ${
+                    isCompleted ? 'bg-emerald-50/80 border-emerald-200 hover:bg-emerald-100/80' : 'bg-white border-slate-200/80 hover:bg-slate-50'
+                }`;
+                card.onclick = () => openLesson(topic, index + 1);
+                card.innerHTML = `
+                    <div class="flex items-center space-x-3 pr-2">
+                        <div class="w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs ${
+                            isCompleted ? 'bg-emerald-500 text-white shadow-sm' : 'bg-slate-100 text-slate-600'
+                        }">${isCompleted ? '<i class="fa-solid fa-check"></i>' : index + 1}</div>
+                        <div>
+                            <span class="text-[10px] font-bold ${isCompleted ? 'text-emerald-700' : 'text-amber-600'} block">
+                                Lección ${index + 1} <span class="text-slate-400 font-normal">(${topic.id})</span>
+                            </span>
+                            <h4 class="text-xs font-bold ${isCompleted ? 'text-emerald-950 line-through/50' : 'text-slate-800'}">${topic.title}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-extrabold px-2.5 py-1 rounded-full ${
+                            isCompleted ? 'bg-emerald-200/80 text-emerald-800' : 'bg-slate-100 text-slate-500'
+                        }">${isCompleted ? 'Repasar' : 'Estudiar'}</span>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function openLesson(topic, lessonNumber) {
+            currentTopic = topic;
+            currentLessonNum = lessonNumber;
+            currentQuestionIndex = 0;
+
+            document.getElementById('lesson-code').innerText = `Lección ${lessonNumber} (${topic.id})`;
+            document.getElementById('lesson-title').innerText = topic.title;
+            document.getElementById('lesson-intro').innerHTML = topic.intro;
+
+            const introHeader = document.getElementById('lesson-intro-header');
+            if (currentCategory === 'comprension') {
+                introHeader.innerHTML = `<i class="fa-solid fa-book-open text-amber-600"></i><span>Lectura Completa</span>`;
+                document.getElementById('lesson-keypoints-container').classList.add('hidden');
+            } else {
+                introHeader.innerHTML = `<i class="fa-solid fa-comments text-pink-600"></i><span>Explicación Sencilla</span>`;
+                document.getElementById('lesson-keypoints-container').classList.remove('hidden');
+            }
+
+            const visualContainer = document.getElementById('lesson-visual-container');
+            if (topic.visualHTML) {
+                visualContainer.innerHTML = topic.visualHTML;
+                visualContainer.classList.remove('hidden');
+            } else {
+                visualContainer.classList.add('hidden');
+            }
+
+            const keypointsContainer = document.getElementById('lesson-keypoints');
+            keypointsContainer.innerHTML = '';
+            if (topic.keypoints) {
+                topic.keypoints.forEach(kp => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-start space-x-2';
+                    li.innerHTML = `<span class="text-amber-500 font-bold">•</span><span>${kp}</span>`;
+                    keypointsContainer.appendChild(li);
+                });
+            }
+
+            renderCurrentQuestion();
+
+            const isCompleted = !!userProgress[topic.id];
+            const badge = document.getElementById('lesson-status-badge');
+            const completeBtn = document.getElementById('btn-complete-lesson');
+
+            if (isCompleted) {
+                badge.className = "text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300";
+                badge.innerHTML = "✅ Completado";
+                completeBtn.disabled = false;
+                completeBtn.className = "w-full py-3.5 bg-emerald-600 text-white font-extrabold rounded-2xl shadow-md text-xs uppercase tracking-wider flex items-center justify-center space-x-2 cursor-pointer";
+                completeBtn.querySelector('span').innerText = "Volver al índice";
+            } else {
+                badge.className = "text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200";
+                badge.innerHTML = "⚪ No completado";
+                completeBtn.disabled = true;
+                completeBtn.className = "w-full py-3.5 bg-slate-300 text-slate-500 font-extrabold rounded-2xl shadow-sm text-xs uppercase tracking-wider flex items-center justify-center space-x-2 cursor-not-allowed";
+                completeBtn.querySelector('span').innerText = "Responde todas las preguntas para avanzar";
+            }
+
+            const viewTopics = document.getElementById('view-topics');
+            const viewLesson = document.getElementById('view-lesson');
+
+            viewTopics.classList.add('hidden');
+            viewLesson.className = "slide-in-right";
+            viewLesson.classList.remove('hidden');
+            document.getElementById('main-view').scrollTop = 0;
+        }
+
+        function backToTopicsList() {
+            const viewTopics = document.getElementById('view-topics');
+            const viewLesson = document.getElementById('view-lesson');
+
+            if (currentCategory) renderTopicsList(studyData[currentCategory].topics);
+            
+            viewLesson.className = "slide-out-right";
+            setTimeout(() => {
+                viewLesson.classList.add('hidden');
+                viewTopics.className = "space-y-3 fade-in";
+                viewTopics.classList.remove('hidden');
+            }, 200);
+        }
+
+        function getQuestionsArray() {
+            if (currentTopic.questions && Array.isArray(currentTopic.questions)) {
+                return currentTopic.questions;
+            } else if (currentTopic.quiz) {
+                return [currentTopic.quiz];
+            }
+            return [];
+        }
+
+        function mezclarOpciones(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function renderCurrentQuestion() {
+            const questions = getQuestionsArray();
+            const q = questions[currentQuestionIndex];
+            const stepIndicator = document.getElementById('quiz-step-indicator');
+
+            if (questions.length > 1) {
+                stepIndicator.innerText = `Pregunta ${currentQuestionIndex + 1} de ${questions.length}`;
+                stepIndicator.classList.remove('hidden');
+            } else {
+                stepIndicator.classList.add('hidden');
+            }
+
+            document.getElementById('quiz-question').innerText = q.question;
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            const feedbackBox = document.getElementById('quiz-feedback');
+            feedbackBox.className = 'hidden mt-3 p-3 rounded-xl text-xs font-semibold leading-relaxed';
+
+            const opcionesAleatorias = mezclarOpciones(q.options);
+
+            opcionesAleatorias.forEach((opt) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full p-3 rounded-xl text-left text-xs font-medium bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition flex items-center justify-between active:scale-[0.98]';
+                btn.onclick = () => checkAnswer(opt.correct, btn);
+                btn.innerHTML = `<span>${opt.text}</span><i class="fa-regular fa-circle text-slate-300"></i>`;
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(isCorrect, selectedBtn) {
+            if (!currentTopic) return;
+            const questions = getQuestionsArray();
+
+            const buttons = document.getElementById('quiz-options').querySelectorAll('button');
+            buttons.forEach((btn) => {
+                btn.style.pointerEvents = 'none';
+                const icon = btn.querySelector('i');
+                if (btn === selectedBtn) {
+                    if (isCorrect) {
+                        btn.className = "w-full p-3 rounded-xl text-left text-xs font-bold bg-emerald-100 border border-emerald-400 text-emerald-900 flex items-center justify-between";
+                        icon.className = "fa-solid fa-circle-check text-emerald-600 text-sm";
+                    } else {
+                        btn.className = "w-full p-3 rounded-xl text-left text-xs font-bold bg-rose-100 border border-rose-400 text-rose-900 flex items-center justify-between";
+                        icon.className = "fa-solid fa-circle-xmark text-rose-600 text-sm";
+                    }
+                } else {
+                    btn.className = "w-full p-3 rounded-xl text-left text-xs font-medium bg-white border border-slate-200 text-slate-400 opacity-60 flex items-center justify-between";
+                    icon.className = "fa-regular fa-circle text-slate-300";
+                }
+            });
+
+            const feedbackBox = document.getElementById('quiz-feedback');
+            feedbackBox.classList.remove('hidden');
+
+            if (isCorrect) {
+                if (currentQuestionIndex < questions.length - 1) {
+                    feedbackBox.className = "mt-3 p-3 rounded-xl text-xs font-semibold leading-relaxed bg-emerald-100 text-emerald-900 border border-emerald-300";
+                    feedbackBox.innerHTML = `<i class="fa-solid fa-check text-emerald-600 mr-1"></i> <strong>¡Correcto!</strong> Pasando a la siguiente pregunta...`;
+                    setTimeout(() => {
+                        currentQuestionIndex++;
+                        renderCurrentQuestion();
+                    }, 1400);
+                } else {
+                    feedbackBox.className = "mt-3 p-3 rounded-xl text-xs font-semibold leading-relaxed bg-emerald-100/90 text-emerald-900 border border-emerald-300";
+                    feedbackBox.innerHTML = `<i class="fa-solid fa-star text-amber-500 mr-1"></i> <strong>¡Excelente!</strong> Has respondido todas las preguntas correctamente.`;
+                    
+                    const completeBtn = document.getElementById('btn-complete-lesson');
+                    completeBtn.disabled = false;
+                    completeBtn.className = "w-full py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold rounded-2xl shadow-lg text-xs uppercase tracking-wider flex items-center justify-center space-x-2 cursor-pointer animate-pulse";
+                    completeBtn.querySelector('span').innerText = "¡Marcar Lección como Completada!";
+                    try { confetti({ particleCount: 40, spread: 60, origin: { y: 0.8 } }); } catch(e){}
+                }
+            } else {
+                feedbackBox.className = "mt-3 p-3 rounded-xl text-xs font-semibold leading-relaxed bg-rose-100 text-rose-900 border border-rose-300";
+                
+                if (currentCategory === 'comprension') {
+                    feedbackBox.innerHTML = `<i class="fa-solid fa-triangle-exclamation text-rose-600 mr-1"></i> <strong>Comprensión incorrecta:</strong> Para asegurar tu aprendizaje, debes leer nuevamente la lectura y responder todo desde la pregunta 1. Reiniciando lección...`;
+                    setTimeout(() => {
+                        openLesson(currentTopic, currentLessonNum);
+                    }, 3500);
+                } else {
+                    feedbackBox.innerHTML = `<i class="fa-solid fa-circle-info text-rose-600 mr-1"></i> <strong>Incorrecto:</strong> Revisa el texto e inténtalo nuevamente.`;
+                    setTimeout(() => {
+                        buttons.forEach(btn => btn.style.pointerEvents = 'auto');
+                    }, 1000);
+                }
+            }
+        }
+
+        function completeCurrentLesson() {
+            if (!currentTopic) return;
+            userProgress[currentTopic.id] = true;
+            localStorage.setItem('landivar_study_progress_v3', JSON.stringify(userProgress));
+            updateOverallProgress();
+            backToTopicsList();
+        }
+
+        /* MANEJO DEL MODAL CUSTOM DE REINICIO */
+        function openResetModal() {
+            const modal = document.getElementById('reset-modal');
+            modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-in";
+            modal.classList.remove('hidden');
+        }
+
+        function closeResetModal() {
+            const modal = document.getElementById('reset-modal');
+            modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-out";
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        function confirmResetProgress() {
+            userProgress = {};
+            localStorage.removeItem('landivar_study_progress_v3');
+            updateOverallProgress();
+            if (currentCategory) renderTopicsList(studyData[currentCategory].topics);
+            closeResetModal();
+        }
+
+        /* MODAL DE ÁNIMO (🎓) */
+        function showTipModal() {
+            const randomNote = loveNotesList[Math.floor(Math.random() * loveNotesList.length)];
+            document.getElementById('tip-text').innerText = `"${randomNote}"`;
+            
+            const modal = document.getElementById('tip-modal');
+            modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-in";
+            modal.classList.remove('hidden');
+        }
+
+        function closeTipModal() {
+            const modal = document.getElementById('tip-modal');
+            modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-out";
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+    </script>
+</body>
+</html>
