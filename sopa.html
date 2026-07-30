@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Sopa de Letras - Repaso Veloz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'landivar-blue': '#1e3a8a'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.25s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Animación fluida de acierto (Sin saltos feos) */
+        @keyframes successGlow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.12); box-shadow: 0 0 12px rgba(52, 211, 153, 0.8); }
+            100% { transform: scale(1); }
+        }
+        .success-pulse {
+            animation: successGlow 0.4s ease-out;
+        }
+
+        .no-select {
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-900/60 backdrop-blur-sm min-h-screen flex items-center justify-center p-4 no-select">
+
+    <div class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-pink-100 text-center space-y-4 fade-in">
+        
+        <!-- Header -->
+        <div class="flex justify-between items-center pb-1 border-b border-slate-100">
+            <a href="index.html" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 active:scale-95 transition" title="Regresar">
+                <i class="fa-solid fa-arrow-left text-xs"></i>
+            </a>
+            <span class="text-xs font-extrabold text-purple-900 flex items-center gap-1">
+                <i class="fa-solid fa-puzzle-piece text-purple-500"></i> Repaso Veloz 🧩
+            </span>
+            <div class="w-8"></div>
+        </div>
+
+        <p id="game-status" class="text-xs font-bold text-purple-700 bg-purple-50 py-1 px-3 rounded-full inline-block">
+            Desliza para formar las palabras ✨
+        </p>
+
+        <!-- Tablero -->
+        <div id="grid-container" class="grid grid-cols-6 gap-1 bg-purple-50 p-2 rounded-2xl border border-purple-100 touch-none select-none"></div>
+
+        <!-- Lista de palabras -->
+        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200/80">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Palabras secretas:</p>
+            <div id="word-list" class="flex flex-wrap gap-1.5 justify-center"></div>
+        </div>
+
+        <!-- Botones -->
+        <div class="space-y-2 pt-1">
+            <button onclick="initGame()" class="w-full py-2.5 bg-purple-100 text-purple-700 text-xs font-bold rounded-xl active:scale-95 transition flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-rotate-right"></i>
+                <span>Nuevo tablero</span>
+            </button>
+            <a href="index.html" class="block w-full py-3 bg-landivar-blue text-white text-xs font-bold rounded-2xl shadow-md active:scale-95 transition text-center">
+                ¡Volver a estudiar! ✨
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        const pool = ["AMOR", "IDEA", "ARTE", "MITO", "OBRA", "TEXTO", "VERSO", "LIBRO", "ETICA", "SIGNO", "LENGUA", "MENTE"];
+        let targetWords = [];
+        let foundWords = [];
+        let currentSelection = [];
+        let isDragging = false;
+
+        function initGame() {
+            document.getElementById('game-status').innerText = "Desliza para formar las palabras ✨";
+            document.getElementById('game-status').className = "text-xs font-bold text-purple-700 bg-purple-50 py-1 px-3 rounded-full inline-block";
+
+            targetWords = [...pool].sort(() => 0.5 - Math.random()).slice(0, 3);
+            foundWords = [];
+            currentSelection = [];
+
+            renderWordBadges();
+            buildBoard();
+        }
+
+        function renderWordBadges() {
+            const container = document.getElementById('word-list');
+            container.innerHTML = '';
+            targetWords.forEach(w => {
+                const badge = document.createElement('span');
+                badge.id = `badge-${w}`;
+                badge.className = "text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm transition-all";
+                badge.innerText = w;
+                container.appendChild(badge);
+            });
+        }
+
+        function buildBoard() {
+            const gridContainer = document.getElementById('grid-container');
+            gridContainer.innerHTML = '';
+
+            let grid = Array(6).fill(null).map(() => Array(6).fill(''));
+
+            targetWords.forEach((word, idx) => {
+                let row = idx * 2;
+                let maxCol = 6 - word.length;
+                let col = Math.floor(Math.random() * (maxCol + 1));
+                for (let c = 0; c < word.length; c++) {
+                    grid[row][col + c] = word[c];
+                }
+            });
+
+            const abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            for (let r = 0; r < 6; r++) {
+                for (let c = 0; c < 6; c++) {
+                    if (!grid[r][c]) {
+                        grid[r][c] = abc[Math.floor(Math.random() * abc.length)];
+                    }
+                }
+            }
+
+            for (let r = 0; r < 6; r++) {
+                for (let c = 0; c < 6; c++) {
+                    const cell = document.createElement('div');
+                    cell.dataset.letter = grid[r][c];
+                    cell.dataset.found = "false";
+                    cell.className = "cell-item w-9 h-9 font-extrabold text-sm rounded-xl bg-white text-slate-700 border border-purple-100 flex items-center justify-center transition-all cursor-pointer select-none";
+                    cell.innerText = grid[r][c];
+                    gridContainer.appendChild(cell);
+                }
+            }
+        }
+
+        const gridContainer = document.getElementById('grid-container');
+
+        function startDrag(e) {
+            const cell = getCellFromEvent(e);
+            if (!cell || cell.dataset.found === "true") return;
+            isDragging = true;
+            currentSelection = [cell];
+            highlightSelection();
+        }
+
+        function moveDrag(e) {
+            if (!isDragging) return;
+            const cell = getCellFromEvent(e);
+            if (cell && cell.dataset.found === "false" && !currentSelection.includes(cell)) {
+                currentSelection.push(cell);
+                highlightSelection();
+            }
+        }
+
+        function endDrag() {
+            if (!isDragging) return;
+            isDragging = false;
+            checkWordMatch();
+        }
+
+        function getCellFromEvent(e) {
+            const touch = e.touches ? e.touches[0] : e;
+            const target = document.elementFromPoint(touch.clientX, touch.clientY);
+            return target && target.classList.contains('cell-item') ? target : null;
+        }
+
+        function highlightSelection() {
+            document.querySelectorAll('.cell-item').forEach(c => {
+                if (c.dataset.found === "false" && !currentSelection.includes(c)) {
+                    c.className = "cell-item w-9 h-9 font-extrabold text-sm rounded-xl bg-white text-slate-700 border border-purple-100 flex items-center justify-center transition-all cursor-pointer select-none";
+                }
+            });
+
+            currentSelection.forEach(c => {
+                if (c.dataset.found === "false") {
+                    c.className = "cell-item w-9 h-9 font-extrabold text-sm rounded-xl bg-purple-600 text-white flex items-center justify-center transition-all cursor-pointer select-none shadow-md scale-105";
+                }
+            });
+        }
+
+        function checkWordMatch() {
+            const formed = currentSelection.map(c => c.dataset.letter).join('');
+            let matched = false;
+
+            targetWords.forEach(w => {
+                if (!foundWords.includes(w) && formed === w) {
+                    matched = true;
+                    foundWords.push(w);
+
+                    // Efecto de acierto limpio y elegante (Verde esmeralda con pulso único)
+                    currentSelection.forEach(c => {
+                        c.dataset.found = "true";
+                        c.className = "cell-item w-9 h-9 font-extrabold text-sm rounded-xl bg-emerald-500 text-white flex items-center justify-center transition-all select-none shadow-sm success-pulse";
+                    });
+
+                    const badge = document.getElementById(`badge-${w}`);
+                    if (badge) {
+                        badge.className = "text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-emerald-100 text-emerald-800 border border-emerald-300 line-through scale-95";
+                    }
+
+                    if (foundWords.length === targetWords.length) {
+                        document.getElementById('game-status').innerText = "¡Ganaste, mi amor! 🎉";
+                        document.getElementById('game-status').className = "text-xs font-bold text-emerald-800 bg-emerald-100 py-1 px-3 rounded-full inline-block border border-emerald-200";
+                    }
+                }
+            });
+
+            if (!matched) {
+                currentSelection.forEach(c => {
+                    if (c.dataset.found === "false") {
+                        c.className = "cell-item w-9 h-9 font-extrabold text-sm rounded-xl bg-white text-slate-700 border border-purple-100 flex items-center justify-center transition-all cursor-pointer select-none";
+                    }
+                });
+            }
+
+            currentSelection = [];
+        }
+
+        gridContainer.addEventListener('mousedown', startDrag);
+        window.addEventListener('mousemove', moveDrag);
+        window.addEventListener('mouseup', endDrag);
+
+        gridContainer.addEventListener('touchstart', startDrag, { passive: false });
+        window.addEventListener('touchmove', moveDrag, { passive: false });
+        window.addEventListener('touchend', endDrag);
+
+        initGame();
+    </script>
+</body>
+</html>
