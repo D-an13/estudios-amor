@@ -481,6 +481,7 @@
         }
 
           function showDashboard() {
+            playSound('click');
             hideFontSlider();
             setActiveNav('nav-home');
             const viewTopics = document.getElementById('view-topics');
@@ -508,7 +509,7 @@
         }
 
         function openCategory(catKey) {
-    // ⚡ AQUÍ LE AGREGAS ESTA LÍNEA AL INICIO:
+    playSound('click');
     hideFontSlider();
 
     setActiveNav(`nav-${catKey}`);
@@ -583,6 +584,7 @@
         }
 
         function openLesson(topic, lessonNumber) {
+            playSound('click');
             currentTopic = topic;
             currentLessonNum = lessonNumber;
             currentQuestionIndex = 0;
@@ -650,7 +652,7 @@
         }
 
         function backToTopicsList() {
-    // ⚡ AGREGAS ESTA LÍNEA AQUÍ:
+    playSound('click');
     hideFontSlider();
 
     const viewTopics = document.getElementById('view-topics');
@@ -716,6 +718,11 @@
 
         function checkAnswer(isCorrect, selectedBtn) {
             if (!currentTopic) return;
+if (isCorrect) {
+        playSound('correct'); // 👈 AGREGADO AQUÍ (para respuestas correctas)
+    } else {
+        playSound('wrong');   // 👈 AGREGADO AQUÍ (para respuestas incorrectas)
+    }
             const questions = getQuestionsArray();
 
             const buttons = document.getElementById('quiz-options').querySelectorAll('button');
@@ -755,6 +762,7 @@
                     completeBtn.disabled = false;
                     completeBtn.className = "w-full py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold rounded-2xl shadow-lg text-xs uppercase tracking-wider flex items-center justify-center space-x-2 cursor-pointer animate-pulse";
                     completeBtn.querySelector('span').innerText = "¡Marcar Lección como Completada!";
+playSound('complete');
                     try { confetti({ particleCount: 40, spread: 60, origin: { y: 0.8 } }); } catch(e){}
                 }
             } else {
@@ -776,6 +784,7 @@
 
         function completeCurrentLesson() {
             if (!currentTopic) return;
+            playSound('complete');
             userProgress[currentTopic.id] = true;
             localStorage.setItem('landivar_study_progress_v3', JSON.stringify(userProgress));
             updateOverallProgress();
@@ -784,12 +793,14 @@
 
         /* MANEJO DEL MODAL CUSTOM DE REINICIO */
         function openResetModal() {
+            playSound('wrong');
             const modal = document.getElementById('reset-modal');
             modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-in";
             modal.classList.remove('hidden');
         }
 
         function closeResetModal() {
+            playSound('click');
             const modal = document.getElementById('reset-modal');
             modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-out";
             setTimeout(() => {
@@ -798,6 +809,7 @@
         }
 
         function confirmResetProgress() {
+            playSound('click');
             userProgress = {};
             localStorage.removeItem('landivar_study_progress_v3');
             updateOverallProgress();
@@ -807,6 +819,7 @@
 
         /* MODAL DE ÁNIMO (🎓) */
         function showTipModal() {
+        playSound('correct');
             const randomNote = loveNotesList[Math.floor(Math.random() * loveNotesList.length)];
             document.getElementById('tip-text').innerText = `"${randomNote}"`;
             
@@ -816,6 +829,7 @@
         }
 
         function closeTipModal() {
+            playSound('click');
             const modal = document.getElementById('tip-modal');
             modal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-out";
             setTimeout(() => {
@@ -856,6 +870,87 @@ function hideFontSlider() {
     if (container) {
         container.classList.remove('opacity-100');
         container.classList.add('opacity-0', 'pointer-events-none');
+    }
+}
+
+// --- SINTETIZADOR DE EFECTOS DE SONIDO ---
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+function playSound(type) {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+
+    const now = audioCtx.currentTime;
+
+    if (type === 'click') {
+        // Pop suave pero con MÁS VOLUMEN para que resalte al tocar cualquier cosa
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(600, now);
+        osc.frequency.exponentialRampToValueAtTime(850, now + 0.04);
+
+        gain.gain.setValueAtTime(0.14, now); // 👈 Subido solo este a 0.14
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+
+        osc.start(now);
+        osc.stop(now + 0.04);
+
+    } else if (type === 'correct') {
+        // Acorde dulce y brillante
+        [523.25, 659.25, 783.99].forEach((freq, i) => { // Do - Mi - Sol
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now + (i * 0.04));
+
+            gain.gain.setValueAtTime(0.06, now + (i * 0.04));
+            gain.gain.exponentialRampToValueAtTime(0.001, now + (i * 0.04) + 0.2);
+
+            osc.start(now + (i * 0.04));
+            osc.stop(now + (i * 0.04) + 0.2);
+        });
+
+    } else if (type === 'wrong') {
+        // Tono suave de "¡Ups!"
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(320, now);
+        osc.frequency.exponentialRampToValueAtTime(240, now + 0.15);
+
+        gain.gain.setValueAtTime(0.05, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+
+        osc.start(now);
+        osc.stop(now + 0.15);
+
+    } else if (type === 'complete') {
+        // Fanfarria / Arpegio mágico
+        const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51]; // Do-Mi-Sol-Do-Mi
+        notes.forEach((freq, idx) => {
+            const noteOsc = audioCtx.createOscillator();
+            const noteGain = audioCtx.createGain();
+            noteOsc.connect(noteGain);
+            noteGain.connect(audioCtx.destination);
+
+            noteOsc.type = 'sine';
+            noteOsc.frequency.setValueAtTime(freq, now + (idx * 0.06));
+
+            noteGain.gain.setValueAtTime(0.08, now + (idx * 0.06));
+            noteGain.gain.exponentialRampToValueAtTime(0.001, now + (idx * 0.06) + 0.35);
+
+            noteOsc.start(now + (idx * 0.06));
+            noteOsc.stop(now + (idx * 0.06) + 0.35);
+        });
     }
 }
     </script>
