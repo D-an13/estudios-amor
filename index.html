@@ -2,7 +2,7 @@
 <html lang="es" class="h-full bg-slate-100">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=390, initial-scale=1.0">
     <title>Guía de Estudio</title>
     
     <!-- FAVICON (Ícono de la pestaña) -->
@@ -84,28 +84,18 @@
   display: none; /* Chrome, Safari, Edge, Opera */
 }
 
-/* Mejora de lectura para lecciones en móvil */
-#view-topics, 
-#topics-list-container,
-.lesson-content {
-    font-size: 0.95rem; /* ~15px en vez de 12px */
-    line-height: 1.6;   /* Da respiro entre líneas */
-    color: #334155;     /* slate-700 para contraste suave */
+/* HACK GLOBAL DE LECTURA */
+#main-view {
+    font-size: 115% !important; /* Le sube el tamaño a TODO de un solo golpe */
 }
 
-/* Títulos y subtítulos dentro de lecciones */
-#topics-list-container h3, 
-.lesson-content h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-/* Párrafos e ítems de lista */
-#topics-list-container p, 
-#topics-list-container li {
-    font-size: 0.925rem;
-    margin-bottom: 0.75rem;
+/* Le da un poco más de grosor a las letras para que resalten en el cel */
+#main-view p, 
+#main-view span, 
+#main-view li, 
+#main-view div {
+    line-height: 1.6 !important; /* Espaciado cómodo entre líneas */
+    -webkit-font-smoothing: antialiased;
 }
     </style>
 </head>
