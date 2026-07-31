@@ -215,92 +215,95 @@ body {
 <body class="h-full flex flex-col justify-between max-w-md mx-auto bg-slate-100 text-slate-800 shadow-2xl relative overflow-x-hidden">
 
 <!-- HEADER COMPACTO Y LIMPIO -->
-<header class="bg-theme text-white pt-3 pb-3 px-4 shadow-md relative z-20">
-    <div class="flex justify-between items-center mb-2">
+<header class="bg-theme text-white pt-3 pb-3 px-4 shadow-md relative z-20 transition-all duration-300">
+    
+    <!-- FILA 1: Títulos grandes a la izquierda | Botones de Pintura y Reset a la derecha -->
+    <div class="flex justify-between items-center mb-2.5">
         <!-- Lado Izquierdo: Corazón y Título Fijo -->
-        <div class="flex items-center space-x-2.5">
-            <button onclick="showTipModal()" class="w-8 h-8 rounded-xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner relative overflow-visible shrink-0" title="Palabritas de Ánimo">
+        <div class="flex items-center space-x-3 min-w-0 pr-2">
+            <button onclick="showTipModal()" class="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner relative overflow-visible shrink-0" title="Palabritas de Ánimo">
                 <div class="relative w-5 h-5 flex items-center justify-center">
-                    <i class="fa-solid fa-heart text-rose-500 text-base drop-shadow-sm"></i>
-                    <i class="fa-solid fa-sparkles text-amber-300 text-[8px] absolute -top-1 -right-1 drop-shadow"></i>
+                    <i class="fa-solid fa-heart text-rose-500 text-lg drop-shadow-sm"></i>
+                    <i class="fa-solid fa-sparkles text-amber-300 text-[9px] absolute -top-1 -right-1 drop-shadow"></i>
                 </div>
             </button>
-            <div>
-                <h1 class="text-[8px] uppercase tracking-wider text-amber-300 font-bold leading-none">Guía de Estudio URL</h1>
-                <p class="text-sm font-extrabold text-white leading-tight mt-0.5">Espacio de Katy</p>
+            <div class="truncate">
+                <h1 class="text-[9px] uppercase tracking-wider text-amber-300 font-bold leading-none">Guía de Estudio URL</h1>
+                <p class="text-base font-extrabold text-white leading-tight mt-0.5 truncate">Espacio de Katy</p>
             </div>
         </div>
 
-        <!-- Lado Derecho: Controles (Barra de tamaño + Botones) -->
-        <div class="flex items-center space-x-2">
-            <!-- BARRITA DE TAMAÑO -->
-            <div id="font-slider-container" class="flex items-center bg-white/10 rounded-full px-3 py-1 border border-white/10 space-x-2 opacity-0 pointer-events-none transition-all duration-300 shrink-0">
-                <span class="text-[9px] text-white/70 font-bold select-none">A</span>
-                <input 
-                    type="range" 
-                    id="font-slider" 
-                    min="1.0" 
-                    max="1.35" 
-                    step="0.01" 
-                    value="1.25" 
-                    oninput="updateFontSize(this.value)"
-                    class="w-20 h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-amber-300"
+        <!-- Lado Derecho: Botones Pintura y Reiniciar (Más grandes para no fallar el toque) -->
+        <div class="flex items-center gap-2 shrink-0">
+            <!-- 1. Bote de Pintura -->
+            <div class="relative">
+                <button 
+                    id="theme-menu-btn" 
+                    onclick="toggleThemeMenu()"
+                    class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95 shadow-sm focus:outline-none border border-white/10"
+                    title="Cambiar Tema"
                 >
-                <span class="text-xs text-amber-300 font-bold select-none">A</span>
-            </div>
+                    <i class="fa-solid fa-paint-roller text-xs"></i>
+                </button>
 
-            <!-- BOTONES PINTURA Y REINICIAR -->
-            <div class="flex items-center gap-1.5 shrink-0">
-                <!-- 1. Bote de Pintura -->
-                <div class="relative">
-                    <button 
-                        id="theme-menu-btn" 
-                        onclick="toggleThemeMenu()"
-                        class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95 shadow-sm focus:outline-none"
-                        title="Cambiar Tema"
-                    >
-                        <i class="fa-solid fa-paint-roller text-[10px]"></i>
-                    </button>
-
-                    <!-- Popover desplegable Dark Glass -->
+               <!-- Popover desplegable Dark Glass (Más amplio y cómodo) -->
 <div 
     id="theme-popover" 
-    class="hidden absolute right-0 top-9 w-48 bg-slate-900/95 backdrop-blur-md rounded-2xl shadow-2xl p-2.5 border border-white/20 z-50 transition-all duration-200"
+    class="hidden absolute right-0 top-10 w-60 bg-slate-900/95 backdrop-blur-md rounded-2xl shadow-2xl p-3 border border-white/20 z-50 transition-all duration-200"
 >
-    <div class="text-[8px] font-extrabold text-amber-300 uppercase tracking-wider mb-2 text-center drop-shadow-sm">
+    <div class="text-[9px] font-extrabold text-amber-300 uppercase tracking-wider mb-2.5 text-center drop-shadow-sm">
         Color de Tema
     </div>
-    <div class="grid grid-cols-5 gap-2 justify-items-center">
+    
+    <div class="grid grid-cols-5 gap-2.5 justify-items-center">
         <!-- Fila 1: Gamas Cálidas Profundas -->
-        <button onclick="setTheme('guinda')" class="w-5 h-5 rounded-full bg-[#801B40] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Guinda"></button>
-        <button onclick="setTheme('vino')" class="w-5 h-5 rounded-full bg-[#4A0E17] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Vino Tinto"></button>
-        <button onclick="setTheme('mora')" class="w-5 h-5 rounded-full bg-[#831843] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Rosa Mora"></button>
-        <button onclick="setTheme('terracota')" class="w-5 h-5 rounded-full bg-[#9A3412] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Terracota"></button>
-        <button onclick="setTheme('bronce')" class="w-5 h-5 rounded-full bg-[#854D0E] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Bronce"></button>
+        <button onclick="setTheme('guinda')" class="w-7 h-7 rounded-full bg-[#801B40] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Guinda"></button>
+        <button onclick="setTheme('vino')" class="w-7 h-7 rounded-full bg-[#4A0E17] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Vino Tinto"></button>
+        <button onclick="setTheme('mora')" class="w-7 h-7 rounded-full bg-[#831843] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Rosa Mora"></button>
+        <button onclick="setTheme('terracota')" class="w-7 h-7 rounded-full bg-[#9A3412] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Terracota"></button>
+        <button onclick="setTheme('bronce')" class="w-7 h-7 rounded-full bg-[#854D0E] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Bronce"></button>
 
         <!-- Fila 2: Gamas Frías Profundas -->
-        <button onclick="setTheme('morado')" class="w-5 h-5 rounded-full bg-[#581C87] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Morado Berenjena"></button>
-        <button onclick="setTheme('marino')" class="w-5 h-5 rounded-full bg-[#0C4A6E] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Azul Marino"></button>
-        <button onclick="setTheme('petroleo')" class="w-5 h-5 rounded-full bg-[#164E63] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Petróleo"></button>
-        <button onclick="setTheme('bosque')" class="w-5 h-5 rounded-full bg-[#064E3B] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Verde Bosque"></button>
-        <button onclick="setTheme('dark')" class="w-5 h-5 rounded-full bg-[#0F172A] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Grafito Oscuro"></button>
+        <button onclick="setTheme('morado')" class="w-7 h-7 rounded-full bg-[#581C87] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-2 ring-white/30 hover:ring-white" title="Morado Berenjena"></button>
+        <button onclick="setTheme('marino')" class="w-7 h-7 rounded-full bg-[#0C4A6E] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Azul Marino"></button>
+        <button onclick="setTheme('petroleo')" class="w-7 h-7 rounded-full bg-[#164E63] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Petróleo"></button>
+        <button onclick="setTheme('bosque')" class="w-7 h-7 rounded-full bg-[#064E3B] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Verde Bosque"></button>
+        <button onclick="setTheme('dark')" class="w-7 h-7 rounded-full bg-[#0F172A] hover:scale-110 active:scale-95 transition-all shadow-md ring-2 ring-white/30 hover:ring-white" title="Grafito Oscuro"></button>
     </div>
 </div>
-                </div>
-
-                <!-- 2. Botón de Reiniciar -->
-                <button 
-                    onclick="openResetModal()" 
-                    class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white/80 flex items-center justify-center transition-all duration-200 active:scale-95 shadow-sm focus:outline-none"
-                    title="Reiniciar progreso"
-                >
-                    <i class="fa-solid fa-rotate-right text-[10px]"></i>
-                </button>
             </div>
+
+            <!-- 2. Botón de Reiniciar -->
+            <button 
+                onclick="openResetModal()" 
+                class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white/80 flex items-center justify-center transition-all duration-200 active:scale-95 shadow-sm focus:outline-none border border-white/10"
+                title="Reiniciar progreso"
+            >
+                <i class="fa-solid fa-rotate-right text-xs"></i>
+            </button>
         </div>
     </div>
 
-    <!-- Barra de progreso general (AFUERA de los controles) -->
+    <!-- FILA 2: BARRITA DE TAMAÑO DE LETRA (Pasa abajo para darle aire a los títulos) -->
+    <div id="font-slider-container" class="flex items-center justify-between bg-black/15 rounded-xl px-3 py-1.5 border border-white/10 opacity-0 pointer-events-none transition-all duration-300 mb-2">
+        <span class="text-[10px] text-white/80 font-semibold select-none">Tamaño de letra:</span>
+        <div class="flex items-center space-x-2 grow justify-end max-w-[180px]">
+            <span class="text-[9px] text-white/70 font-bold select-none">A</span>
+            <input 
+                type="range" 
+                id="font-slider" 
+                min="1.0" 
+                max="1.35" 
+                step="0.01" 
+                value="1.25" 
+                oninput="updateFontSize(this.value)"
+                class="w-full h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-amber-300"
+            >
+            <span class="text-xs text-amber-300 font-bold select-none">A</span>
+        </div>
+    </div>
+
+    <!-- Barra de progreso general -->
     <div class="bg-white/10 px-3 py-1.5 rounded-xl border border-white/10 backdrop-blur-md">
         <div class="flex justify-between items-center mb-0.5 text-[10px] font-semibold">
             <span class="text-white/80">Tu Progreso General</span>
