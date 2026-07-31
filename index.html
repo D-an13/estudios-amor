@@ -84,19 +84,45 @@
   display: none; /* Chrome, Safari, Edge, Opera */
 }
 
-/* HACK GLOBAL DE LECTURA */
-#main-view {
-    font-size: 115% !important; /* Le sube el tamaño a TODO de un solo golpe */
-}
+:root {
+        /* Factor de escala inicial (1.20 = 20% más grande por defecto) */
+        --font-scale: 1.20; 
+    }
 
-/* Le da un poco más de grosor a las letras para que resalten en el cel */
-#main-view p, 
-#main-view span, 
-#main-view li, 
-#main-view div {
-    line-height: 1.6 !important; /* Espaciado cómodo entre líneas */
-    -webkit-font-smoothing: antialiased;
-}
+    body { 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        -webkit-tap-highlight-color: transparent; 
+        user-select: none; 
+    }
+
+    /* FORZAR A TAILWIND A ESCALAR EL TEXTO EN LAS LECCIONES Y PREGUNTAS */
+    #main-view .text-xs,
+    #main-view p,
+    #main-view li,
+    #main-view span:not(#font-scale-indicator) {
+        font-size: calc(0.875rem * var(--font-scale)) !important; /* Base más grande (~16.8px) */
+        line-height: 1.6 !important;
+    }
+
+    #main-view .text-sm,
+    #main-view h3 {
+        font-size: calc(1rem * var(--font-scale)) !important;
+    }
+
+    #main-view .text-base,
+    #main-view .text-lg,
+    #main-view h2 {
+        font-size: calc(1.2rem * var(--font-scale)) !important;
+    }
+
+    /* Ocultar barras de scroll */
+    * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    *::-webkit-scrollbar {
+        display: none;
+    }
     </style>
 </head>
 <body class="h-full flex flex-col justify-between max-w-md mx-auto bg-slate-100 text-slate-800 shadow-2xl relative overflow-x-hidden">
