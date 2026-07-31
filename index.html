@@ -87,87 +87,108 @@
         --font-scale: 1.25; /* Valor por defecto */
     }
 
-    /* ESCALADO DINÁMICO DE FUENTE */
-    #main-view .text-xs,
-    #main-view p,
-    #main-view li,
-    #main-view span:not(#streak-badge) {
+    body { 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        -webkit-tap-highlight-color: transparent; 
+        user-select: none; 
+    }
+
+    /* ESCALADO COMPLETO DE CONTENIDO (Tarjetas, lecciones, párrafos, listas, etc.) */
+    #dashboard-view p,
+    #dashboard-view span:not(#streak-badge):not(#overall-percentage),
+    #dashboard-view h3,
+    #view-topics .lesson-card p,
+    #view-topics .lesson-card h3,
+    #view-topics .lesson-card span,
+    #view-lesson p,
+    #view-lesson li,
+    #view-lesson span:not(#lesson-status-badge):not(#quiz-step-indicator),
+    #view-lesson div,
+    #view-lesson h3 {
         font-size: calc(0.875rem * var(--font-scale)) !important;
-        line-height: 1.6 !important;
+        line-height: 1.5 !important;
     }
 
-    #main-view .text-sm,
-    #main-view h3 {
-        font-size: calc(1rem * var(--font-scale)) !important;
+    /* Títulos dentro de la lección */
+    #view-lesson h2#lesson-title {
+        font-size: calc(1.15rem * var(--font-scale)) !important;
     }
 
-    #main-view .text-base,
-    #main-view .text-lg,
-    #main-view h2 {
-        font-size: calc(1.2rem * var(--font-scale)) !important;
+    /* PROTECCIÓN DE ESTRUCTURA Y NAVEGACIÓN (Elementos que NO deben moverse) */
+    #topics-title {
+        font-size: 0.75rem !important; /* Mantiene la materia pegada a la derecha y fina */
+    }
+
+    /* Ocultar scrollbars */
+    * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    *::-webkit-scrollbar {
+        display: none;
     }
     </style>
 </head>
 <body class="h-full flex flex-col justify-between max-w-md mx-auto bg-slate-100 text-slate-800 shadow-2xl relative overflow-x-hidden">
 
    <!-- HEADER -->
-    <header class="bg-landivar-blue text-white pt-10 pb-6 px-5 shadow-md relative z-20">
-        <div class="flex justify-between items-center mb-3">
-            <!-- Lado Izquierdo: Corazón y Título -->
-            <div class="flex items-center space-x-3">
-                <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner relative overflow-visible" title="Palabritas de Ánimo">
-                    <div class="relative w-6 h-6 flex items-center justify-center">
-                        <i class="fa-solid fa-heart text-rose-500 text-xl drop-shadow-sm"></i>
-                        <i class="fa-solid fa-sparkles text-amber-300 text-[10px] absolute -top-1 -right-1 drop-shadow"></i>
-                    </div>
-                </button>
-                <div>
-                    <h1 class="text-xs uppercase tracking-wider text-amber-300 font-semibold">Guía de Estudio URL</h1>
-                    <p class="text-lg font-extrabold text-white leading-tight">Espacio de Katy</p>
+<header class="bg-landivar-blue text-white pt-8 pb-5 px-5 shadow-md relative z-20">
+    <div class="flex justify-between items-center mb-3">
+        <!-- Lado Izquierdo: Corazón y Título Fijo -->
+        <div class="flex items-center space-x-3">
+            <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner relative overflow-visible" title="Palabritas de Ánimo">
+                <div class="relative w-6 h-6 flex items-center justify-center">
+                    <i class="fa-solid fa-heart text-rose-500 text-xl drop-shadow-sm"></i>
+                    <i class="fa-solid fa-sparkles text-amber-300 text-[10px] absolute -top-1 -right-1 drop-shadow"></i>
                 </div>
-            </div>
-            
-            <!-- Lado Derecho: Barrita de Fuente + Botón Reiniciar -->
-            <div class="flex items-center space-x-2">
-                <!-- BARRITA NUEVA DE TAMAÑO DE LETRA -->
-                <div class="flex items-center bg-white/10 rounded-full px-2.5 py-1 border border-white/10 space-x-1.5">
-    <i class="fa-solid fa-font text-[9px] text-white/60"></i>
-    <input 
-        type="range" 
-        id="font-slider" 
-        min="1.0" 
-        max="1.40" 
-        step="0.01" 
-        value="1.25" 
-        oninput="updateFontSize(this.value)"
-        class="w-14 h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-amber-300"
-    >
-    <i class="fa-solid fa-font text-xs text-amber-300 font-bold"></i>
-</div>
-
-                <!-- Botón Reiniciar (Tu botón original) -->
-                <button onclick="openResetModal()" title="Reiniciar progreso" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-xs text-white/80 transition active:scale-95">
-                    <i class="fa-solid fa-rotate-right"></i>
-                </button>
+            </button>
+            <div>
+                <h1 class="text-[10px] uppercase tracking-wider text-amber-300 font-bold leading-none">Guía de Estudio URL</h1>
+                <p class="text-base font-extrabold text-white leading-tight mt-0.5">Espacio de Katy</p>
             </div>
         </div>
+        
+        <!-- Lado Derecho: Controles -->
+        <div class="flex items-center space-x-2">
+            <!-- BARRITA DE TAMAÑO -->
+            <div class="flex items-center bg-white/10 rounded-full px-2.5 py-1 border border-white/10 space-x-1.5">
+                <span class="text-[9px] text-white/70 font-bold">A</span>
+                <input 
+                    type="range" 
+                    id="font-slider" 
+                    min="1.0" 
+                    max="1.35" 
+                    step="0.01" 
+                    value="1.25" 
+                    oninput="updateFontSize(this.value)"
+                    class="w-12 h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-amber-300"
+                >
+                <span class="text-xs text-amber-300 font-bold">A</span>
+            </div>
 
-        <div class="bg-white/10 p-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
-            <div class="flex justify-between items-center mb-1.5 text-xs font-semibold">
-                <span class="text-white/80">Tu Progreso General</span>
-                <span id="overall-percentage" class="text-amber-300 font-bold">0%</span>
-            </div>
-            
-            <div class="w-full h-3 bg-slate-900/40 rounded-full overflow-hidden p-0.5 border border-white/15">
-                <div id="overall-progress-bar" class="h-full bg-gradient-to-r from-emerald-300 via-amber-200 to-rose-300 rounded-full transition-all duration-500 shadow-sm" style="width: 0%"></div>
-            </div>
-            
-            <div class="flex justify-between items-center mt-2 text-[10px] text-slate-300 font-medium">
-                <span id="completed-count">0 de 0 lecciones</span>
-                <span id="streak-badge" class="bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-md border border-amber-400/30 font-semibold">🔥 ¡A darle con todo mi amor!</span>
-            </div>
+            <button onclick="openResetModal()" title="Reiniciar progreso" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-xs text-white/80 transition active:scale-95 shrink-0">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
         </div>
-    </header>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="bg-white/10 p-3 rounded-2xl border border-white/10 backdrop-blur-md">
+        <div class="flex justify-between items-center mb-1 text-xs font-semibold">
+            <span class="text-white/80">Tu Progreso General</span>
+            <span id="overall-percentage" class="text-amber-300 font-bold">0%</span>
+        </div>
+        
+        <div class="w-full h-2.5 bg-slate-900/40 rounded-full overflow-hidden p-0.5 border border-white/15">
+            <div id="overall-progress-bar" class="h-full bg-gradient-to-r from-emerald-300 via-amber-200 to-rose-300 rounded-full transition-all duration-500 shadow-sm" style="width: 0%"></div>
+        </div>
+        
+        <div class="flex justify-between items-center mt-1.5 text-[10px] text-slate-300 font-medium">
+            <span id="completed-count">0 de 0 lecciones</span>
+            <span id="streak-badge" class="bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-md border border-amber-400/30 font-semibold">🔥 ¡A darle con todo mi amor!</span>
+        </div>
+    </div>
+</header>
 
     <!-- MAIN CONTAINER -->
     <main id="main-view" class="flex-1 overflow-y-auto custom-scroll bg-slate-100 p-4 pb-20 relative z-10">
@@ -228,16 +249,21 @@
             </div>
         </div>
 
-        <!-- TOPICS LIST -->
-        <div id="view-topics" class="hidden space-y-3">
-            <div class="flex items-center justify-between mb-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-200">
-                <button onclick="showDashboard()" class="flex items-center space-x-1.5 text-xs font-bold text-slate-600 hover:text-landivar-blue transition px-2 py-1 rounded-lg bg-slate-100 active:scale-95">
-                    <i class="fa-solid fa-arrow-left"></i><span>Volver</span>
-                </button>
-                <h2 id="topics-title" class="text-sm font-extrabold text-landivar-blue uppercase tracking-wider">Materia</h2>
-            </div>
-            <div id="topics-list-container" class="space-y-2.5"></div>
-        </div>
+       <!-- TOPICS LIST -->
+<div id="view-topics" class="hidden space-y-3">
+    <!-- Encabezado con título alineado a la derecha -->
+    <div class="flex items-center justify-between mb-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 gap-2">
+        <button onclick="showDashboard()" class="flex items-center space-x-1.5 text-xs font-bold text-slate-600 hover:text-landivar-blue transition px-3 py-1.5 rounded-xl bg-slate-100 active:scale-95 shrink-0">
+            <i class="fa-solid fa-arrow-left"></i><span>Volver</span>
+        </button>
+        
+        <!-- Titulo alineado a la derecha con auto-ajuste de tamaño -->
+        <h2 id="topics-title" class="text-xs font-extrabold text-landivar-blue uppercase tracking-wider text-right flex-1 truncate">
+            Materia
+        </h2>
+    </div>
+    <div id="topics-list-container" class="space-y-2.5"></div>
+</div>
 
         <!-- LESSON DETAIL -->
         <div id="view-lesson" class="hidden">
