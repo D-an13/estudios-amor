@@ -336,266 +336,272 @@ const studyData = {
     lenguaje: {
     title: "Lenguaje y Literatura",
     topics: [
-        {
+       {
             id: "3.9.1.1",
             title: "Lenguaje: funciones, tipos y niveles",
-            intro: "El lenguaje es el código y conjunto de señales con el que expresamos nuestros pensamientos. Sin embargo, no siempre nos comunicamos con el mismo objetivo: a veces informamos, a veces ordenamos, a veces expresamos sentimientos o simplemente probamos si el micrófono funciona.<br><br><b>1. Las 6 Funciones del Lenguaje (Según la intención del emisor):</b><br><br>• <b>Función Emotiva o Expresiva:</b> Centrada en el <i>emisor</i>. Su objetivo es manifestar estados de ánimo, sentimientos, deseos, dolor o emociones subjetivas. Usualmente utiliza signos de admiración o interjecciones.<br><i>Ejemplo:</i> '¡Amo este día de lluvia!', '¡Ojalá me vaya bien en la prueba!', '¡Qué dolor de cabeza!'.<br><br>• <b>Función Apelativa o Conativa:</b> Centrada en el <i>receptor</i>. El emisor busca influir, convencer, dar una orden, pedir un favor o generar una respuesta/acción directa en la otra persona.<br><i>Ejemplo:</i> 'Cierra la puerta al salir', 'Por favor, estudia más', '¿Me prestas tu borrador?'.<br><br>• <b>Función Referencial, Representativa u Objetiva:</b> Centrada en el <i>contexto / realidad</i>. Se limita a transmitir datos neutros, hechos reales o conocimientos de forma transparente, sin que el emisor meta sus opiniones personales.<br><i>Ejemplo:</i> 'La Luna gira alrededor de la Tierra', 'La prueba consta de 50 preguntas', 'Mañana es viernes'.<br><br>• <b>Función Metalingüística:</b> Centrada en el <i>código (el propio idioma)</i>. Ocurre cuando usamos el lenguaje para hablar sobre las reglas, significados o gramática del mismo lenguaje.<br><i>Ejemplo:</i> 'Las palabras agudas llevan tilde en la última sílaba si terminan en N, S o vocal', 'El antónimo de efímero es duradero'.<br><br>• <b>Función Fática o de Contacto:</b> Centrada en el <i>canal físico de comunicación</i>. Sirve para iniciar, mantener, prolongar o verificar si el canal de comunicación está abierto y funcionando correctamente.<br><i>Ejemplo:</i> '¿Hola, me escuchas?', 'Aló, aló', '1, 2, 3 probando micro', 'Entendido, cambio y fuera'.<br><br>• <b>Función Poética o Estética:</b> Centrada en la <i>forma del mensaje</i>. Busca llamar la atención sobre la belleza, el ritmo o la forma en que se dicen las cosas mediante recursos literarios como metáforas, rimas o comparaciones.<br><i>Ejemplo:</i> 'Caminante no hay camino, se hace camino al andar', 'Tus ojos son dos luceros que iluminan mi sendero'.<br><br><b>2. Niveles de la Lengua (Según el contexto socio-cultural):</b><br>• <b>Nivel Culto:</b> Lenguaje formal, apegado estrictamente a las normas de la RAE, utilizado por académicos o conferencias.<br>• <b>Nivel Coloquial:</b> Lenguaje cotidiano, fluido y espontáneo que usamos con amigos y familiares.<br>• <b>Nivel Profesional/Técnico:</b> Lenguaje especializado cargado de 'tecnicismos' de una rama (medicina, programación, derecho).<br>• <b>Nivel Vulgar:</b> Presenta deficiencias léxicas, deformación de palabras y falta de vocabulario formal.",
+            intro: "El lenguaje es el código y conjunto de señales con el que expresamos nuestros pensamientos. Sin embargo, no siempre nos comunicamos con el mismo objetivo: a veces informamos, a veces ordenamos, a veces expresamos sentimientos o probamos si el micrófono funciona.<br><br><b>1. Distinción entre las 6 Funciones del Lenguaje (Según la intención):</b><br><br>• <b>Función Emotiva o Expresiva:</b> Centrada en el <i>emisor</i>. Manifiesta estados de ánimo, sentimientos, deseos o dolor subjetivo.<br><i>Ejemplo:</i> '¡Amo este día de lluvia!', '¡Ojalá me vaya bien en la prueba!'.<br><br>• <b>Función Conativa u Apelativa:</b> Centrada en el <i>receptor</i>. Busca influir, convencer, dar una orden o generar una acción directa en el oyente.<br><i>Ejemplo:</i> 'Cierra la puerta al salir', 'Por favor, estudia más'.<br><br>• <b>Función Referencial o Representativa:</b> Centrada en el <i>contexto / realidad</i>. Transmite datos neutros, hechos reales o conocimientos de forma objetiva, sin opiniones.<br><i>Ejemplo:</i> 'La Luna gira alrededor de la Tierra', 'La prueba consta de 50 preguntas'.<br><br>• <b>Función Metalingüística:</b> Centrada en el <i>código (el propio idioma)</i>. Se usa para hablar sobre la gramática, reglas u ortografía de la misma lengua.<br><i>Ejemplo:</i> 'Las palabras agudas llevan tilde en la última sílaba si terminan en N, S o vocal'.<br><br>• <b>Función Fática o de Contacto:</b> Centrada en el <i>canal físico</i>. Inicia, prolonga o interrumpe la comunicación para verificar que el canal funcione.<br><i>Ejemplo:</i> '¿Hola, me escuchas?', '1, 2, 3 probando micro'.<br><br>• <b>Función Poética o Estética:</b> Centrada en la <i>forma del mensaje</i>. Busca embellecer el texto con recursos literarios, metáforas y rimas.<br><i>Ejemplo:</i> 'Caminante no hay camino, se hace camino al andar'.<br><br><b>2. Diferenciación de Tipos y Niveles de la Lengua:</b><br>• <b>Nivel Culto:</b> Lenguaje altamente formal, apegado estrictamente a la RAE y usado por académicos.<br>• <b>Nivel Coloquial:</b> Lenguaje cotidiano, espontáneo y natural usado entre amigos y familiares.<br>• <b>Nivel Vulgar:</b> Presenta deficiencias léxicas, faltas ortográficas graves y deformación de palabras.<br>• <b>Nivel Profesional / Técnico:</b> Emplea vocabulario especializado (tecnicismos) propio de una profesión (medicina, ingeniería, derecho).<br>• <b>Nivel Literario:</b> Nivel artístico caracterizado por la búsqueda de belleza y uso constante de figuras retóricas.<br>• <b>Jerga:</b> Vocabulario particular y modismos compartidos por un grupo social o gremio específico (ej. jerga juvenil o laboral).",
             keypoints: [
-                "Función Apelativa/Conativa: Su finalidad es modificar el comportamiento del oyente mediante órdenes, peticiones o persuasión.",
-                "Función Referencial: Información pura y objetiva sobre la realidad sin tintes emocionales.",
-                "Función Metalingüística: Es cuando el lenguaje analiza o define a su propio código gramatical.",
-                "El truco para el examen: Si la oración busca que el oyente 'haga algo o responda', la respuesta es APELATIVA. Si busca 'enseñar una regla ortográfica o de vocabulario', es METALINGÜÍSTICA."
+                "Función Apelativa/Conativa: Modifica el comportamiento del oyente mediante órdenes o persuasión.",
+                "Función Referencial: Información objetiva de la realidad sin emociones.",
+                "Función Metalingüística: El lenguaje analiza su propio código gramatical.",
+                "Jerga y Nivel Profesional: Uso de modismos de grupo (jerga) o vocabulario técnico especializado (profesional).",
+                "El truco para el examen: Si la oración busca que el oyente haga algo = APELATIVA. Si enseña una regla gramatical = METALINGÜÍSTICA."
             ],
             quiz: {
-                question: "¿Qué función del lenguaje predomina en un diccionario al definir la palabra 'Axiología'?",
+                question: "¿Qué función del lenguaje predomina en la frase: 'Las palabras esdrújulas siempre se tildan sin excepción'?",
                 options: [
                     { text: "Metalingüística", correct: true },
                     { text: "Referencial", correct: false },
                     { text: "Poética", correct: false }
                 ],
-                explanation: "Es metalingüística porque se utiliza el mismo idioma español para explicar el significado y naturaleza de una palabra del propio código."
+                explanation: "Es metalingüística porque se utiliza el propio idioma para explicar una regla gramatical y ortográfica del código español."
             }
         },
         {
             id: "3.9.1.2",
             title: "Nivel morfosintáctico",
-            intro: "Para expresarnos con claridad no basta con conocer palabras; debemos saber cómo armarlas internamente y cómo conectarlas ordenadamente dentro de una oración. El nivel morfosintáctico es la fusión de dos pilares esenciales:<br><br><b>1. Morfología (La estructura interna de la palabra):</b><br>Estudia cómo se componen las palabras. Una palabra no es una masa indivisible; suele tener una <i>Raíz o Lexema</i> (que porta el significado principal) y <i>Morfemas</i> (prefijos o sufijos) que indican género, número o tiempo verbal.<br><i>Ejemplo:</i> En 'Niños', 'Niñ-' es la raíz, '-o-' indica género masculino y '-s' indica número plural.<br><br><b>2. Sintaxis (La función de las palabras en la oración):</b><br>Estudia el orden y la relación jerárquica de las palabras dentro del enunciado.<br><br><b>Estructura Esencial de la Oración Bimembre:</b><br>• <b>Sujeto:</b> Es la persona, animal o cosa de quien se afirma o se dice algo en la oración. Su corazón o núcleo siempre es un <b>sustantivo</b> o un <b>pronombre</b>.<br>• <b>Predicado:</b> Es todo lo que se dice del sujeto, incluyendo las acciones que realiza. Su corazón o núcleo siempre es un <b>verbo conjugado</b>.<br><br><b>La Regla de Oro: La Concordancia Gramatical:</b><br>Existe una ley en español que establece que el Núcleo del Sujeto y el Núcleo del Predicado deben coincidir <b>obligatoriamente en Número (singular/plural) y Persona (1ra, 2da o 3ra)</b>.<br><br>• <i>Error común de concordancia:</i> 'El grupo de estudiantes <b>aprobaron</b> el examen.' → <b>Incorrecto.</b> El núcleo del sujeto es 'grupo' (singular), no 'estudiantes'. Por lo tanto, el verbo debe estar en singular ('aprobó').<br>• <i>Forma correcta:</i> 'El grupo de estudiantes <b>aprobó</b> el examen.'",
+            intro: "Para expresarnos con claridad debemos conocer la forma interna de las palabras y cómo combinarlas dentro de una oración. El nivel morfosintáctico une dos pilares:<br><br><b>1. Morfología:</b> Estudia la estructura interna de la palabra (raíz o lexema + prefijos/sufijos que indican género, número o tiempo).<br><br><b>2. Sintaxis (Identificación de la estructura sintáctica de la oración):</b><br>Estudia el orden, la función y las relaciones jerárquicas dentro del enunciado bimembre:<br><br>• <b>Sujeto:</b> Persona, animal o cosa de quien se habla. Su núcleo siempre es un <b>sustantivo</b> o <b>pronombre</b>.<br>• <b>Predicado:</b> Todo lo que se dice del sujeto. Su núcleo siempre es un <b>verbo conjugado</b>.<br><br><b>Los Complementos del Predicado:</b><br>• <b>Objeto Directo (OD):</b> Recibe directamente la acción del verbo (Pregunta: <i>¿Qué + verbo?</i>).<br>• <b>Objeto Indirecto (OI):</b> Quien se beneficia o perjudica por la acción (Pregunta: <i>¿A quién / Para quién?</i>).<br>• <b>Complemento Circunstancial (CC):</b> Expresa las circunstancias de tiempo, lugar, modo o causa (Pregunta: <i>¿Dónde?, ¿Cuándo?, ¿Cómo?</i>).<br><br><b>Concordancia Gramatical:</b> El núcleo del sujeto y el del predicado deben coincidir obligatoriamente en <b>Número y Persona</b>.<br>• <i>Error común:</i> 'La lista de compras <b>están</b> listas.' (Incorrecto. El núcleo es 'lista', en singular).<br>• <i>Forma correcta:</i> 'La lista de compras <b>está</b> lista.'",
             keypoints: [
-                "Morfología: Estudio de la forma interna de las palabras (raíces, géneros, plurales, prefijos).",
-                "Sintaxis: Estudio del orden y las funciones que cumplen las palabras dentro de la oración.",
-                "Sujeto Colectivo: Palabras como 'enjambre', 'equipo', 'familia' o 'público' son singulares y exigen que el verbo esté en SINGULAR.",
-                "El truco para el examen: Para ubicar la concordancia, localiza el verbo conjugado, pregúntale '¿Quién?' y asegúrate de que el sustantivo principal (el núcleo) concuerde en singular o plural con ese verbo."
+                "Morfología: Formación interna de palabras (raíces, géneros, plurales).",
+                "Sintaxis: Función de las palabras dentro de la oración (Sujeto, Predicado, Complementos).",
+                "Objetos del Predicado: OD (¿qué?), OI (¿a quién?), CC (tiempo/lugar/modo).",
+                "Concordancia: El sujeto colectivo en singular exige verbo en singular ('El grupo aprobó').",
+                "El truco para el examen: Identifica primero el verbo conjugado, pregúntale '¿Quién hace la acción?' y verifica que coincidan en singular/plural."
             ],
             quiz: {
-                question: "¿Cuál de las siguientes oraciones presenta un error de concordancia morfosintáctica?",
+                question: "En la oración 'Carlos entregó el informe a su jefe ayer', ¿qué función sintáctica cumple el fragmento 'el informe'?",
                 options: [
-                    { text: "La multitud de aficionados protestaron a las afueras del estadio.", correct: true },
-                    { text: "La multitud de aficionados protestó a las afueras del estadio.", correct: false },
-                    { text: "Los aficionados protestaron a las afueras del estadio.", correct: false }
+                    { text: "Objeto Directo", correct: true },
+                    { text: "Objeto Indirecto", correct: false },
+                    { text: "Complemento Circunstancial", correct: false }
                 ],
-                explanation: "La opción 1 tiene un error porque el sujeto es 'La multitud' (sustantivo colectivo singular), por lo que el verbo debe ser 'protestó' en singular."
+                explanation: "'El informe' es el Objeto Directo porque responde a la pregunta '¿Qué entregó Carlos?' recibiendo la acción verbal."
             }
         },
         {
             id: "3.9.1.3",
             title: "Estrategias para la comprensión de textos",
-            intro: "Comprender un escrito va mucho más allá de leer palabra por palabra en voz alta. Requiere desarrollar la habilidad de decodificar tanto lo que el autor dice de forma explícita como lo que sugiere entre líneas.<br><br><b>1. Distinción entre Denotación y Connotación:</b><br>• <b>Valor Denotativo (El sentido literal):</b> Es el significado objetivo, primario y formal que tiene una palabra. Es el significado universal que encuentras registrado en los diccionarios. No deja espacio a segundas interpretaciones.<br><i>Ejemplo:</i> 'El corazón es un órgano muscular que bombea sangre a todo el cuerpo'. (Uso científico/denotativo).<br><br>• <b>Valor Connotativo (El sentido figurado):</b> Es el significado secundario, subjetivo, metafórico o cultural que se le atribuye a una palabra según el contexto, las emociones o la intención del emisor.<br><i>Ejemplo:</i> 'Ella tiene un corazón de piedra'. (Obviamente no es de mineral, connota frialdad e insensibilidad).<br><br><b>2. Interpretación de Signos No Lingüísticos:</b><br>En la lectura moderna, el texto escrito suele acompañarse de recursos visuales no lingüísticos que complementan o jerarquizan el mensaje:<br>• <b>Tipografía:</b> Uso de <b>negritas</b> para destacar conceptos centrales, <i>cursivas</i> para extranjerismos o títulos de libros, y MAYÚSCULAS para alertas.<br>• <b>Elementos gráficos:</b> Ilustraciones, mapas, íconos y diagramas que le permiten al lector verificar o resumir visualmente la información leída.",
+            intro: "Comprender un escrito exige decodificar tanto lo que el autor expresa explícitamente como lo que sugiere mediante diversos lenguajes.<br><br><b>1. Interpretación del valor Denotativo y Connotativo:</b><br>• <b>Valor Denotativo (Sentido literal):</b> Es el significado objetivo, exacto y primario registrado en los diccionarios. No deja espacio a segundas interpretaciones.<br><i>Ejemplo:</i> 'El perro ladra en la calle' (Significado real del animal).<br><br>• <b>Valor Connotativo (Sentido figurado):</b> Es el significado secundario, metafórico, expresivo o cultural que adquiere una palabra según el contexto.<br><i>Ejemplo:</i> 'Ese hombre trabaja como un perro' (Connota esfuerzo o explotación laboral).<br><br><b>2. Interpretación de Signos Lingüísticos y No Lingüísticos:</b><br>• <b>Signos Lingüísticos:</b> Palabras escritas, sintaxis, conectores lógicos y signos de puntuación que le dan cohesión al texto.<br>• <b>Signos No Lingüísticos (Recursos visuales):</b> Elementos que apoyan o jerarquizan la lectura:<br>  - <i>Tipografía:</i> Negritas para conceptos clave, cursivas para extranjerismos/títulos, subrayados para énfasis.<br>  - <i>Gráficos y Símbolos:</i> Iconos, mapas, esquemas e imágenes que ilustran la información explícita.",
             keypoints: [
-                "Lenguaje Denotativo = Significado objetivo, exacto, literal (de diccionario).",
-                "Lenguaje Connotativo = Significado figurado, poético, simbólico o contextual.",
-                "Signos no lingüísticos: Apoyos visuales (tipografías, símbolos, imágenes) que aclaran o jerarquizan el texto.",
-                "El truco para el examen: Si la frase expresa una realidad física y científica es DENOTATIVA. Si exige interpretación metafórica o subjetiva, es CONNOTATIVA."
+                "Denotación: Significado literal, objetivo y formal de diccionario.",
+                "Connotación: Significado figurado, metafórico o subjetivo según el contexto.",
+                "Signos no lingüísticos: Apoyos visuales (negritas, tipografías, íconos) que complementan la lectura.",
+                "El truco para el examen: Si la frase describe una realidad física científica es DENOTATIVA. Si exige interpretación poética o simbólica es CONNOTATIVA."
             ],
             quiz: {
-                question: "En la frase 'Ese profesor es una lumbrera en su materia', ¿qué valor semántico se le otorga a la palabra 'lumbrera'?",
+                question: "En la frase 'Ese deportista tiene músculos de acero', ¿qué valor semántico posee la palabra 'acero'?",
                 options: [
                     { text: "Connotativo", correct: true },
                     { text: "Denotativo", correct: false },
                     { text: "Metalingüístico", correct: false }
                 ],
-                explanation: "Es connotativo porque la palabra 'lumbrera' (que denotativamente es un objeto que da luz) se utiliza en sentido figurado para referirse a una persona muy inteligente."
+                explanation: "Es connotativo porque la palabra 'acero' no se usa literalmente como el metal, sino en sentido figurado para indicar mucha fuerza o dureza."
             }
         },
         {
             id: "3.9.1.4",
             title: "Tipos de textos",
-            intro: "Todo texto se crea con una finalidad distinta: un poema busca emocionar, una noticia busca informar y una receta de cocina busca guiar. Según la intención comunicativa y el modelo de organización, los textos se clasifican en 4 grandes grupos:<br><br><b>1. Texto Descriptivo (Pinta con palabras):</b><br>• <b>Propósito:</b> Detallar cómo es un objeto, persona, lugar, animal o emoción.<br>• <b>Características:</b> Abunda en adjetivos calificativos. Responde a la pregunta <i>¿Cómo es?</i>.<br><i>Ejemplo:</i> 'Era un caserón antiguo, de paredes descascaradas, ventanas de madera carcomida y un pasillo oscuro que olía a humedad'.<br><br><b>2. Texto Expositivo (Informa de forma neutral):</b><br>• <b>Propósito:</b> Dar a conocer, explicar o divulgar un tema científico, histórico o técnico de manera objetiva y ordenada, sin emitir juicios ni opiniones personales.<br>• <b>Características:</b> Uso de lenguaje formal, datos, fechas y explicaciones lógicas. Responde a <i>¿Qué es y por qué es así?</i>.<br><i>Ejemplo:</i> 'El agua es una sustancia cuya molécula está compuesta por dos átomos de hidrógeno y uno de oxígeno (H2O)'.<br><br><b>3. Texto Argumentativo (Defiende una tesis para persuadir):</b><br>• <b>Propósito:</b> Convencer o persuadir al lector sobre una postura, idea u opinión (Tesis), aportando razones, pruebas o argumentos que la respalden.<br>• <b>Características:</b> Estructura de Tesis + Argumentos + Conclusión. Responde a <i>¿Qué opino y por qué deberías estar de acuerdo conmigo?</i>.<br><i>Ejemplo:</i> 'Es indispensable prohibir los plásticos de un solo uso en el país, ya que las investigaciones demuestran que tardan más de 500 años en degradarse y destruyen la fauna marina'.<br><br><b>4. Texto Narrativo (Cuenta una historia):</b><br>• <b>Propósito:</b> Relatar una secuencia de acontecimientos reales o ficticios que suceden a unos personajes en un espacio y tiempo determinado.<br>• <b>Características:</b> Tiene estructura de Inicio, Nudo y Desenlace. Responde a <i>¿Qué sucedió?</i>.<br><i>Ejemplo:</i> 'El hidalgo Don Quijote montó a su caballo Rocinante y partió al amanecer hacia los campos de La Mancha'.",
+            intro: "Según la intención comunicativa y el modelo de organización, los textos se estructuran en diferentes tipologías:<br><br><b>1. Texto Descriptivo (Pinta con palabras):</b><br>• <b>Propósito:</b> Detallar rasgos de objetos, personas, lugares o situaciones.<br>• <b>Características:</b> Uso abundante de adjetivos qualificativos. Responde a <i>¿Cómo es?</i>.<br><br><b>2. Texto Expositivo (Informa de forma neutral):</b><br>• <b>Propósito:</b> Explicar y divulgar conceptos, datos o temas científicos objetivamente, sin emitir juicios ni opiniones personales.<br>• <b>Características:</b> Estructura de Introducción, Desarrollo y Conclusión. Responde a <i>¿Qué es y por qué es así?</i>.<br><br><b>3. Texto Argumentativo (Defiende una postura):</b><br>• <b>Propósito:</b> Convencer o persuadir al lector sobre una idea (Tesis) utilizando razones y pruebas demostrables.<br>• <b>Características:</b> Estructura de Tesis, Argumentos y Conclusión. Responde a <i>¿Qué opino y por qué tengo la razón?</i>.<br><br><b>4. Texto Narrativo (Relata una historia):</b><br>• <b>Propósito:</b> Contar acontecimientos reales o ficticios vividos por personajes.<br>• <b>Características:</b> Estructura de Inicio, Nudo y Desenlace. Responde a <i>¿Qué sucedió?</i>.",
             keypoints: [
-                "Expositivo: Explica un tema objetivamente para enseñar/divulgar (Textos escolares, artículos científicos).",
-                "Argumentativo: Defiende una posición personal con razones para persuadir (Ensayos, artículos de opinión).",
-                "Descriptivo: Detalla características y rasgos usando adjetivos.",
-                "Narrativo: Cuenta historias o eventos ordenados cronológicamente.",
-                "El truco para el examen: Si el autor 'busca convencerte de su punto de vista u opinión', la respuesta es ARGUMENTATIVO. Si solo te 'da información sin opinar', es EXPOSITIVO."
+                "Expositivo: Divulga información de forma imparcial y objetiva (manuales, textos escolares).",
+                "Argumentativo: Defiende una tesis personal con razones para convencer (ensayos, artículos de opinión).",
+                "Descriptivo: Detalla características mediante adjetivos.",
+                "Narrativo: Relata secuencias de eventos cronológicos.",
+                "El truco para el examen: Si el texto intenta persuadirte o dar su postura es ARGUMENTATIVO. Si solo te informa neutralmente es EXPOSITIVO."
             ],
             quiz: {
-                question: "¿Qué tipo de texto es un ensayo donde un sociólogo expone sus razones y evidencias para fundamentar por qué la educación virtual debe ser gratuita?",
+                question: "¿Qué tipo de texto es un artículo periodístico que presenta datos oficiales sobre la tasa de inflación anual sin agregar opiniones personales?",
                 options: [
-                    { text: "Texto Argumentativo", correct: true },
-                    { text: "Texto Expositivo", correct: false },
-                    { text: "Texto Narrativo", correct: false }
+                    { text: "Texto Expositivo", correct: true },
+                    { text: "Texto Argumentativo", correct: false },
+                    { text: "Texto Descriptivo", correct: false }
                 ],
-                explanation: "Es argumentativo porque el sociólogo presenta razones y argumentos para defender una postura (Tesis) y persuadir a su audiencia."
+                explanation: "Es un texto expositivo porque transmite información objetiva y verídica sin buscar persuadir ni emitir valoraciones subjetivas."
             }
         },
         {
             id: "3.9.1.5",
-            title: "Estructura de las palabras y relaciones léxicas",
-            intro: "El léxico de nuestro idioma es rico y variado. Para dominar la lectura y la ortografía, es indispensable entender cómo se forman las palabras y cómo se relacionan entre sí por su sonido, escritura o significado:<br><br><b>1. Formación de las palabras:</b><br>• <b>Primitivas:</b> Palabras originales que no provienen de ninguna otra (Ej: <i>mar, sol, pan</i>).<br>• <b>Derivadas:</b> Se forman agregando prefijos (antes de la raíz) o sufijos (después de la raíz) a una palabra primitiva (Ej: <b>sub</b>marino, pan<b>adería</b>).<br>• <b>Compuestas:</b> Nacen al unir dos o más palabras simples completas (Ej: <i>abre + latas = abrelatas</i>, <i>salva + vidas = salvavidas</i>).<br><br><b>2. Relaciones Semánticas (Por su significado):</b><br>• <b>Sinónimos:</b> Palabras distintas que comparten un significado similar o idéntico (<i>empezar / comenzar</i>).<br>• <b>Antónimos:</b> Palabras que expresan significados opuestos o contrarios (<i>abundancia / escasez</i>).<br><br><b>3. Confusiones Ortográficas Clave:</b><br>• <b>Palabras Homónimas:</b> Tienen distinta procedencia pero terminan coincidiendo en su pronunciación o escritura. Se dividen en:<br>  - <b>Homófonas:</b> Suenan <b>exactamente igual</b>, pero se escriben <b>diferente</b> (con una letra distinta) y tienen significados diferentes.<br>  <i>Ejemplos:</i> <b>Tubo</b> (pieza cilíndrica) / <b>Tuvo</b> (del verbo tener). <b>Vello</b> (capilar) / <b>Bello</b> (hermoso).<br>  - <b>Homógrafas:</b> Se escriben y se pronuncian <b>exactamente igual</b>, pero tienen significados totalmente distintos según el contexto.<br>  <i>Ejemplos:</i> <b>Vino</b> (bebida de uva) / <b>Vino</b> (del verbo venir). <b>Banco</b> (institución financiera) / <b>Banco</b> (mueble para sentarse).<br><br>• <b>Palabras Parónimas:</b> No son idénticas, pero tienen una pronunciación y escritura <b>muy parecida o semejante</b>, lo que suele causar confusiones.<br>  <i>Ejemplos:</i> <b>Apto</b> (capaz/idóneo) y <b>Acto</b> (acción/evento). <b>Afecto</b> (cariño) y <b>Efecto</b> (resultado).",
+            title: "Estructura de las palabras",
+            intro: "Para dominar la lectura y la ortografía es vital entender cómo se construyen las palabras y cómo se relacionan:<br><br><b>1. Formación de las Palabras:</b><br>• <b>Primitivas:</b> Palabras base que no provienen de ninguna otra (Ej: <i>sol, mar</i>).<br>• <b>Derivadas:</b> Nacen agregando prefijos o sufijos a la raíz primitiva (Ej: <b>sub</b>marino, pan<b>adería</b>).<br>• <b>Compuestas:</b> Unión de dos palabras simples completas (Ej: <i>salvar + vidas = salvavidas</i>).<br>• <b>Palabras Grecolatinas:</b> Raíces antiguas de origen griego o latino que forman nuestro vocabulario técnico (Ej: <i>Bio</i> = vida, <i>Logía</i> = estudio; <i>Filo</i> = amor, <i>Sofía</i> = sabiduría).<br><br><b>2. Relaciones Léxicas:</b><br>• <b>Sinónimos:</b> Significado igual o semejante (<i>empezar / comenzar</i>).<br>• <b>Antónimos:</b> Significados opuestos (<i>abundancia / escasez</i>).<br>• <b>Homónimos:</b><br>  - <i>Homófonas:</i> Suenan igual pero se escriben distinto y significan diferente (<i>Tubo / Tuvo</i>).<br>  - <i>Homógrafas:</i> Se escriben y suenan exactamente igual pero tienen distinto significado (<i>Vino</i> verbo / <i>Vino</i> bebida).<br>• <b>Parónimas:</b> Palabras parecidas en sonido/escritura pero de significado distinto (<i>Apto / Acto</i>).<br><br><b>3. Figuras Retóricas, Locuciones y Refranes:</b><br>• <b>Figuras Retóricas:</b> Formas no convencionales de emplear las palabras para dotarlas de expresividad (Metáfora, Símil, Hipérbole).<br>• <b>Locuciones:</b> Grupos de palabras fijas que funcionan como una sola pieza gramatical (Ej: <i>'de vez en cuando'</i>, <i>'a pie juntillas'</i>).<br>• <b>Refranes:</b> Dichos populares anónimos que transmiten una enseñanza o sabiduría práctica (Ej: <i>'A caballo regalado no se le busca colmillo'</i>).",
             keypoints: [
-                "Homófonas: Suenan igual, pero varía la letra (b/v, c/s/z, g/j) y el significado.",
-                "Homógrafas: Misma escritura exacta, pero significados totalmente distintos.",
-                "Parónimas: Parecidas en sonido y escritura, pero NO iguales (ej. adoptar/adaptar).",
-                "El truco para el examen: Si la diferencia entre dos palabras que suenan igual radica en una 'b/v' o 'h' (como haber/a ver), son HOMÓFONAS."
+                "Raíces Grecolatinas: Componentes griegos/latinos esenciales para comprender tecnicismos.",
+                "Homófonas: Mismo sonido, diferente letra y significado.",
+                "Parónimas: Pronunciación semejante pero no igual.",
+                "Locuciones y Refranes: Frases hechas gramaticales (locuciones) o dichos tradicionales con moraleja (refranes).",
+                "El truco para el examen: Si dos palabras suenan idénticas pero una lleva 'b' y la otra 'v', son HOMÓFONAS."
             ],
             quiz: {
-                question: "Las palabras 'Revelar' (dar a conocer un secreto) y 'Rebelar' (oponerse a la autoridad) son un ejemplo de palabras:",
+                question: "¿Qué tipo de palabras son 'Cazar' (atrapar animales) y 'Casar' (unir en matrimonio)?",
                 options: [
                     { text: "Homófonas", correct: true },
                     { text: "Homógrafas", correct: false },
                     { text: "Parónimas", correct: false }
                 ],
-                explanation: "Son homófonas porque suenan idénticas al pronunciarse, pero se escriben con grafías distintas ('v' y 'b') y tienen significados diferentes."
+                explanation: "Son homófonas porque tienen la misma pronunciación, pero su escritura diferir entre 'z' y 's' altera por completo su significado."
             }
         },
         {
             id: "3.9.1.6",
-            title: "Textos narrativos: subgéneros y características",
-            intro: "Los textos narrativos cuentan historias organizadas en una secuencia de <b>Inicio (Planteamiento), Nudo (Conflicto central) y Desenlace (Resolución)</b>. Según la intención pedagógica o el origen del relato, se dividen en varios subgéneros fundamentales:<br><br><b>1. Cuento:</b> Narración ficticia breve, con pocos personajes, una trama sencilla y un único conflicto principal que se resuelve rápidamente.<br><br><b>2. Fábula:</b> Relato ficticio muy antiguo, generalmente protagonizado por animales u objetos personificados (que hablan y actúan como humanos). Su objetivo principal es didáctico y siempre concluye de forma explícita o implícita con una <b>moraleja</b> (enseñanza de conducta o moral).<br><br><b>3. Leyenda:</b> Narración tradicional y folclórica propia de un pueblo o región. Nace de un <b>hecho real o personaje histórico</b>, pero con el paso del tiempo y la tradición oral se decora exageradamente con <b>elementos fantásticos, sobrenaturales o mágicos</b>.<br><br><b>4. Anécdota:</b> Relato muy breve y espontáneo sobre un suceso curioso, divertido o relevante que le ocurrió de verdad a una persona en su día a día.<br><br><b>5. Biografía vs. Autobiografía:</b><br>• <b>Biografía:</b> Texto que narra la vida completa de una persona, redactado por <b>alguien más</b> (en tercera persona: <i>él/ella</i>).<br>• <b>Autobiografía:</b> Texto en el que el <b>propio sujeto redacta la historia de su vida</b> (en primera persona: <i>yo</i>).",
+            title: "Textos narrativos",
+            intro: "Los textos narrativos cuentan historias organizadas en <b>Inicio, Nudo y Desenlace</b>. Según su finalidad y origen se clasifican en diversos subgéneros:<br><br><b>1. Cuento:</b> Narración ficticia breve, con pocos personajes y un conflicto central de rápida resolución.<br><br><b>2. Fábula:</b> Relato ficticio breve protagonizado frecuentemente por animales u objetos personificados. Posee un fin didáctico e incluye siempre una <b>moraleja</b> final.<br><br><b>3. Leyenda:</b> Narración folclórica de tradición oral que parte de un <b>hecho o personaje real</b>, pero que ha sido exagerado con <b>elementos fantásticos o mágicos</b> por el pueblo.<br><br><b>4. Anécdota:</b> Relato corto y espontáneo sobre un suceso curioso, divertido o real que le ocurrió a una persona.<br><br><b>5. Biografía vs. Autobiografía:</b><br>• <b>Biografía:</b> Narra la vida completa de una persona redactada por <b>un tercero</b> (en tercera persona: <i>él/ella</i>).<br>• <b>Autobiografía:</b> Narra los hechos de vida redactados por el <b>propio personaje</b> (en primera persona: <i>yo</i>).",
             keypoints: [
-                "Fábula: Animales personificados + Moraleja explícita al final.",
-                "Leyenda: Origen histórico/real + Adorno fantástico de tradición oral.",
-                "Biografía (escrita en 3ra persona) vs Autobiografía (escrita por el propio protagonista en 1ra persona).",
-                "El truco para el examen: Si en la pregunta se menciona una 'moraleja o enseñanza moral', la respuesta correcta es FÁBULA."
+                "Fábula: Animales personificados + Moraleja instructiva.",
+                "Leyenda: Base histórica/real enriquecida con elementos fantásticos tradicionales.",
+                "Biografía (escrita por otro en 3ra persona) vs. Autobiografía (escrita por sí mismo en 1ra persona).",
+                "El truco para el examen: Si en la pregunta mencionan 'enseñanza moral o moraleja al final', es una FÁBULA."
             ],
             quiz: {
-                question: "Un relato de tradición popular guatemalteca que explica la aparición nocturna de 'La Llorona' combinando lugares reales con hechos fantásticos pertenece al subgénero de:",
+                question: "Un relato tradicional que mezcla hechos históricos reales del periodo colonial con duendes y espíritus mitológicos corresponde a una:",
                 options: [
                     { text: "Leyenda", correct: true },
                     { text: "Fábula", correct: false },
-                    { text: "Cuento", correct: false }
+                    { text: "Autobiografía", correct: false }
                 ],
-                explanation: "Es una leyenda porque nace del folclore tradicional de una región mezclando entornos reales con mitos y elementos fantásticos."
+                explanation: "Es una leyenda porque nace de un entorno o hecho histórico real que fue adornado con mitos y fantasía por la tradición oral."
             }
         },
         {
             id: "3.9.1.7",
             title: "Técnicas de síntesis de textos",
-            intro: "Cuando te enfrentas a textos extensos o capítulos enteros de estudio, necesitas procesar esa información y reducirla a su estructura más pura. Para ello se utilizan los organizadores gráficos:<br><br><b>1. Cuadro Sinóptico (Esquema de Llaves):</b><br>• <b>Estructura:</b> Organiza las ideas de forma jerárquica de izquierda a derecha.<br>• <b>Elemento clave:</b> Su característica gráfica indiscutible es el uso de <b>LLAVES ({ })</b> que se van abriendo para desglosar el Tema Principal → Subtemas → Conceptos → Detalles.<br><br><b>2. Mapa Conceptual (Red de Nodos y Enlaces):</b><br>• <b>Estructura:</b> Muestra relaciones lógicas entre conceptos interconectados visualmente de arriba hacia abajo.<br>• <b>Elemento clave:</b> Los conceptos van dentro de cajitas o módulos y se unen entre sí por medio de <b>LÍNEAS y PALABRAS ENLACE</b> (como: <i>'se divide en'</i>, <i>'produce'</i>, <i>'es un'</i>), formando frases con sentido pleno llamadas proposiciones.<br><br><b>3. Diagrama de Flujo (Procesos secuenciales):</b><br>• <b>Estructura:</b> Representa gráficamente la secuencia de pasos o algoritmos de un procedimiento.<br>• <b>Elemento clave:</b> Utiliza símbolos estandarizados (óvalos de inicio/fin, rectángulos de acción, rombos de decisión) conectados mediante <b>flechas direccionales</b>.",
+            intro: "Para resumir y procesar información compleja de textos largos se utilizan organizadores gráficos y técnicas de síntesis visual:<br><br><b>1. Cuadro Sinóptico (Esquema de Llaves):</b><br>• <b>Estructura:</b> Organiza la información de forma jerárquica de izquierda a derecha (Tema → Subtemas → Conceptos).<br>• <b>Elemento indiscutible:</b> Utiliza <b>LLAVES ({ })</b> para agrupar y desglosar las categorías.<br><br><b>2. Mapa Conceptual (Red de Nodos y Enlaces):</b><br>• <b>Estructura:</b> Muestra relaciones lógicas entre conceptos interconectados de arriba hacia abajo.<br>• <b>Elemento indiscutible:</b> Ubica conceptos en cajitas unidos por <b>LÍNEAS y PALABRAS ENLACE</b> (<i>'es un'</i>, <i>'se divide en'</i>) formando proposiciones.<br><br><b>3. Diagramas (Diagrama de Flujo y Organizadores):</b><br>• <b>Estructura:</b> Representan visualmente la secuencia de un proceso o algoritmo paso a paso.<br>• <b>Elemento indiscutible:</b> Utiliza símbolos gráficos estandarizados (rectángulos, rombos) conectados mediante <b>flechas direccionales</b>.",
             keypoints: [
-                "Cuadro Sinóptico: Identificable de inmediato por el uso de LLAVES ({ }).",
-                "Mapa Conceptual: Usa palabras enlace sobre líneas para conectar conceptos.",
-                "Diagrama de Flujo: Muestra el orden secuencial paso a paso mediante flechas y símbolos.",
-                "El truco para el examen: Si la pregunta menciona 'llaves para esquematizar', es CUADRO SINÓPTICO. Si menciona 'palabras de enlace', es MAPA CONCEPTUAL."
+                "Cuadro Sinóptico: Identificado por el uso de LLAVES ({ }) de general a particular.",
+                "Mapa Conceptual: Emplea palabras de enlace sobre líneas interconectadas.",
+                "Diagrama de Flujo: Esquematiza procesos y secuencias mediante flechas.",
+                "El truco para el examen: Si la pregunta menciona 'uso de llaves', es CUADRO SINÓPTICO. Si habla de 'palabras enlace', es MAPA CONCEPTUAL."
             ],
             quiz: {
-                question: "¿Qué organizador gráfico es el más adecuado para representar de forma esquemática la jerarquía de un tema de general a particular utilizando llaves?",
+                question: "¿Qué organizador gráfico utiliza recuadros conceptuales unidos por palabras de enlace para estructurar ideas jerárquicamente?",
                 options: [
-                    { text: "Cuadro sinóptico", correct: true },
-                    { text: "Mapa conceptual", correct: false },
+                    { text: "Mapa conceptual", correct: true },
+                    { text: "Cuadro sinóptico", correct: false },
                     { text: "Diagrama de flujo", correct: false }
                 ],
-                explanation: "El cuadro sinóptico se caracteriza de forma exclusiva por utilizar llaves ({ }) para agrupar las ideas según su nivel de jerarquía."
+                explanation: "El mapa conceptual se caracteriza por conectar nodos mediante palabras de enlace para construir proposiciones lógicas."
             }
         },
         {
             id: "3.9.1.8",
             title: "Proceso de lectura",
-            intro: "Leer no es una acción instantánea, sino un proceso activo y consciente compuesto por 3 etapas estratégicas que garantizan una comprensión lectora sólida:<br><br><b>1. Etapa de Pre-lectura (Antes de leer):</b><br>• Es la fase de preparación y exploración rápida.<br>• <b>Acciones:</b> Observar títulos, subtítulos, imágenes, índice o palabras en negrita.<br>• <b>Objetivo:</b> Activar los conocimientos previos sobre el tema, despertar curiosidad y formular <b>hipótesis o predicciones</b> de lo que tratará el texto.<br><br><b>2. Etapa de Lectura Activa (Durante la lectura):</b><br>• Es la inmersión directa en el texto.<br>• <b>Acciones:</b> Leer con atención a velocidad adecuada, deducir el significado de palabras desconocidas por el contexto, subrayar ideas principales y secundarias, y hacerse preguntas internas.<br>• <b>Objetivo:</b> Comprender e interpretar la información explícita e implícita.<br><br><b>3. Etapa de Post-lectura (Después de leer):</b><br>• Es la fase de consolidación y procesamiento final del conocimiento.<br>• <b>Acciones:</b> Verificar si las predicciones iniciales eran acertadas, responder preguntas de comprensión, elaborar resúmenes, fichas o mapas conceptuales y emitir un juicio crítico.<br>• <b>Objetivo:</b> Fijar el aprendizaje en la memoria a largo plazo.",
+            intro: "La lectura no es pasiva, sino un proceso estratégico y consciente compuesto por 3 etapas secuenciales:<br><br><b>1. Etapa de Pre-lectura (Antes de leer):</b><br>• <b>Acciones:</b> Exploración rápida visual de títulos, subtítulos, imágenes, índice y tipografía en negrita.<br>• <b>Objetivo:</b> Activar conocimientos previos, despertar interés y generar <b>hipótesis o predicciones</b> sobre el texto.<br><br><b>2. Etapa de Lectura (Durante la lectura):</b><br>• <b>Acciones:</b> Lectura atenta, subrayado de ideas principales, deducción de palabras desconocidas por contexto y formulación de preguntas internas.<br>• <b>Objetivo:</b> Decodificar y comprender la información explícita e implícita del texto.<br><br><b>3. Etapa de Post-lectura (Después de leer):</b><br>• <b>Acciones:</b> Elaborar resúmenes, esquemas, fichas, responder preguntas de evaluación y verificar hipótesis.<br>• <b>Objetivo:</b> Consolidar, sintetizar y valorar críticamente la información aprendida.",
             keypoints: [
-                "Pre-lectura: Exploración visual, conocimientos previos y predicción sobre el texto.",
-                "Durante la lectura: Subrayado, deducción contextual e identificación de ideas centrales.",
-                "Post-lectura: Verificación de hipótesis, resúmenes, esquemas y evaluación de lo leído.",
-                "El truco para el examen: Todo lo que consista en 'evaluar lo aprendido, resumir o hacer un mapa mental' forma parte de la POST-LECTURA."
+                "Pre-lectura: Hojear el texto, mirar títulos y formular predicciones iniciales.",
+                "Lectura: Subrayar ideas clave y comprender el contenido en profundidad.",
+                "Post-lectura: Sintetizar mediante mapas, resúmenes y emitir recomendaciones del escrito.",
+                "El truco para el examen: Formular hipótesis antes de empezar = PRE-LECTURA. Hacer resúmenes al terminar = POST-LECTURA."
             ],
             quiz: {
-                question: "¿En qué etapa del proceso lector el estudiante examina los títulos e imágenes para anticipar el contenido del escrito?",
+                question: "¿En qué etapa del proceso de lectura el lector elabora un resumen o mapa mental para consolidar lo aprendido?",
                 options: [
-                    { text: "Antes de la lectura (Pre-lectura)", correct: true },
-                    { text: "Durante la lectura", correct: false },
-                    { text: "Después de la lectura (Post-lectura)", correct: false }
+                    { text: "Post-lectura", correct: true },
+                    { text: "Pre-lectura", correct: false },
+                    { text: "Lectura activa", correct: false }
                 ],
-                explanation: "La observación previa de títulos e imágenes para formular predicciones se realiza durante la fase de Pre-lectura."
+                explanation: "La síntesis final mediante resúmenes u organizadores se realiza en la etapa de Post-lectura."
             }
         },
         {
             id: "3.9.1.9",
             title: "Reseña crítica",
-            intro: "La reseña crítica es un escrito académico en el cual se analiza, examina y evalúa una obra cultural o científica (un libro, una película, una obra de teatro o un artículo académico).<br><br><b>Diferencia clave: Resumen vs. Reseña Crítica:</b><br>Un <i>resumen</i> se limita a sintetizar objetivamente la obra sin aportar opiniones. La <i>reseña crítica</i> da un paso más allá: <b>INCLUYE OBLIGATORIAMENTE UN JUICIO DE VALOR ARGUMENTADO</b> por parte del reseñador.<br><br><b>Estructura Estándar de una Reseña Crítica:</b><br>1. <b>Ficha técnica / Encabezado:</b> Datos identitarios de la obra reseñada (título, autor, año de publicación, editorial).<br>2. <b>Resumen Sintético:</b> Descripción objetiva de las partes fundamentales o trama central del trabajo.<br>3. <b>Comentario Crítico / Juicio de Valor:</b> Es el núcleo argumentativo. Se analiza la calidad, aciertos, fallas o aportes de la obra.<br>4. <b>Conclusión y Recomendación:</b> Cierre donde el autor valora si recomienda o no la lectura/observación de la obra.<br><br><i>Contexto posmodernista:</i> La literatura posmoderna desafía las narrativas tradicionales, utiliza la ironía, la mezcla de géneros y la fragmentación. Reseñar una obra posmodernista exige analizar cómo el autor rompe las reglas establecidas.",
+            intro: "La reseña crítica es un escrito académico en el que se analiza, examina y evalúa una obra cultural o literaria (un libro, una película o un ensayo).<br><br><b>Diferencia clave entre Resumen y Reseña Crítica:</b><br>Un <i>resumen</i> solo expone las ideas de la obra objetivamente. La <i>reseña crítica</i> requiere de forma <b>OBLIGATORIA UN JUICIO DE VALOR ARGUMENTADO</b> (la postura u opinión razonada del autor de la reseña).<br><br><b>Estructura de la Reseña Crítica:</b><br>1. <b>Ficha Técnica:</b> Datos de la obra (título, autor, fecha, editorial).<br>2. <b>Resumen Sintético:</b> Breve descripción objetiva del contenido o trama.<br>3. <b>Comentario Crítico:</b> Evaluación argumentada de aciertos, fallas y aportes.<br>4. <b>Conclusión:</b> Recomendación final sobre la obra.<br><br><b>Elaboración sobre una obra literaria posmodernista:</b><br>La <b>Literatura Posmodernista</b> (segunda mitad del siglo XX en adelante) rompe con las estructuras tradicionales mediante la <i>metaficción</i>, el uso de la <i>ironía</i>, el <i>desorden cronológico</i>, el <i>pastiche</i> (mezcla de géneros) y la <i>fragmentación narrativa</i>. Elaborar una reseña crítica de este tipo de obra exige valorar precisamente cómo el autor desafía las reglas literarias convencionales.",
             keypoints: [
-                "Reseña Crítica = Resumen descriptivo de la obra + Opinión o evaluación argumentada.",
-                "El juicio de valor debe estar justificado con razones sólidas, no simples apreciaciones subjetivas.",
-                "El truco para el examen: La diferencia fundamental entre un simple resumen y una reseña crítica es la presencia de una 'VALORACIÓN O JUICIO CRÍTICO'."
+                "Reseña Crítica = Síntesis objetiva de la obra + Juicio de valor u opinión justificada.",
+                "Literatura Posmodernista: Caracterizada por la fragmentación, ironía, mezcla de géneros y ruptura de la narrativa tradicional.",
+                "El truco para el examen: El elemento que diferencia radicalmente a una reseña crítica de un resumen es el JUICIO DE VALOR u OPINIÓN ARGUMENTADA."
             ],
             quiz: {
-                question: "¿Qué apartado es indispensable en una reseña crítica y no debe figurar en un resumen objetivo?",
+                question: "¿Qué rasgo caracteriza a una obra literaria posmodernista al momento de analizarla en una reseña crítica?",
                 options: [
-                    { text: "El juicio de valor u opinión fundamentada sobre la obra", correct: true },
-                    { text: "La mención del título y autor de la obra", correct: false },
-                    { text: "La síntesis de los capítulos principales", correct: false }
+                    { text: "La ruptura de la narrativa lineal y la mezcla de géneros (pastiche)", correct: true },
+                    { text: "El uso estricto de la rima consonante y la métrica clásica", correct: false },
+                    { text: "La ausencia total de lenguaje figurado o connotativo", correct: false }
                 ],
-                explanation: "Lo que define a la reseña crítica es la inclusión de una evaluación o juicio de valor argumentado por parte de quien la escribe."
+                explanation: "La literatura posmodernista destaca por romper con las estructuras clásicas, usando fragmentación, ironía y mezcla de estilos."
             }
         },
         {
             id: "3.9.1.10",
             title: "Propiedades de la redacción y ortografía",
-            intro: "Escribir correctamente no es solo juntar oraciones sin faltas de ortografía; exige estructurar párrafos con lógica y fluidez. Para ello se deben respetar tres propiedades fundamentales:<br><br><b>1. Propiedades Esenciales de la Redacción:</b><br>• <b>Coherencia:</b> Es la propiedad lógica del texto. Garantiza que todas las ideas aportadas giren en torno a un tema central común, evitando contradicciones o saltos absurdos de información.<br>• <b>Cohesión:</b> Es la correcta unión gramatical de las palabras y oraciones. Se logra mediante el uso preciso de conectores lógicos (<i>'sin embargo'</i>, <i>'por consiguiente'</i>, <i>'en primer lugar'</i>) y una adecuada puntuación.<br>• <b>Adecuación:</b> Adaptación del lenguaje utilizado al receptor y al contexto (usar lenguaje formal en un trabajo académico y coloquial con amigos).<br><br><b>2. Tipos de Párrafos según su Función:</b><br>• <b>Párrafo Introductorio:</b> Se ubica al inicio; presenta el tema central, engancha al lector y plantea la tesis o propósito del escrito.<br>• <b>Párrafo Nuclear o de Desarrollo:</b> Es la parte más extensa y densa. Expone, explica, ejemplifica y argumenta la información principal.<br>• <b>Párrafo Concluyente:</b> Se ubica al final; resume las ideas más importantes presentadas y da un cierre definitivo al escrito.<br><br><b>3. Ortografía Normativa:</b><br>Dominio y aplicación estricta de las normas de escritura para letras con sonidos idénticos o confusos (<b>b/v, c/s/z, x, g/j, h</b>).",
+            intro: "Escribir un texto académico o profesional no consiste solo en no cometer faltas de ortografía, sino en asegurar que la información fluya con claridad, orden y rigor. Para ello debemos dominar tres ejes fundamentales:<br><br><b>1. Propiedades Esenciales de la Redacción:</b><br>• <b>Coherencia:</b> Es el hilo conductor lógico del escrito. Garantiza que todas las ideas aportadas respondan a un tema central común y que mantengan <b>unidad temática y énfasis</b>, evitando contradicciones o digresiones innecesarias.<br>• <b>Cohesión:</b> Es la correcta articulación gramatical entre palabras, oraciones y párrafos. Se logra mediante el uso preciso de conectores lógicos (<i>'por lo tanto'</i>, <i>'sin embargo'</i>, <i>'en consecuencia'</i>) y una adecuada puntuación.<br>• <b>Adecuación:</b> Es el ajuste de la forma y el registro lingüístico (formal o informal) al receptor, al canal y a la intención comunicativa del texto.<br><br><b>2. Estructura e Intención Comunicativa de los Párrafos:</b><br>• <b>Párrafo Introductorio:</b> Presenta la idea central, engancha al lector, contextualiza el tema y plantea la tesis o propósito general.<br>• <b>Párrafo Nuclear o de Desarrollo:</b> Constituye el cuerpo del escrito. Contiene la argumentación, las explicaciones, datos y ejemplos principales. Exige máxima <b>unidad y énfasis</b> en cada idea expuesta.<br>• <b>Párrafo Concluyente:</b> Sintetiza los hallazgos o argumentos más valiosos y aporta un cierre, reflexión o solución definitiva al planteamiento inicial.<br><br><b>3. Proceso de Revisión y Corrección de Documentos:</b><br>Todo escrito profesional requiere tres fases: <i>Planificación</i> (esquema inicial), <i>Textualización</i> (borrador) y <i>Revisión/Corrección</i> (relectura crítica para pulir vacíos de lógica, repeticiones redundantes y faltas ortográficas).<br><br><b>4. Ortografía Normativa de Grafías Dudosas:</b><br>Aplicación de reglas estrictas para consonantes con fonética idéntica o similar:<br>• <b>B / V:</b> Se escribe <i>B</i> antes de consonante (<i>obvio, blanco</i>) y en terminaciones <i>-bundo, -bilidad</i>. Se escribe <i>V</i> tras la letra <i>N</i> (<i>enviar, convento</i>) o en adjetivos terminados en <i>-ivo/a, -evo/a</i>.<br>• <b>C / S / Z / X:</b> Diferenciación de seseo y uso de <i>C</i> en terminaciones <i>-ción</i> (derivados de palabras con <i>-to/-tor</i>) vs. <i>S</i> en <i>-sión</i> (derivados de palabras con <i>-so/-sor</i>). Uso de <i>Z</i> en aumentativos (<i>-azo</i>). Uso de <i>X</i> en prefijos <i>extra-</i> o <i>exo-</i>.<br>• <b>G / J / H:</b> Se escribe <i>G</i> en palabras terminadas en <i>-gía, -gión</i>. Se usa <i>J</i> en vocablos derivados de verbos terminados en <i>-jar</i> o en terminaciones <i>-aje, -ería</i>. La <i>H</i> se mantiene fija en prefijos como <i>hidro-, hiper-, hipo-, homo-</i>.",
             keypoints: [
-                "Coherencia = Sentido lógico e hilo conductor global del escrito.",
-                "Cohesión = Relación gramatical correcta entre frases mediante conectores y comas.",
-                "Párrafo Nuclear = Párrafo principal de desarrollo explicativo e informativo.",
-                "El truco para el examen: Si te preguntan por el párrafo que 'contiene el desarrollo de los argumentos principales', la respuesta es PÁRRAFO NUCLEAR."
+                "Coherencia y Unidad: Mantener un tema central definido sin contradicciones.",
+                "Cohesión: Uso de conectores gramaticales y puntuación correcta.",
+                "Párrafo Nuclear: Bloque principal donde se desarrollan argumentaciones explicativas con énfasis.",
+                "Revisión de textos: Fase imprescindible para detectar discordancias y corregir faltas de redacción.",
+                "El truco para el examen: El párrafo que contiene el núcleo del argumento y la información más amplia es el PÁRRAFO NUCLEAR."
             ],
             quiz: {
-                question: "¿Qué propiedad de la redacción asegura que un texto mantenga una relación lógica entre sus ideas sin contradicciones en el tema central?",
+                question: "¿Qué propiedad de la redacción se rompe cuando un texto salta entre temas sin conexión lógica y presenta ideas contradictorias?",
                 options: [
                     { text: "Coherencia", correct: true },
                     { text: "Cohesión", correct: false },
                     { text: "Adecuación", correct: false }
                 ],
-                explanation: "La coherencia es la propiedad que le otorga unidad lógica y sentido global a la estructura de un escrito."
+                explanation: "La coherencia es la propiedad que vela por la unidad temática, la lógica global y la falta de contradicciones en un escrito."
             }
-            },
-            {
-                id: "3.9.1.11",
-                title: "Vicios de dicción",
-                intro: "Los vicios de dicción son todas aquellas formas incorrectas, imprecisas o inadecuadas de hablar o escribir que violan las reglas del idioma o ensucian la claridad del mensaje.<br><br><b>Los Vicios de Dicción Más Frecuentes en Evaluaciones:</b><br><br>• <b>Solecismo:</b> Es cualquier error cometido en la estructura sintáctica de una oración, en la construcción de frases o en las reglas de concordancia y uso de preposiciones.<br><i>Ejemplos:</i> 'Hacen tres días que no lo veo' (Debe ser: *Hace tres días*). 'En base a lo conversado' (Debe ser: *Con base en lo conversado*).<br><br>• <b>Anfibología:</b> Es la falta de claridad en una oración que da pie a una <b>doble interpretación o sentido ambiguo</b> debido a la mala organización de las palabras.<br><i>Ejemplo:</i> 'Se vende ropa para niños usada' (¿Los niños son usados o la ropa es usada?). 'El perro de tu hermano me ladró' (Puede sonar como un insulto o como la mascota).<br><br>• <b>Pleonasmo o Redundancia:</b> Empleo inútil e innecesario de palabras que repiten un concepto que ya estaba claro e implícito.<br><i>Ejemplos:</i> 'Subir para arriba', 'Salir para afuera', 'Voló por el aire', 'Persona humana'.<br><br>• <b>Barbarismo:</b> Pronunciar, acentuar o escribir mal las palabras, o emplear extranjerismos innecesarios cuando existen vocablos en español.<br><i>Ejemplos:</i> Escribir 'Haiga' en vez de *Haya*, decir 'Dijistes' en lugar de *Dijiste*, o usar 'Show' teniendo la palabra *espectáculo*.",
-                keypoints: [
-                    "Solecismo: Errores sintácticos o de concordancia (ej. 'hacen años', 'de acuerdo a').",
-                    "Anfibología: Redacción ambigua que genera confusión de interpretación.",
-                    "Pleonasmo / Redundancia: Repetición de conceptos obvios (ej. 'subir arriba').",
-                    "Barbarismo: Palabras mal escritas o mal pronunciadas (ej. 'nadien', 'dijistes').",
-                    "El truco para el examen: Si la frase puede entenderse de dos formas ridículas o confusas, es ANFIBOLOGÍA. Si repite algo obvio, es PLEONASMO."
+        },
+        {
+            id: "3.9.1.11",
+            title: "Vicios de dicción y reconstrucción de oraciones",
+            intro: "Los vicios de dicción son construcciones agramaticales, imprevisiones o giros incorrectos al hablar o escribir que oscurecen la comprensión del mensaje. Para dominar este tema es necesario saber **identificar el vicio y reconstruir la oración correctamente**:<br><br><b>1. Solecismo (Error de sintaxis, régimen o concordancia):</b><br>• <i>Incorrecto:</i> 'Hacen muchos meses que no voy al centro.'<br>• <b>Reconstrucción correcta:</b> 'Hace muchos meses que no voy al centro.' (El verbo haber en sentido impersonal de tiempo transcurrido permanece en singular).<br>• <i>Incorrecto:</i> 'De acuerdo a las normas vigentes...'<br>• <b>Reconstrucción correcta:</b> 'De acuerdo con las normas vigentes...' (Uso normativo de preposición).<br><br><b>2. Anfibología (Ambigüedad o doble sentido confuso):</b><br>• <i>Incorrecto:</i> 'El abogado vio al acusado caminando con su maletín.' (¿De quién era el maletín?).<br>• <b>Reconstrucción correcta:</b> 'El abogado, llevando su propio maletín, vio al acusado caminando.'<br><br><b>3. Pleonasmo o Redundancia (Repetición innecesaria de ideas):</b><br>• <i>Incorrecto:</i> 'Debemos lapidar una réplica exacta idéntica.'<br>• <b>Reconstrucción correcta:</b> 'Debemos lapidar una réplica exacta.' (Si es réplica exacta, es idéntica).<br>• <i>Incorrecto:</i> 'La víctima sufrió una hemorragia de sangre.'<br>• <b>Reconstrucción correcta:</b> 'La víctima sufrió una hemorragia.'<br><br><b>4. Barbarismo (Mala escritura, mala pronunciación o extranjeros innecesarios):</b><br>• <i>Incorrecto:</i> 'Ojalá no haiga ningún inconveniente en la fiesta.'<br>• <b>Reconstrucción correcta:</b> 'Ojalá no haya ningún inconveniente en la fiesta.'<br>• <i>Incorrecto:</i> 'Me envió un email con el link del evento.'<br>• <b>Reconstrucción correcta:</b> 'Me envió un correo electrónico con el enlace del evento.'",
+            keypoints: [
+                "Solecismo: Se corrige arreglando la concordancia o la preposición (ej. cambiar 'de acuerdo a' por 'de acuerdo con').",
+                "Anfibología: Se corrige reordenando los elementos para eliminar el doble sentido ambiguo.",
+                "Pleonasmo: Se corrige eliminando la palabra sobrante o implícita (ej. eliminar 'de sangre' en hemorragia).",
+                "Barbarismo: Se corrige aplicando la grafía académica correcta o sustituyendo el extranjerismo por el vocablo en español.",
+                "El truco para el examen: En los ejercicios de reconstrucción, ubica primero el error (un verbo mal conjugado = Solecismo; una redundancia = Pleonasmo)."
+            ],
+            quiz: {
+                question: "¿Cuál es la reconstrucción correcta de la oración defectuosa: 'El jefe le dijo a su secretario que abriera su cajón'?",
+                options: [
+                    { text: "El jefe le ordenó al secretario abrir el cajón del propio jefe.", correct: true },
+                    { text: "El jefe dijo al secretario que abriera el cajón suyo de él.", correct: false },
+                    { text: "El jefe le dijo que en su cajón abriera el secretario.", correct: false }
                 ],
-                quiz: {
-                    question: "¿Qué vicio de dicción se comete en la oración: 'El empleado vio a su jefe entrando a su oficina' (sin aclarar de quién es la oficina)?",
-                    options: [
-                        { text: "Anfibología", correct: true },
-                        { text: "Solecismo", correct: false },
-                        { text: "Pleonasmo", correct: false }
-                    ],
-                    explanation: "Es anfibología porque la mala construcción genera ambigüedad sobre si la oficina pertenece al empleado o al jefe."
-                }
-            },
-            {
-                id: "3.9.1.12",
-                title: "Literatura guatemalteca e identidad",
-                intro: "La literatura guatemalteca no puede entenderse al margen de su historia: es un reflejo de su multiculturalidad, sus paisajes, la belleza de sus idiomas mayas y sus intensas luchas sociales y políticas:<br><br><b>Autores Guatemaltecos Fundamentales:</b><br><br>• <b>Humberto Ak'abal (Poeta Maya K'iche'):</b><br>Nacido en Momostenango, Totonicapán. Es una de las figuras más celebradas de la lírica centroamericana. Escribía sus poemas originalmente en idioma <b>K'iche'</b> y los traducía él mismo al español. Su poesía destaca por su sencillez, brevedad y belleza, evocando los sonidos de la naturaleza, el canto de los pájaros, el viento en las montañas y la profunda cosmovisión maya.<br><br>• <b>Luis Cardoza y Aragón:</b><br>Ensayista y poeta genial originario de Antigua Guatemala. Es considerado uno de los intelectuales y críticos de arte más destacados del siglo XX. Su obra reflexiona con una prosa poética refinada sobre la cultura, la política y la búsqueda de la identidad de Guatemala.<br><br>• <b>Otto René Castillo:</b><br>Poeta y combatiente comprometido con la justicia social. Es el máximo exponente guatemalteco de la 'poesía comprometida' o social. Su célebre poema <i>'Vamos patria a caminar'</i> es un canto universal de amor al país y de protesta contra la opresión.<br><br>• <b>Luis de Lión:</b><br>Escritor indígena nacido en San Juan del Obispo. Su obra cumbre, la novela <i>'El tiempo principia en Xibalbá'</i>, es considerada un punto de quiebre histórico en la narrativa nacional, al adentrarse con un lenguaje audaz en la psicología e identidad del pueblo indígena guatemalteco contemporáneo.",
-                keypoints: [
-                    "Humberto Ak'abal: Poeta lírico k'iche' cuya poesía celebra la cosmovisión maya y la naturaleza.",
-                    "Otto René Castillo: Icono de la poesía comprometida y de protesta social.",
-                    "Luis de Lión: Narrativa contemporánea indígena guatemalteca del siglo XX.",
-                    "El truco para el examen: Si la pregunta alude a 'versos sencillos en idioma k'iche' sobre el bosque, la naturaleza y la identidad maya', responde HUMBERTO AK'ABAL."
+                explanation: "La oración original padecía de anfibología (no se sabía de quién era el cajón); la reconstrucción elimina la ambigüedad aclarando el poseedor."
+            }
+        },
+        {
+            id: "3.9.1.12",
+            title: "Literatura guatemalteca e identidad",
+            intro: "La literatura guatemalteca es una de las representaciones más profundas de la identidad pluriétnica, multicultural y de las complejas transformaciones históricas del país. Diversos autores han construido visiones únicas sobre la guatemaltequidad:<br><br><b>Visión de Identidad en Autores Guatemaltecos Clave:</b><br><br>• <b>Luis Cardoza y Aragón:</b><br><i>Visión de Guatemala:</i> Su obra (destacando ensayos como <i>'Guatemala, Las líneas de su mano'</i>) analiza la identidad nacional con una profunda mirada crítica, poética y filosófica. Cardoza define a Guatemala como un territorio de dolor, belleza sublime y contradicciones, buscando reconciliar el pasado prehispánico con los retos contemporáneos.<br><br>• <b>Otto René Castillo:</b><br><i>Visión de Guatemala:</i> Representante de la literatura comprometida. Su visión de patria está ligada a la dignidad del pueblo humilde, la solidaridad social y la resistencia frente a la opresión. En poemas emblemáticos como <i>'Vamos patria a caminar'</i>, concibe la identidad como un compromiso ético de amor y entrega total por el bienestar de Guatemala.<br><br>• <b>Luis de Lión:</b><br><i>Visión de Guatemala:</i> Pionero de la narrativa indígena contemporánea. En su obra cumbre <i>'El tiempo principia en Xibalbá'</i>, desmonta la visión folclórica del indígena y retrata con realismo desnudo, lírico y desgarrador la psicología, los dilemas morales y las tensiones culturales del hombre maya en el contexto guatemalteco del siglo XX.<br><br>• <b>Humberto Ak'abal:</b><br><i>Visión de Guatemala:</i> Poeta maya K'iche' que proyectó la cosmovisión ancestral a escala internacional. Su poesía, escrita originalmente en K'iche' y traducida por él mismo al español, reflexiona sobre la identidad guatemalteca desde el respeto sagrado a la naturaleza, el canto de los pájaros, el sonido del viento y la memoria oral de las comunidades indígenas.",
+            keypoints: [
+                "Luis Cardoza y Aragón: Ensayismo poético sobre la identidad histórica y contradictoria del país ('Las líneas de su mano').",
+                "Otto René Castillo: Poesía social comprometida con la lucha del pueblo y la dignidad patria ('Vamos patria a caminar').",
+                "Luis de Lión: Narrativa indígena contemporánea y análisis psicológico de la identidad ('El tiempo principia en Xibalbá').",
+                "Humberto Ak'abal: Poesía lírica K'iche' centrada en la naturaleza y la cosmovisión maya.",
+                "El truco para el examen: Si la pregunta indaga por 'el autor de Guatemala, Las líneas de su mano que reflexiona sobre la identidad nacional', es LUIS CARDOZA Y ARAGÓN."
+            ],
+            quiz: {
+                question: "¿Qué autor guatemalteco construyó en su obra 'El tiempo principia en Xibalbá' una visión renovada y psicológica de la identidad indígena contemporánea?",
+                options: [
+                    { text: "Luis de Lión", correct: true },
+                    { text: "Otto René Castillo", correct: false },
+                    { text: "Humberto Ak'abal", correct: false }
                 ],
-                quiz: {
-                    question: "¿Qué autor guatemalteco es universalmente reconocido por escribir poesía en idioma k'iche' que rescata los sonidos de la naturaleza y la cosmovisión maya?",
-                    options: [
-                        { text: "Humberto Ak'abal", correct: true },
-                        { text: "Luis Cardoza y Aragón", correct: false },
-                        { text: "Otto René Castillo", correct: false }
-                    ],
-                    explanation: "Humberto Ak'abal es el gran referente guatemalteco de la poesía en lengua k'iche' dedicada a la cosmovisión maya."
-                }
-            },
-            {
-                id: "3.9.1.13",
-                title: "Realismo mágico y realidad referencial",
-                intro: "Durante el siglo XX, la literatura hispanoamericana deslumbró al mundo entero al fusionar la dura realidad política de la región con la fantasía ancestral.<br><br><b>1. El Realismo Mágico:</b><br>Es una corriente literaria en la que <b>elementos fantásticos, mágicos, míticos o inverosímiles se integran dentro de la narración como si fueran hechos cotidianos y absolutamente normales</b>. Para los personajes de la novela, que lluevan flores del cielo o que alguien flote no causa espanto ni asombro, lo viven con naturalidad.<br><br><b>2. La Realidad Referencial:</b><br>Es el trasfondo histórico, social y político <b>real</b> que sostiene a la novela (dictaduras militares, explotación de la tierra, injusticias sociales).<br><br><b>3. Miguel Ángel Asturias (Premio Nobel de Literatura 1967):</b><br>Es la figura cumbre de las letras guatemaltecas. Asturias logró combinar de forma magistral las técnicas de vanguardia europeas con la <b>mitología maya guatemalteca (Popol Vuh)</b> y la realidad referencial de su país.<br><br>• <i>'Hombres de maíz':</i> Obra cumbre del realismo mágico donde aborda la defensa de la tierra sagrada del maíz por parte de los indígenas ante la explotación comercial.<br>• <i>'El Señor Presidente':</i> Novela referencial que denuncia los horrores, abusos de poder y el clima de terror bajo la dictadura de Manuel Estrada Cabrera.",
-                keypoints: [
-                    "Realismo Mágico: Lo fantástico e irreal se percibe como cotidiano por los personajes.",
-                    "Miguel Ángel Asturias: Ganador del Premio Nobel de Literatura en 1967.",
-                    "Hombres de maíz: Máximo exponente del realismo mágico guatemalteco fundado en la cosmovisión maya.",
-                    "El Señor Presidente: Novela referencial de denuncia política sobre la dictadura.",
-                    "El truco para el examen: Ante preguntas sobre 'Premio Nobel de Literatura de Guatemala' o 'Realismo Mágico', la respuesta siempre es MIGUEL ÁNGEL ASTURIAS."
+                explanation: "Luis de Lión es el autor fundamental de 'El tiempo principia en Xibalbá', hito de la narrativa guatemalteca sobre la identidad maya."
+            }
+        },
+        {
+            id: "3.9.1.13",
+            title: "Realismo mágico y realidad referencial",
+            intro: "La literatura hispanoamericana alcanzó su cima estética al entrelazar la realidad social y política del continente con la dimensión mítica y fantástica de sus pueblos.<br><br><b>1. Realismo Mágico vs. Realidad Referencial:</b><br>• <b>Realidad Referencial:</b> Es el marco de hechos históricos, geográficos y políticos reales que sirven de contexto a la obra (dictaduras militares, explotación agrícola, injusticias sociales o movimientos indígenas).<br>• <b>Realismo Mágico:</b> Es la técnica narrativa donde los <b>sucesos extraordinarios, míticos o mágicos son percibidos con absoluta normalidad</b> por los personajes dentro de la historia, sin causar sorpresa ni espanto.<br><br><b>2. Análisis Comparativo en la Obra de Miguel Ángel Asturias (Premio Nobel 1967):</b><br>Asturias es el creador del 'realismo mágico primigenio' o 'realismo social mitológico', donde la realidad guatemalteca se interpreta a través del filtro de la cosmovisión maya (Popol Vuh):<br><br>• <b>'Hombres de maíz':</b><br>  - <i>Realidad Referencial:</i> El avance de los capitalistas y comerciantes que queman los bosques para cultivar maíz como negocio desmedido.<br>  - <i>Realismo Mágico:</i> La creencia sagrada de los indígenas de que el ser humano fue hecho de maíz. Los campesinos se transforman en coyotes, las maldiciones curanderas tienen efectos físicos reales y los personajes dialogan con espíritus del monte de forma natural.<br><br>• <b>'El Señor Presidente':</b><br>  - <i>Realidad Referencial:</i> La dictadura sanguinaria de Manuel Estrada Cabrera, retratando la paranoia, la opresión del Estado, las cárceles e injusticias sociales.<br>  - <i>Dimensión Mítica/Mágica:</i> El dictador es proyectado no solo como un gobernante, sino como una presencia casi mitológica, omnipresente y grotesca que altera la atmósfera psíquica de toda la sociedad.",
+            keypoints: [
+                "Realidad Referencial: Marco histórico, social y político real (ej. dictaduras o despojo de tierras).",
+                "Realismo Mágico: Acontecimientos fantásticos presentados como hechos cotidianos sin extrañeza.",
+                "Miguel Ángel Asturias (Nobel 1967): Maestro en fusionar la realidad guatemalteca con los mitos del Popol Vuh.",
+                "Hombres de Maíz: Contrapone la explotación del maíz (realidad) con la condición sagrada del hombre hecho de maíz y metamorfosis míticas (realismo mágico).",
+                "El Señor Presidente: Denuncia la dictadura (realidad referencial) envolviéndola en una atmósfera pesadillesca y mitológica.",
+                "El truco para el examen: La diferencia clave es que la Realidad Referencial denuncia el hecho histórico verídico, mientras que el Realismo Mágico aporta el elemento mítico/sobrenatural cotidiano."
+            ],
+            quiz: {
+                question: "En la obra 'Hombres de maíz' de Miguel Ángel Asturias, ¿cuál de los siguientes elementos representa la Realidad Referencial?",
+                options: [
+                    { text: "La explotación comercial indiscriminada de la tierra por parte de especuladores", correct: true },
+                    { text: "La transformación de los personajes en coyotes o espíritus protectores", correct: false },
+                    { text: "Las pócimas curanderas que causan ceguera instantánea por una maldición", correct: false }
                 ],
-                quiz: {
-                    question: "¿Qué escritor guatemalteco fue galardonado con el Premio Nobel de Literatura en 1967 por sus obras cumbre del Realismo Mágico?",
-                    options: [
-                        { text: "Miguel Ángel Asturias", correct: true },
-                        { text: "Augusto Monterroso", correct: false },
-                        { text: "Luis Cardoza y Aragón", correct: false }
-                    ],
-                    explanation: "Miguel Ángel Asturias obtuvo el Premio Nobel de Literatura en 1967 por la calidad y trascendencia universal de su obra."
+                explanation: "La explotación de las tierras por intereses comerciales constituye la realidad referencial socioeconómica que Asturias denuncia en la novela."
                 }
             }
         ]
