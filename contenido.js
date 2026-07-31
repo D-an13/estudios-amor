@@ -5,14 +5,15 @@ const studyData = {
             {
                 id: "3.7.1.1",
                 title: "La ética y otras ciencias auxiliares de la Filosofía",
-                intro: "A ver, imagínate que estamos sentados un jueves tranquilos con un café platicando de la vida. De repente nos preguntamos: <i>'¿Por qué ciertas cosas nos parecen buenas o malas, bellas o feas, y cómo sabemos qué es real?'</i>. Ahí estamos entrando de lleno al terreno de la <b>Filosofía</b> (que etimológicamente significa 'amor a la sabiduría').<br><br>La filosofía busca comprender las causas primeras y los principios fundamentales de todo lo que existe. Como es un campo tan vasto, se divide en <b>disciplinas o ciencias auxiliares</b> especializadas:<br><br>• <b>Ética:</b> Estudio filosófico de la moral, el bien, el deber ser y la conducta humana. Nos ayuda a discernir entre lo correcto e incorrecto en nuestras decisiones cotidianas.<br><br>• <b>Ontología (Metafísica general):</b> Estudia la naturaleza del 'ser', la existencia y la realidad misma. Se pregunta: <i>¿Qué significa que algo 'exista'? ¿Cuál es la esencia de las cosas?</i>.<br><br>• <b>Epistemología (Teoría del conocimiento):</b> Evalúa cómo conocemos la verdad, los límites del saber humano y los criterios de validez del conocimiento científico.<br><br>• <b>Lógica:</b> Estudia la estructura, formas y reglas del razonamiento válido, permitiéndonos construir argumentos sólidos e identificar falacias.<br><br>• <b>Axiología:</b> Es la teoría de los <b>valores</b>. Analiza tanto los valores éticos (justicia, honestidad) como los estéticos, estudiando qué hace que algo sea considerado valioso.<br><br>• <b>Estética:</b> Explora la percepción de la belleza, la experiencia sensible y las manifestaciones del arte.<br><br><b>Ejemplo para no olvidarlo nunca:</b> Si analizas una pintura en un museo: preguntarte si la obra es hermosa es <b>Estética</b>; evaluar si lo que plasma refleja la verdad histórica es <b>Epistemología</b>; y cuestionarte si el tema representado es moralmente aceptable es <b>Ética</b>.",
+                intro: "<b>Para entender qué es la Filosofía:</b> Etimológicamente, la palabra proviene del griego <i>philos</i> (amor) y <i>sophia</i> (sabiduría), es decir, es el 'amor a la sabiduría'. Surgió cuando los seres humanos dejaron de conformarse con explicaciones míticas o religiosas sobre el mundo y comenzaron a buscar explicaciones basadas en la razón y las causas primeras de la existencia.<br><br>Dado que la realidad es inmensa, la Filosofía necesita 'herramientas' o <b>ciencias auxiliares (disciplinas filosóficas)</b> que se especializan en estudiar un aspecto específico de la vida y el conocimiento humano:<br><br>• <b>Ontología (Metafísica general):</b> Es la rama que investiga la naturaleza del <i>'ser'</i>, la existencia y la estructura de la realidad misma. No se pregunta si una manzana es roja, sino qué significa que la manzana 'exista' o qué diferencia a un objeto real de una ilusión o un concepto abstracto.<br><br>• <b>Epistemología (Teoría del Conocimiento):</b> Se encarga de examinar los fundamentos, límites y la validez del conocimiento, especialmente el científico. Responde a preguntas como: <i>¿Cómo sabemos que lo que pensamos es verdad? ¿Qué diferencia una simple opinión de un conocimiento científico probado?</i>.<br><br>• <b>Lógica:</b> Es la ciencia formal que estudia la estructura, las leyes y las formas del pensamiento y el razonamiento. Su objetivo es enseñarnos a construir argumentos coherentes y válidos, dándonos las reglas para evitar caer en contradicciones o engaños verbales.<br><br>• <b>Axiología:</b> Es la disciplina dedicada a la teoría de los <b>valores</b>. Investiga por qué clasificamos las cosas, ideas o acciones como valiosas o indeseables. Analiza tanto los valores éticos (como la justicia y la honestidad) como los estéticos o culturales.<br><br>• <b>Estética:</b> Se enfoca en la reflexión filosófica sobre la percepción, la belleza, el arte y las emociones que experimentamos a través de los sentidos cuando contemplamos una obra artística o un paisaje natural.<br><br>• <b>Ética:</b> Es la disciplina que analiza de manera crítica la moral, el bien, la virtud, la justicia y el 'deber ser'. No se limita a decirte qué leyes obedecer, sino que te hace cuestionar <i>por qué</i> una acción se considera correcta o incorrecta en una sociedad.",
                 keypoints: [
-                    "Ética: Estudio filosófico de la moral, el bien y el deber ser del comportamiento humano.",
-                    "Ontología: Estudio de la naturaleza del 'ser', la existencia y la realidad.",
-                    "Epistemología: Estudio del origen, posibilidad y validez del conocimiento científico.",
-                    "Axiología: Estudio riguroso de la naturaleza de los valores humanos.",
-                    "Estética: Reflexión sobre la belleza, la percepción sensible y la teoría del arte.",
-                    "El truco para el examen: Si te preguntan por 'valores', la respuesta es AXIOLOGÍA. Si preguntan por 'el ser o la realidad', es ONTOLOGÍA."
+                    "Ontología: Estudio de la naturaleza del 'ser', la existencia y la estructura profunda de la realidad.",
+                    "Epistemología: Análisis de los límites, métodos, origen y criterios de validez del conocimiento científico.",
+                    "Lógica: Ciencia formal que estudia las estructuras del razonamiento correcto e identifica falacias.",
+                    "Axiología: Estudio riguroso y sistemático de la naturaleza y clasificación de los valores humanos.",
+                    "Estética: Reflexión sobre la belleza, la experiencia sensible y las expresiones del arte.",
+                    "Ética: Estudio filosófico sobre la conducta humana, la moral, el bien y el deber ser en la sociedad.",
+                    "El truco de oro para el examen: Si te preguntan por 'la validez de la ciencia y el saber', es EPISTEMOLOGÍA. Si te preguntan por 'la escala de valores', la respuesta inequívoca es AXIOLOGÍA."
                 ],
                 quiz: {
                     question: "¿Qué disciplina de la filosofía se encarga específicamente de estudiar la naturaleza de los valores humanos?",
@@ -21,19 +22,22 @@ const studyData = {
                         { text: "Epistemología", correct: false },
                         { text: "Ontología", correct: false }
                     ],
-                    explanation: "La axiología es la rama filosófica que profundiza en el concepto, clasificación y fundamento de los valores humanos."
+                    explanation: "La axiología es la rama filosófica dedicada al estudio, jerarquización y análisis de los valores humanos."
                 }
             },
             {
                 id: "3.7.1.2",
                 title: "Filosofía presocrática",
-                intro: "Antes de los grandes maestros de Atenas como Sócrates o Platón, surgió en las colonias griegas un grupo de sabios llamados <b>Presocráticos</b>. Ellos marcaron un hito histórico fundamental: <b>el paso del Mito al Logos</b>.<br><br>¿Qué significa esto? Que dejaron de explicar las tormentas, las cosechas o la creación del mundo mediante relatos mitológicos de dioses furiosos, y comenzaron a buscar explicaciones <b>racionales y bien observadas</b> basadas en la naturaleza.<br><br>La gran búsqueda de los presocráticos era descubrir el <b>Arché (o Arjé)</b>, que se define como el <i>principio u origen fundamental de donde surge todo en el universo y al cual todo regresa</i>.<br><br><b>Los presocráticos clave y sus propuestas:</b><br><br>• <b>Tales de Mileto:</b> Considerado el primer filósofo. Afirmaba que el Arché es el <b>Agua</b>, ya que todo lo vivo necesita humedad para germinar y mantenerse.<br><br>• <b>Anaxímenes:</b> Proponía que el principio vital es el <b>Aire</b>, un elemento infinito que al rarefacerse o condensarse da origen a las demás sustancias.<br><br>• <b>Pitágoras:</b> Argumentaba que la esencia de la realidad no era un elemento físico, sino abstracto: los <b>Números</b> y las proporciones matemáticas.<br><br>• <b>Heráclito de Éfeso:</b> Sostenía que la realidad está en constante devenir y transformación (<i>'Nadie puede bañarse dos veces en el mismo río, porque ni el río ni el hombre son los mismos'</i>). Asociaba este movimiento al <b>Fuego</b>.<br><br>• <b>Parménides de Elea:</b> Defendía la postura contraria a Heráclito. Decía que el cambio es solo una ilusión de nuestros sentidos y que el 'Ser' es inmóvil, uno, eterno e inmutable.",
+                intro: "<b>El origen del pensamiento científico en Grecia:</b> Antes de la aparición de Sócrates, en las colonias griegas de Jonia e Italia meridional (siglos VI y V a.C.), surgió un grupo de pensadores conocidos como los <b>Presocráticos</b>. Ellos fueron los responsables de provocar el evento cultural más importante de Occidente: <b>el paso del Mito al Logos</b>.<br><br>¿Qué significa esto? En lugar de explicar los terremotos diciendo que 'el dios Poseidón estaba enojado' (explicación mítica), comenzaron a observar objetivamente la naturaleza para encontrar leyes lógicas y naturales (explicación racional o <i>logos</i>).<br><br>La búsqueda central de todos los presocráticos era descubrir el <b>Arché (o Arjé)</b>, que se define como el principio constitutivo, origen y causa primera de la cual emergen todas las cosas del universo y hacia la cual todas retornan al destruirse.<br><br><b>Los pensadores presocráticos y sus visiones del Arché:</b><br><br>• <b>Tales de Mileto:</b> Considerado el primer filósofo de la historia. Propuso que el Arché era el <b>Agua</b>, tras observar que la vida requiere humedad para germinar y mantenerse, y que el agua puede cambiar de estado (sólido, líquido, gaseoso).<br><br>• <b>Anaxímenes:</b> Planteó que el principio vital era el <b>Aire</b>, argumentando que todo vive mediante la respiración y que el aire, por condensación o rarefacción, genera las demás sustancias (como el fuego, el agua y la tierra).<br><br>• <b>Pitágoras:</b> Rompió con la idea de buscar un elemento físico y propuso un principio abstracto: los <b>Números</b>. Sostenía que la realidad tiene una estructura matemática perfecta y que la armonía del cosmos se puede medir y expresar formalmente.<br><br>• <b>Heráclito de Éfeso:</b> Sostenía que la característica fundamental del universo es el <b>cambio constante y el devenir</b> (<i>'Nadie puede bañarse dos veces en el mismo río, porque ni el hombre ni el agua son los mismos'</i>). Simbolizaba este movimiento incesante a través del <b>Fuego</b>.<br><br>• <b>Parménides de Elea:</b> Defendió la postura radicalmente opuesta a Heráclito. Afirmaba que el cambio es solo una ilusión engañosa de nuestros sentidos. Para Parménides, el <i>'Ser'</i> es único, inmóvil, eterno e inmutable, porque algo no puede 'pasar de ser a no ser'.",
                 keypoints: [
-                    "Paso del Mito al Logos: Transición de explicaciones mítico-religiosas a explicaciones racionales y observacionales.",
-                    "Arché (Arjé): La sustancia o principio elemental que sostiene el origen de la naturaleza.",
-                    "Tales = Agua | Anaxímenes = Aire | Pitágoras = Números | Heráclito = Fuego y Cambio permanente.",
-                    "Parménides = El 'Ser' es inmóvil y el cambio es una ilusión sensorial.",
-                    "El truco para el examen: Si la pregunta alude al 'cambio constante' o la metáfora del 'río', es HERÁCLITO. Si indaga por la 'sustancia originaria', la palabra clave es ARCHÉ."
+                    "Paso del Mito al Logos: Transición histórica de las explicaciones fantasiosas/religiosas al razonamiento lógico y observacional.",
+                    "Arché (Arjé): La sustancia primordial o principio constitutivo de toda la naturaleza.",
+                    "Tales de Mileto = El Agua como elemento primordial de la vida.",
+                    "Anaxímenes = El Aire como sustancia infinita y vital.",
+                    "Pitágoras = Los Números y la proporcionalidad matemática como estructura de la realidad.",
+                    "Heráclito = El cambio perpetuo (devenir) y el choque de opuestos, simbolizado por el Fuego.",
+                    "Parménides = El 'Ser' es inmutable, uno y eterno; el cambio es solo una ilusión sensorial.",
+                    "El truco de oro para el examen: Si la pregunta alude al 'devenir', la 'transformación constante' o la célebre frase del 'río', marca HERÁCLITO."
                 ],
                 quiz: {
                     question: "¿Cómo se le llama al concepto filosófico presocrático que busca el principio o sustancia fundamental de la naturaleza?",
@@ -42,18 +46,18 @@ const studyData = {
                         { text: "Logos", correct: false },
                         { text: "Axioma", correct: false }
                     ],
-                    explanation: "El Arché es el término griego que usaban los presocráticos para designar el principio o elemento primordial de todas las cosas."
+                    explanation: "El Arché es el término técnico que usaban los filósofos presocráticos para designar el principio o sustancia elemental del universo."
                 }
             },
             {
                 id: "3.7.1.3",
                 title: "La Filosofía clásica (Sócrates, Platón y Aristóteles)",
-                intro: "Llegamos a la época de oro del pensamiento griego. Estos tres filósofos estructuraron la columna vertebral de la cultura y la ciencia en Occidente:<br><br><b>1. Sócrates (El maestro de la pregunta):</b><br>No dejó escritos propios; conocemos sus ideas gracias a Platón. Cambió el enfoque de la filosofía: dejó de mirar la naturaleza física para enfocarse en la ética humana y la virtud. Su famoso método es la <b>Mayéutica</b> (palabra que significa 'arte de hacer parir'). Consistía en hacer preguntas guiadas e ir desmontando falsos conocimientos hasta que el interlocutor 'diera a luz' la verdad por sí mismo. Su lema era: <i>'Solo sé que no sé nada'</i>.<br><br><b>2. Platón (El mundo del idealismo):</b><br>Discípulo de Sócrates. Formuló la <b>Teoría de las Ideas</b> y la explicó magistralmente en el <b>Mito de la Caverna</b>. Sostenía que existen dos mundos: el <i>Mundo Sensible</i> (el físico, imperfecto y cambiante que captamos con los sentidos) y el <i>Mundo Inteligible o de las Ideas</i> (donde residen las esencias perfectas, eternas e inmutables). Para Platón, el cuerpo es la cárcel del alma.<br><br><b>3. Aristóteles (El empirismo y la lógica):</b><br>Discípulo de Platón, pero profundamente crítico de separar la realidad en dos mundos. Trajo la filosofía de vuelta a la tierra, argumentando que la verdad se descubre mediante la observación de la naturaleza y los hechos concretos. Es el fundador de la <b>Lógica formal</b> (con los silogismos deductivos) y planteó una ética centrada en la búsqueda de la felicidad (Eudemonía) a través de la <b>Virtud y el Justo Medio</b> entre dos extremos.",
+                intro: "<b>La cumbre del pensamiento ateniense:</b> Durante los siglos V y IV a.C., la filosofía dio un giro crucial: dejó de centrarse únicamente en la naturaleza física para enfocar su estudio en el ser humano, la política, la mente y la conducta social. Este periodo está dominado por tres figuras interconectadas:<br><br><b>1. Sócrates (El maestro sin libros):</b><br>Nunca escribió una sola obra; todo lo que sabemos de él proviene de su discípulo Platón. Sócrates se oponía a los sofistas (cobradores de discursos engañosos) y buscaba definiciones verdaderas sobre la virtud y la justicia. Desarrolló el método de la <b>Mayéutica</b> (término que significa 'el arte de ayudar a dar a luz'). A través de un diálogo basado en preguntas incisivas, obligaba a su interlocutor a darse cuenta de sus propias contradicciones hasta que la persona lograba 'dar a luz' la verdad por sus propios medios. Su lema pedagógico era: <i>'Solo sé que no sé nada'</i>.<br><br><b>2. Platón (El mundo de las ideas y el idealismo):</b><br>Discípulo de Sócrates y fundador de La Academia. Planteó la <b>Teoría de las Ideas</b> y el dualismo ontológico, explicados célebremente en el <b>Mito de la Caverna</b>. Argumentaba que existen dos realidades:<br>• <i>El Mundo Sensible:</i> Es la realidad física que percibimos con los sentidos; es cambiante, imperfecta y engañosa (como las sombras en el fondo de una cueva).<br>• <i>El Mundo Inteligible (de las Ideas):</i> Es el plano superior donde existen las esencias perfectas, eternas e inmutables de las cosas (el Bien, la Justicia, la Belleza). El alma humana pertenece a este mundo y el cuerpo es solo su 'cárcel temporal'.<br><br><b>3. Aristóteles (El realismo, la lógica y el empirismo):</b><br>Discípulo de Platón durante 20 años, pero crítico del dualismo de su maestro. Aristóteles trajo la filosofía 'de vuelta a la tierra', sosteniendo que las esencias no están en un mundo invisible, sino en las cosas concretas que podemos observar y experimentar (fundamento del <i>Empirismo</i>). Es considerado el padre de la <b>Lógica formal</b> (a través de los silogismos). En su ética, enseñaba que la meta suprema del ser humano es la felicidad (<i>Eudemonía</i>), la cual se alcanza practicando la <b>Virtud del Justo Medio</b> (saber actuar en el equilibrio perfecto entre dos extremos: el exceso y la deficiencia).",
                 keypoints: [
-                    "Sócrates: Método de la Mayéutica (diálogo por preguntas) y búsqueda de la verdad orientada a la virtud.",
-                    "Platón: Dualismo ontológico (Mundo Sensible vs. Mundo de las Ideas) y el Mito de la Caverna.",
-                    "Aristóteles: Observación empírica, invención de la Lógica tradicional y la Teoría del Justo Medio.",
-                    "El truco para el examen: Pregunta sobre 'guiar al interlocutor mediante preguntas para descubrir la verdad' = MAYÉUTICA / SÓCRATES. Pregunta sobre 'sombras vs. realidad perfecta' = PLATÓN."
+                    "Sócrates: Creador del método de la Mayéutica (diálogo inductivo por preguntas) y centrado en la ética humana.",
+                    "Platón: Dualismo ontológico (Mundo Sensible vs. Mundo Inteligible/Ideas) e interpretación del Mito de la Caverna.",
+                    "Aristóteles: Padre del Empirismo y la Lógica formal (silogismos); propone la ética del 'Justo Medio' para alcanzar la Eudemonía (felicidad).",
+                    "El truco de oro para el examen: Si la pregunta trata sobre 'sombras reflejadas en la pared de una cueva', es PLATÓN. Si habla de 'guiar mediante preguntas para descubrir la verdad interna', la respuesta es MAYÉUTICA / SÓCRATES."
                 ],
                 quiz: {
                     question: "¿En qué consiste el método socrático conocido como Mayéutica?",
@@ -62,19 +66,19 @@ const studyData = {
                         { text: "En memorizar discursos largos dictados por los gobernantes", correct: false },
                         { text: "En escribir libros teóricos sobre el origen del universo", correct: false }
                     ],
-                    explanation: "La Mayéutica socrática es un diálogo inductivo a base de preguntas que ayuda a que la persona alcance el conocimiento de forma autónoma."
+                    explanation: "La Mayéutica socrática es un proceso dialógico mediante el cual el maestro guía al estudiante con preguntas para que este razone y alcance el conocimiento de forma autónoma."
                 }
             },
             {
                 id: "3.7.1.4",
                 title: "Filosofía maya",
-                intro: "A diferencia del pensamiento occidental antropocéntrico (donde el hombre se considera el centro y dueño de todo), la <b>Filosofía Maya</b> posee un enfoque profundamente <b>cosmocéntrico, comunitario, holístico y sagrado</b>.<br><br>Para la cosmovisión maya, el ser humano no domina a la naturaleza, sino que es un hilo más en el gran tejido del universo.<br><br><b>Fundamentos centrales de la Filosofía Maya:</b><br><br>• <b>Interconectividad y Armonía Total:</b> Todo en el cosmos posee vida y energía (<i>Ch'ulel</i>). La tierra, las plantas, los ríos, los animales y las personas forman un solo organismo. Alterar una parte rompe el equilibrio general.<br><br>• <b>El Popol Vuh y el Origen Humano:</b> En el libro sagrado K'iche', se narra cómo los creadores (Tepeu y Gucumatz) fracasaron al intentar hacer al hombre de barro (se deshacía) y de madera (no tenía corazón ni memoria). Finalmente, la humanidad consciente y agradecida nace del <b>Maíz</b> (blanco y amarillo). El maíz sintetiza el respeto, la nutrición y la alianza sagrada entre el cosmos y el ser humano.<br><br>• <b>La Dualidad y Complementariedad:</b> El universo funciona mediante pares complementarios (día/noche, hombre/mujer, vida/muerte). No son opuestos destructivos, sino fuerzas indispensables para mantener el equilibrio.<br><br>• <b>Utz Kaslemal (El Buen Vivir):</b> Filosofía de vida orientada a convivir en paz con uno mismo, con los semejantes, los antepasados y la Madre Tierra.",
+                intro: "<b>Una visión sagrada y colectiva del universo:</b> A diferencia de la filosofía occidental, que coloca al ser humano en el centro como dueño y señor de la naturaleza (<i>Antropocentrismo</i>), la <b>Filosofía Maya</b> parte de una cosmovisión estrictamente <b>Cosmocéntrica, holística, comunitaria y sagrada</b>.<br><br>En el pensamiento maya, el ser humano no domina la tierra, sino que forma parte integral de un tejido interconectado donde las montañas, plantas, animales, fuentes de agua, astros y personas comparten una energía vital (<i>Ch'ulel</i>).<br><br><b>Pilares fundamentales de la cosmovisión maya:</b><br><br>• <b>El Popol Vuh y el Origen Humano:</b> En el libro sagrado de los K'iche', se relata el proceso de creación del mundo. Los dioses creadores (Tepeu y Gucumatz) intentaron crear a la humanidad en tres ocasiones. Primero usaron <i>barro</i>, pero las criaturas se deshacían y no tenían entendimiento. Luego usaron <i>madera</i>, pero las figuras no tenían corazón, memoria ni gratitud hacia sus creadores. Finalmente, crearon con éxito al ser humano consciente a partir del <b>Maíz</b> (blanco y amarillo). El maíz simboliza la sustancia sagrada que brinda sensibilidad, intelecto y alianza con el cosmos.<br><br>• <b>Principio de Dualidad y Complementariedad:</b> La realidad no se concibe como una lucha del 'bien contra el mal', sino como la interacción de fuerzas opuestas que se necesitan mutuamente para mantener el equilibrio del universo (el día y la noche, la vida y la muerte, el sol y la luna, lo femenino y lo masculino).<br><br>• <b>Utz Kaslemal (El Buen Vivir):</b> Es la propuesta ética de vida que busca la plenitud del individuo en completa armonía con la comunidad, los antepasados y la naturaleza (Madre Tierra).",
                 keypoints: [
-                    "Cosmovisión Cosmocéntrica: El centro y valor supremo es el equilibrio del cosmos y la naturaleza.",
-                    "Popol Vuh: Texto fundamental donde el maíz es la sustancia sagrada de la que nace el hombre consciente.",
-                    "Dualidad y Complementariedad: Armonía entre elementos divergentes para mantener el orden universal.",
-                    "Utz Kaslemal: Principio ético y comunitario del 'Buen Vivir' en sintonía con la Tierra.",
-                    "El truco para el examen: Si la pregunta aborda la 'creación exitosa de los hombres' o la 'sustancia sagrada de vida' en la cultura maya, la respuesta es el MAÍZ."
+                    "Cosmovisión Cosmocéntrica: El ser humano es un elemento integrado y respetuoso dentro del equilibrio del cosmos.",
+                    "Popol Vuh: Texto sagrado donde la humanidad consciente es moldeada a partir de las masas de Maíz.",
+                    "Principio de Complementariedad: Los elementos opuestos no se destruyen, se necesitan para equilibrar la realidad.",
+                    "Utz Kaslemal: Principio ético del 'Buen Vivir' en armonía con la comunidad y el entorno natural.",
+                    "El truco de oro para el examen: Ante cualquier pregunta sobre 'la sustancia sagrada con la que fueron creados exitosamente los hombres con memoria e intelecto' en la cultura maya, responde siempre EL MAÍZ."
                 ],
                 quiz: {
                     question: "¿Cuál es el elemento fundamental en el Popol Vuh con el que son creados exitosamente los seres humanos conscientes?",
@@ -83,41 +87,43 @@ const studyData = {
                         { text: "El Barro", correct: false },
                         { text: "La Madera", correct: false }
                     ],
-                    explanation: "En la narración del Popol Vuh, los seres humanos de maíz son los únicos capaces de tener memoria, sensibilidad y venerar a los creadores."
+                    explanation: "En la narración del Popol Vuh, la creación definitiva y triunfante de los seres humanos con conciencia, gratitud y memoria se realiza utilizando el maíz sagrado."
                 }
             },
             {
                 id: "3.7.1.5",
-                title: "Razonamiento válido y tipos de falacias",
-                intro: "Para construir debates inteligentes e investigar rigurosamente, necesitamos argumentar con <b>validez lógica</b>. Un razonamiento es lógicamente válido cuando su conclusión se deduce de manera directa y coherente a partir de las premisas planteadas.<br><br>Sin embargo, es muy común tropezar con <b>Falacias</b>: argumentos engañosos que <i>parecen</i> lógicos a simple vista, pero que contienen trampas, manipulación emocional o errores en la estructura del razonamiento.<br><br><b>Las Falacias más recurrentes en evaluaciones:</b><br><br>• <b>Ad Hominem (Ataque a la persona):</b> Consiste en descalificar un argumento atacando los defectos, aspecto, edad o vida privada de quien lo emite, en lugar de refutar su idea.<br><i>Ejemplo:</i> 'No podemos validar la propuesta económica del profesor porque él no viste formalmente'.<br><br>• <b>Ad Verecundiam (Apelar a la falsa autoridad):</b> Defender que una afirmación es cierta solo porque la dijo alguien famoso o respetado, aunque esa persona no sea experta en esa materia específica.<br><i>Ejemplo:</i> 'Esta vitamina cura el resfrío porque lo afirmó un actor famoso en la televisión'.<br><br>• <b>Ad Populum (Apelar al pueblo / a la mayoría):</b> Sostener que una idea es correcta únicamente porque 'la mayoría de la gente lo hace o lo cree'.<br><i>Ejemplo:</i> 'Debemos comprar esta marca porque es la que la mayoría consume'.<br><br>• <b>Ad Ignorantiam (Apelar a la ignorancia):</b> Dar por hecho que una afirmación es verdadera solo porque nadie ha podido demostrar lo contrario.<br><i>Ejemplo:</i> 'Los extraterrestres existen porque nadie ha demostrado jamás que no existan'.<br><br>• <b>Ad Misericordiam (Apelar a la piedad):</b> Intentar convencer o ganar una discusión manipulando los sentimientos de compasión o lástima.",
+                title: "Razonamiento y falacias",
+                intro: "<b>1. Aplicación de las reglas del razonamiento válido:</b><br>El razonamiento lógico es el proceso mental mediante el cual derivamos una <b>conclusión</b> a partir de una o más <b>premisas</b>. Para que un razonamiento sea <b>válido</b>, la estructura formal debe garantizar que si las premisas son verdaderas, la conclusión deba ser necesariamente verdadera (regla de no contradicción y deducción rigurosa). La validez no depende de si el contenido suena 'bonito', sino del cumplimiento estricto de la regla lógica.<br><br><b>2. Diferenciación de los distintos tipos de falacias:</b><br>Una <b>falacia</b> es un argumento engañoso que parece válido pero viola las reglas del razonamiento lógico:<br><br>• <b>Ad Hominem (Ataque personal):</b> Atacar o descalificar a la persona que habla en lugar de refutar sus argumentos.<br>• <b>Ad Verecundiam (Apelación a la falsa autoridad):</b> Defender que algo es cierto solo porque lo dijo alguien famoso o respetado, aunque no sea experto en la materia.<br>• <b>Ad Populum (Apelación a la multitud):</b> Sostener que algo es correcto simplemente porque la mayoría de la gente lo cree o lo hace.<br>• <b>Ad Ignorantiam (Apelación a la ignorancia):</b> Afirmar que algo es verdadero solo porque nadie ha podido demostrar que es falso.<br>• <b>Ad Misericordiam (Apelación a la piedad):</b> Manipular las emociones o dar lástima para justificar una conclusión en lugar de usar razones verdaderas.",
                 keypoints: [
-                    "Validez Lógica: Coherencia formal donde la conclusión deriva de las premisas.",
-                    "Falacia: Razonamiento engañoso o inválido con apariencia de verdad.",
-                    "Ad Hominem = Ataca las características de la persona.",
-                    "Ad Verecundiam = Usa la fama de una autoridad no competente.",
-                    "Ad Populum = Se respalda en lo que hace la mayoría.",
-                    "El truco para el examen: Identifica la trampa: Si critican el carácter, apariencia o condición del hablante para tumbar su idea, la falacia es AD HOMINEM."
+                    "Razonamiento Válido: Estructura lógica donde la verdad de las premisas garantiza la validez de la conclusión.",
+                    "Falacia: Argumento que parece correcto pero contiene un error lógico tramposo en su estructura.",
+                    "Ad Hominem: Descalificar al individuo en vez del argumento.",
+                    "Ad Verecundiam: Apelar a una autoridad no calificada en el tema.",
+                    "Ad Populum: Argumentar que la mayoría siempre tiene la razón.",
+                    "Ad Ignorantiam: Dar por verdadero algo solo porque no se ha demostrado lo contrario.",
+                    "Ad Misericordiam: Usar la lástima o el chantaje emocional como prueba.",
+                    "El truco de oro para el examen: Si descalifican al ponente = AD HOMINEM. Si justifican algo 'porque todos lo hacen' = AD POPULUM."
                 ],
                 quiz: {
-                    question: "Si alguien dice en una discusión: 'Ese plan ambiental no sirve porque quien lo propuso me cae mal', ¿qué falacia está cometiendo?",
+                    question: "Si durante un debate un candidato rechaza la propuesta de su oponente diciendo: 'No le hagan caso a sus ideas sobre economía porque él no sabe vestirse bien', ¿en qué falacia incurre?",
                     options: [
-                        { text: "Ad Hominem", correct: true },
-                        { text: "Ad Populum", correct: false },
-                        { text: "Ad Ignorantiam", correct: false }
+                        { text: "Falacia Ad Hominem", correct: true },
+                        { text: "Falacia Ad Populum", correct: false },
+                        { text: "Falacia Ad Ignorantiam", correct: false }
                     ],
-                    explanation: "Incurre en una falacia Ad Hominem al atacar directamente a la persona que propone la idea y no el contenido del plan ambiental."
+                    explanation: "Es una falacia Ad Hominem porque ataca directamente las características personales de la persona en lugar de refutar su argumento económico."
                 }
             },
             {
                 id: "3.7.1.6",
                 title: "Cultura, multiculturalidad e interculturalidad",
-                intro: "En un país diverso como Guatemala, es fundamental no confundir estos tres términos sobre la convivencia social:<br><br>• <b>Cultura:</b> Es el conjunto complejo de conocimientos, costumbres, lenguas, tradiciones, artes, valores y cosmovisiones que caracterizan e identifican a un grupo humano determinado.<br><br>• <b>Multiculturalidad (Concepto Descriptivo):</b> Se refiere a la <b>coexistencia de varias culturas distintas dentro de un mismo espacio geográfico o territorial</b>. Describe una realidad objetiva (el hecho de que convivimos pueblos Mayas, Garífunas, Xinkas y Ladinos), pero <i>no garantiza</i> por sí sola que exista una comunicación fluida o una relación de equidad entre ellos. Es como varios departamentos en un mismo edificio.<br><br>• <b>Interculturalidad (Concepto Dinámico e Ideal):</b> Es el proceso continuo de <b>relación, diálogo respetuoso, interacción activa y aprendizaje mutuo entre diversas culturas</b> en condiciones de absoluta igualdad y justicia social. Busca derribar barreras de racismo y discriminación.<br><br>• <b>Etnocentrismo (La amenaza):</b> Consiste en analizar o juzgar a otras culturas usando los valores y normas de la cultura propia como si fueran la 'medida correcta' o superior.",
+                intro: "<b>La comprensión de la diversidad social:</b> En sociedades heterogéneas como la guatemalteca, es vital distinguir conceptualmente tres niveles en las relaciones humanas y culturales:<br><br>• <b>Cultura:</b> Es el entramado dinámico de conocimientos, idiomas, creencias, manifestaciones artísticas, normas morales, costumbres y cosmovisiones que una comunidad crea, comparte y transmite de generación en generación, otorgándole identidad.<br><br>• <b>Multiculturalidad (Concepto Descriptivo):</b> Se refiere a la <b>presencia o coexistencia pasiva de diversas culturas dentro de un mismo espacio geográfico o marco territorial</b>. Describe una realidad social existente (por ejemplo, el hecho de que en Guatemala convivan los pueblos Maya, Garífuna, Xinka y Ladino), pero este concepto <i>no asegura</i> que exista diálogo, equidad ni entendimiento entre ellos. Es simplemente 'la constatación de que estamos juntos'.<br><br>• <b>Interculturalidad (Concepto Dinámico, Político e Ideal):</b> Es el proceso permanente de <b>comunicación activa, diálogo equitativo, respeto profundo y enriquecimiento mutuo</b> entre comunidades culturalmente diversas. No busca que las culturas se asimilen ni pierdan su identidad, sino que convivan en condiciones de absoluta justicia social, erradicando el racismo y la discriminación.<br><br>• <b>Etnocentrismo (Sesgo destructivo):</b> Es la actitud o prejuicio social en el que un grupo evalúa y juzga las costumbres, idioma o tradiciones de otros pueblos tomando como 'única norma correcta o superior' la cultura propia.",
                 keypoints: [
-                    "Cultura: Sistema de significados, idioma, creencias y tradiciones de un grupo.",
-                    "Multiculturalidad: Convivencia o presencia de múltiples culturas en un territorio (constatación de un hecho).",
-                    "Interculturalidad: Diálogo dinámico, respeto profundo, equidad e intercambio constructivo entre culturas.",
-                    "Etnocentrismo: Actitud de juzgar a otras culturas sintiendo que la propia es el modelo superior.",
-                    "El truco para el examen: Si el enunciado habla de 'diálogo activo, equidad y respeto entre culturas', marca INTERCULTURALIDAD. Si solo menciona 'varias culturas juntas en un país', marca MULTICULTURALIDAD."
+                    "Cultura: Conjunto de significados, idioma, costumbres e identidad compartidos por un grupo.",
+                    "Multiculturalidad: Muestra o fotografía de la existencia de varias culturas conviviendo en un país o región.",
+                    "Interculturalidad: Relación activa basada en el diálogo horizontal, la equidad, el respeto y la cooperación sin racismo.",
+                    "Etnocentrismo: Tendencia a considerar la cultura propia como superior o como el estándar para juzgar a las demás.",
+                    "El truco de oro para el examen: Si el texto del examen menciona 'diálogo dinámico, respeto recíproco e igualdad de derechos', marca INTERCULTURALIDAD. Si solo menciona 'la presencia de varios grupos culturales en un territorio', marca MULTICULTURALIDAD."
                 ],
                 quiz: {
                     question: "¿Cómo se llama al proceso de interacción equitativa y diálogo respetuoso entre diversas culturas en una misma sociedad?",
@@ -126,19 +132,19 @@ const studyData = {
                         { text: "Multiculturalidad", correct: false },
                         { text: "Etnocentrismo", correct: false }
                     ],
-                    explanation: "La interculturalidad implica una interacción activa basada en el diálogo horizontal y el respeto recíproco entre pueblos diversos."
+                    explanation: "La interculturalidad describe la búsqueda y práctica activa de relaciones horizontales, igualitarias y de respeto mutuo entre pueblos con diferentes identidades culturales."
                 }
             },
             {
                 id: "3.7.1.7",
                 title: "Filósofos guatemaltecos y centroamericanos",
-                intro: "Nuestra región cuenta con un legado formidable de intelectuales que han analizado la política, la educación, la historia y la estructura social centroamericana:<br><br>• <b>José Cecilio del Valle (Hondureño–Centroamericano):</b> Una de las mentes más brillantes de la ilustración regional. Redactó el <b>Acta de Independencia de 1821</b>. Concebía que la educación de calidad, el método científico y la formación ética eran las únicas herramientas capaces de conducir a las naciones centroamericanas hacia la libertad y la prosperidad.<br><br>• <b>Severo Martínez Peláez (Guatemalteco):</b> Historiador y pensador indispensable del siglo XX. Su obra cumbre, <b>'La Patria del Criollo'</b>, realiza un análisis sociohistórico riguroso sobre las raíces de la segregación, la explotación de la tierra y la estructura social heredada del régimen colonial en Guatemala.<br><br>• <b>Luis Cardoza y Aragón (Guatemalteco):</b> Ensayista, poeta y crítico de arte nacido en Antigua Guatemala. Sus escritos denunciaron las injusticias sociales, defendieron la dignidad humana y reflexionaron con profunda sensibilidad sobre la identidad nacional.<br><br>• <b>Enrique Gómez Carrillo (Guatemalteco):</b> Conocido como el 'Rey del Modernismo', sus crónicas de viaje e impresiones críticas aportaron una valiosa mirada reflexiva sobre la cultura y la condición humana a inicios del siglo XX.",
+                intro: "<b>El pensamiento crítico de nuestra región:</b> Centroamérica ha producido mentes brillantes que han analizado la libertad, la educación, la injusticia social y la construcción de la identidad nacional:<br><br>• <b>José Cecilio del Valle (Hondureño–Centroamericano, 1777–1834):</b> Conocido como 'El Sabio Valle', fue una de las figuras intelectuales más influyentes de la Ilustración hispanoamericana. Redactó el <b>Acta de Independencia de Centroamérica en 1821</b>. Pensador enciclopédico, convencido de que la única vía real para consolidar naciones libres y prósperas era la inversión masiva en educación pública, la aplicación del método científico y la buena administración económica.<br><br>• <b>Severo Martínez Peláez (Guatemalteco, 1925–1998):</b> Historiador e intelectual indispensable del siglo XX. Es el autor de la obra cumbre <b>'La Patria del Criollo'</b> (1970), un riguroso ensayo de interpretación histórica bajo el prisma del materialismo histórico. En él analiza detalladamente cómo la estructura del régimen colonial español (el despojo de tierras y la explotación servil del indígena) moldeó las profundas desigualdades sociales y la economía de la Guatemala contemporánea.<br><br>• <b>Luis Cardoza y Aragón (Guatemalteco, 1901–1992):</b> Ensayista, poeta, crítico de arte y diplomático nacido en Antigua Guatemala. Sus escritos se caracterizan por una profunda sensibilidad artística ligada a una denuncia constante contra las dictaduras y la opresión. Reflexionó incansablemente sobre la libertad, la belleza y la dignidad humana.<br><br>• <b>Enrique Gómez Carrillo (Guatemalteco, 1873–1927):</b> Denominado el 'El Rey de la Crónica'. Fue un prolífico escritor del movimiento modernista que viajó por todo el mundo dejando agudos análisis culturales, literarios y sociales en sus famosas crónicas periodísticas.",
                 keypoints: [
-                    "José Cecilio del Valle: Prócer, redactor del Acta de Independencia de 1821 y defensor de la educación científica.",
-                    "Severo Martínez Peláez: Autor de 'La Patria del Criollo', texto clave para entender la realidad histórica colonial de Guatemala.",
-                    "Luis Cardoza y Aragón: Crítico de arte y pensador enfocado en la justicia social y la identidad.",
-                    "Enrique Gómez Carrillo: Gran cronista modernista con una aguda visión crítica cultural.",
-                    "El truco para el examen: Si la pregunta indaga de forma directa sobre el autor del libro 'La Patria del Criollo', responde sin dudar SEVERO MARTÍNEZ PELÁEZ."
+                    "José Cecilio del Valle: Prócer ilustrado, redactó el Acta de Independencia de 1821 y fue un ferviente defensor de la educación y el método científico.",
+                    "Severo Martínez Peláez: Autor de 'La Patria del Criollo', obra clave para comprender las raíces sociohistóricas de la segregación y tenencia de tierra en Guatemala.",
+                    "Luis Cardoza y Aragón: Ilustre pensador, poeta y crítico de arte comprometido con las luchas sociales y la libertad política.",
+                    "Enrique Gómez Carrillo: Destacado exponente guatemalteco de la crónica literaria dentro del Modernismo.",
+                    "El truco de oro para el examen: Ante la pregunta directa por el 'autor del libro histórico La Patria del Criollo', la respuesta correcta es SEVERO MARTÍNEZ PELÁEZ."
                 ],
                 quiz: {
                     question: "¿Qué pensador e historiador guatemalteco escribió la obra fundamental 'La Patria del Criollo'?",
@@ -147,170 +153,181 @@ const studyData = {
                         { text: "José Cecilio del Valle", correct: false },
                         { text: "Enrique Gómez Carrillo", correct: false }
                     ],
-                    explanation: "Severo Martínez Peláez fue el historiador guatemalteco que analizó la estructura colonial en su célebre libro 'La Patria del Criollo'."
+                    explanation: "Severo Martínez Peláez fue el ilustre historiador guatemalteco que analizó la estructura económica y social del periodo colonial en 'La Patria del Criollo'."
                 }
             },
-            {
+         {
                 id: "3.7.2.1",
                 title: "Psicología y áreas de aplicación",
-                intro: "La <b>Psicología</b> es la ciencia que estudia el comportamiento humano y los procesos mentales (pensamientos, emociones, percepciones y memoria). Dado que los seres humanos nos desenvolvemos en múltiples entornos, la psicología se divide en especialidades aplicadas:<br><br>• <b>Psicología Clínica:</b> Se ocupa del diagnóstico, evaluación, prevención y tratamiento terapéutico de los trastornos emocionales, mentales y de la conducta.<br><br>• <b>Psicología Educativa:</b> Investiga cómo aprenden las personas y diseña estrategias pedagógicas para optimizar el rendimiento y el desarrollo cognitivo en escuelas y universidades.<br><br>• <b>Psicología Industrial / Organizacional:</b> Analiza la conducta humana en los ambientes de trabajo. Se enfoca en el reclutamiento de personal, la motivación laboral, el liderazgo y la mejora del clima organizacional.<br><br>• <b>Psicología Social:</b> Estudia cómo el contexto, la cultura, los prejuicios y la interacción con los grupos influyen en los pensamientos y actitudes del individuo.<br><br>• <b>Psicología Forense:</b> Aplica los principios psicológicos en el ámbito del derecho, elaborando peritajes y evaluaciones para jueces y tribunales judiciales.<br><br>• <b>Psicobiología:</b> Explora las bases biológicas y neuronales que sustentan la conducta y los procesos de la mente.",
+                intro: "<b>Concepto de Psicología:</b> Es la ciencia que estudia la conducta humana, los procesos mentales (percepción, memoria, pensamiento) y las emociones en relación con el entorno físico y social.<br><br><b>Identificación de las áreas de aplicación:</b><br><br>• <b>Psicobiología:</b> Estudia las bases biológicas y neuronales que explican la conducta y la mente.<br>• <b>Psicología Experimental:</b> Emplea experimentos controlados en laboratorio para investigar procesos cognitivos básicos como la memoria, la percepción y el aprendizaje.<br>• <b>Psicología del Desarrollo:</b> Analiza cómo cambian los procesos psicológicos a lo largo del ciclo vital humano.<br>• <b>Psicología de la Personalidad:</b> Investiga los patrones individuales y rasgos constantes que hacen única a cada persona.<br>• <b>Psicología Clínica:</b> Diagnostica, trata y previene los trastornos mentales y el malestar emocional.<br>• <b>Psicología Educativa:</b> Optimiza los procesos de enseñanza-aprendizaje y la adaptación escolar.<br>• <b>Psicología Industrial y Social:</b><br>- <i>Industrial/Organizacional:</i> Mejora el rendimiento, ambiente laboral y selección de personal en empresas.<br>- <i>Social:</i> Investiga cómo los pensamientos, sentimientos y conductas son influenciados por la presencia de otras personas o grupos.<br>• <b>Psicología Ambiental:</b> Analiza la relación recíproca entre el comportamiento humano y el entorno físico/arquitectónico.<br>• <b>Psicología Forense:</b> Aplica principios psicológicos en el ámbito legal y el sistema de justicia (peritajes, evaluaciones de culpabilidad).",
                 keypoints: [
-                    "Psicología: Ciencia que estudia la conducta y los procesos mentales.",
-                    "Clínica: Diagnóstico y psicoterapia de salud mental.",
-                    "Educativa: Aprendizaje y rendimiento escolar.",
-                    "Industrial / Organizacional: Selección de personal y clima laboral en empresas.",
-                    "Social: Influencia de los grupos y la cultura en el individuo.",
-                    "Forense: Peritajes aplicados al sistema legal y jurídico.",
-                    "El truco para el examen: Relaciona el campo: Trabajo/Empresa = INDUSTRIAL | Escuela/Aulas = EDUCATIVA | Tribunales = FORENSE | Terapia = CLÍNICA."
+                    "Psicología: Ciencia de la conducta y los procesos mentales.",
+                    "Psicobiología: Foco en bases neuronales y biología.",
+                    "Psicología Experimental: Uso de laboratorios para investigar memoria y percepción.",
+                    "Psicología de la Personalidad: Estudio de patrones distintivos de comportamiento.",
+                    "Psicología Social e Industrial: Análisis de la dinámica grupal y del comportamiento dentro de organizaciones.",
+                    "Psicología Ambiental: Interacción entre la conducta humana y los espacios físicos.",
+                    "Psicología Forense: Auxiliar en el ámbito del derecho y los procesos judiciales.",
+                    "El truco de oro para el examen: Si la pregunta involucra peritajes o tribunales = FORENSE. Si involucra rendimiento en empresas = INDUSTRIAL. Si es relación con espacios urbanos/físicos = AMBIENTAL."
                 ],
                 quiz: {
-                    question: "¿Qué área de la psicología se encarga de mejorar el clima laboral y los procesos de selección en una empresa?",
+                    question: "¿Qué área de la psicología aplica sus conocimientos teóricos y prácticos para evaluar a imputados dentro de procesos judiciales y dictámenes legales?",
                     options: [
-                        { text: "Psicología Industrial / Organizacional", correct: true },
-                        { text: "Psicología Clínica", correct: false },
-                        { text: "Psicología Forense", correct: false }
+                        { text: "Psicología Forense", correct: true },
+                        { text: "Psicología Educativa", correct: false },
+                        { text: "Psicología Ambiental", correct: false }
                     ],
-                    explanation: "La psicología industrial u organizacional se enfoca en optimizar el rendimiento, clima de trabajo y reclutamiento en empresas."
+                    explanation: "La Psicología Forense trabaja directamente en la interfaz entre la salud mental y el sistema de administración de justicia."
                 }
             },
-            {
+          {
                 id: "3.7.2.2",
-                title: "Escuelas psicológicas",
-                intro: "Comprender la mente es una tarea monumental. Por ello, a lo largo de la historia nacieron grandes corrientes o <b>'escuelas psicológicas'</b>, cada una con su propio marco teórico para explicar quiénes somos:<br><br>• <b>Psicoanálisis (Sigmund Freud):</b> Pone el foco en el <b>Inconsciente</b>. Plantea que la conducta humana está guiada por impulsos, deseos reprimidos y conflictos emocionales que se gestaron durante la infancia temprana.<br><br>• <b>Conductismo (John B. Watson, B.F. Skinner):</b> Rechaza el estudio de procesos internos no observables (como los sueños o el inconsciente) y argumenta que la psicología debe estudiar <b>SÓLO la conducta observable y medible</b>. Explica el aprendizaje a través de <b>Estímulos, Respuestas, Refuerzos (premios) y Castigos</b>.<br><br>• <b>Humanismo (Abraham Maslow, Carl Rogers):</b> Surge como reacción al psicoanálisis y al conductismo. Sostiene una visión positiva del ser humano, destacando el libre albedrío, la dignidad y la constante búsqueda de <b>Autorrealización</b> y desarrollo del potencial personal.<br><br>• <b>Cognitivismo (Jean Piaget, Ulric Neisser):</b> Estudia cómo la mente procesa, almacena, recupera y transforma la información del entorno, analizando el cerebro como un procesador de datos.",
+                title: "Escuelas psicológicas y su impacto social",
+                intro: "<b>Las escuelas psicológicas</b> son enfoques teóricos que explican la conducta desde diferentes ángulos e influyen de manera profunda en la sociedad:<br><br>• <b>Psicoanálisis (Freud):</b> Explica el comportamiento a partir del <b>inconsciente</b> y los impulsos reprimidos. <i>Impacto social:</i> Revolucionó el arte, la literatura y la comprensión moderna de la sexualidad y el trauma.<br><br>• <b>Conductismo (Watson, Skinner):</b> Se enfoca únicamente en la <b>conducta observable</b> y los estímulos/respuestas. <i>Impacto social:</i> Transformó los métodos de disciplina escolar, el adiestramiento y las estrategias de <b>publicidad y mercadeo</b>.<br><br>• <b>Humanismo (Rogers, Maslow):</b> Defiende el libre albedrío, la <b>autorrealización</b> y la bondad innata. <i>Impacto social:</i> Reorientó la educación hacia el desarrollo personal, los recursos humanos y la autoayuda.<br><br>• <b>Cognitivismo (Piaget, Beck):</b> Estudia la mente como un procesador de información (pensamiento, memoria, interpretación). <i>Impacto social:</i> Creó la terapia cognitivo-conductual actual e impulsó la comprensión del desarrollo educativo.",
                 keypoints: [
-                    "Psicoanálisis (Freud): Inconsciente, impulsos reprimidos y vivencias infantiles.",
-                    "Conductismo (Skinner/Watson): Modificación de la conducta observable mediante estímulos, premios y castigos.",
-                    "Humanismo (Maslow/Rogers): Libre albedrío, crecimiento personal y Pirámide de Autorrealización.",
-                    "Cognitivismo: Procesos mentales superiores (memoria, lenguaje, percepción y resolución de problemas).",
-                    "El truco para el examen: Mente inconsciente = PSICOANÁLISIS | Modificar conducta con premios/castigos = CONDUCTISMO | Potencial y crecimiento personal = HUMANISMO."
+                    "Psicoanálisis: Inconsciente y experiencias infantiles reprimidas.",
+                    "Conductismo: Conducta observable, condicionamientos y estímulo-respuesta.",
+                    "Humanismo: Potencial humano, libre albedrío y autorrealización.",
+                    "Cognitivismo: Procesos mentales, pensamiento e interpretación de la información.",
+                    "El truco de oro para el examen: Si te preguntan por la escuela que influyó en la publicidad y el condicionamiento conductual en la sociedad, la respuesta es CONDUCTISMO."
                 ],
                 quiz: {
-                    question: "¿Qué escuela psicológica sostiene que la conducta humana se moldea principalmente a través de estímulos, premios y castigos observables?",
+                    question: "¿Qué escuela psicológica impactó fuertemente en la publicidad y las técnicas educativas mediante el estudio del condicionamiento estímulo-respuesta y la conducta observable?",
                     options: [
                         { text: "Conductismo", correct: true },
                         { text: "Psicoanálisis", correct: false },
-                        { text: "Humanismo", correct: false }
+                        { text: "Gestalt", correct: false }
                     ],
-                    explanation: "El conductismo centra todo su análisis en cómo los estímulos ambientales y los refuerzos moldean la conducta observable."
+                    explanation: "El conductismo se enfocó en moldear la conducta visible mediante estímulos y refuerzos, aplicando sus principios al marketing y la disciplina."
                 }
             },
-            {
+          {
                 id: "3.7.2.3",
-                title: "La personalidad y sus enfoques",
-                intro: "La <b>Personalidad</b> es el patrón único, estructurado y relativamente estable de pensamientos, emociones y conductas que caracteriza a un individuo a lo largo de su vida.<br><br><b>Los dos componentes constituyentes de la personalidad:</b><br><br>• <b>Temperamento:</b> Es la dimensión <b>biológica, innata y heredada</b> de la personalidad. Se manifiesta desde el nacimiento (por ejemplo, la tendencia de un bebé a ser naturalmente irritable o tranquilo) y depende de nuestro sistema nervioso y hormonal.<br><br>• <b>Carácter:</b> Es la dimensión <b>social y aprendida</b>. Se moldea gradualmente con las experiencias de vida, la educación familiar, los valores y las normas culturales del entorno.<br><br><i>Fórmula memorizable: Personalidad = Temperamento (Biología) + Carácter (Experiencia/Educación).</i><br><br><b>Enfoques destacados sobre la personalidad:</b><br>• <b>Aparato Psíquico de Freud:</b> La personalidad resulta del equilibrio entre el <i>Ello</i> (impulsos primitivos e inconscientes), el <i>Superyó</i> (la conciencia moral e ideales) y el <i>Yo</i> (el mediador con la realidad).<br>• <b>Teoría Psicosocial de Erik Erikson:</b> Plantea que la personalidad se desarrolla a lo largo de 8 etapas vitales, superando crisis psicosociales socio-ambientales.",
+                title: "La personalidad, bases biológicas y escuelas",
+                intro: "<b>1. Bases biológicas de las emociones y conducta individual:</b><br>Las emociones y el comportamiento están regidos por la acción conjunta del <b>Sistema Nervioso</b> (especialmente el Sistema Límbico, la Amígdala y la Corteza Prefrontal) que procesa las respuestas inmediatas, y el <b>Sistema Endocrino</b> (hormonas como cortisol, adrenalina, oxitocina), que regula la intensidad y duración de los estados emocionales a nivel fisiológico.<br><br><b>2. Diferenciación entre Personalidad y Temperamento:</b><br>• <b>Temperamento:</b> Es la base <b>biológica, heredada y genética</b> de la afectividad. Se manifiesta desde el nacimiento (nivel de reactividad, tono hormonal) y no se cambia, solo se autorregula.<br>• <b>Carácter / Personalidad:</b> La personalidad es la suma del temperamento más el <b>Carácter</b> (construido por el aprendizaje social, educación, valores y experiencias). La personalidad es moldeable y orienta la adaptación personal y social.<br><br><b>3. Ideas que fundamentan las principales escuelas de la personalidad:</b><br>• <b>Psicoanálisis (Sigmund Freud):</b> La personalidad se estructura en tres instancias: <b>El Ello</b> (impulsos primitivos inconscientes), <b>El Yo</b> (el principio de realidad) y <b>El Superyó</b> (las normas morales e ideales).<br>• <b>Neo-psicoanálisis (Erik Erikson):</b> Acepta el inconsciente pero desplaza el foco sexual hacia el ámbito <b>psicosocial</b>. Propone que la personalidad se desarrolla a lo largo de <b>8 crisis psicosociales</b> durante todo el ciclo vital.<br>• <b>Humanismo (Carl Rogers y Abraham Maslow):</b><br>- <i>Carl Rogers:</i> La personalidad gira en torno al <b>Sí mismo (Self)</b> y la búsqueda de congruencia entre el 'Yo real' y el 'Yo ideal'.<br>- <i>Abraham Maslow:</i> Plantea la <b>Jerarquía de Necesidades (Pirámide de Maslow)</b>; la personalidad madura busca la <b>autorrealización</b> una vez cubiertas las necesidades básicas.",
                 keypoints: [
-                    "Temperamento: Dimensión de la personalidad determinada genéticamente (innata).",
-                    "Carácter: Dimensión adquirida mediante el aprendizaje, la educación y el contexto social.",
-                    "Estructura Freudiana: El Ello (deseo), Yo (realidad) y Superyó (normas/moral).",
-                    "El truco para el examen: Si preguntan por la parte de la personalidad que viene 'por herencia o biología desde el nacimiento', marca TEMPERAMENTO."
+                    "Bases Biológicas: Sistema Nervioso (procesamiento neuronal) + Sistema Endocrino (regulación hormonal de emociones).",
+                    "Temperamento: Factor innato, biológico y genético de las emociones.",
+                    "Personalidad: Integración del temperamento innato con el carácter socialmente aprendido.",
+                    "Freud (Psicoanálisis): Estructura del Ello, Yo y Superyó.",
+                    "Erikson (Neo-psicoanálisis): Desarrollo psicosocial en 8 etapas/crisis a lo largo de la vida.",
+                    "Rogers (Humanismo): El concepto del 'Self' y la congruencia entre el Yo real y el Yo ideal.",
+                    "Maslow (Humanismo): La Pirámide de Necesidades y la Autorrealización.",
+                    "El truco de oro para el examen: Si la pregunta dice 'componente innato y genético' = TEMPERAMENTO. Si menciona '8 crisis psicosociales del desarrollo' = ERIK ERIKSON. Si cita la 'Jerarquía de necesidades' = MASLOW."
                 ],
                 quiz: {
-                    question: "¿Cuál es el componente de la personalidad que viene determinado biológicamente y es de origen hereditario?",
+                    question: "¿Cómo se le denomina al componente biológico, hereditario e innato que determina la reactividad emocional inicial de un individuo?",
                     options: [
-                        { text: "El Temperamento", correct: true },
-                        { text: "El Carácter", correct: false },
-                        { text: "El Rol Social", correct: false }
+                        { text: "Temperamento", correct: true },
+                        { text: "Carácter", correct: false },
+                        { text: "Superyó", correct: false }
                     ],
-                    explanation: "El temperamento es el pilar genético e innato de la personalidad de todo ser humano."
+                    explanation: "El temperamento es la dimensión biológica e inmodificable de la afectividad que heredamos genéticamente."
                 }
             },
             {
                 id: "3.7.2.4",
-                title: "Desarrollo evolutivo y cambios psicológicos",
-                intro: "La <b>Psicología Evolutiva</b> analiza la transformación continua que experimentamos las personas a lo largo de nuestro ciclo vital. En cada etapa enfrentamos retos y cambios cognitivos, biológicos y afectivos:<br><br>• <b>Infancia:</b> Marcada por la formación del apego afectivo primario, el aprendizaje acelerado del lenguaje y los primeros hitos de socialización en el núcleo familiar.<br><br>• <b>Adolescencia (Etapa de transición crítica):</b> Periodo caracterizado por cambios hormonales intensos y el desarrollo del pensamiento abstracto. Su tarea psicológica central es la <b>búsqueda y consolidación de la identidad personal y el rol social</b>, así como la independización emocional de la tutela de los padres.<br><br>• <b>Adultez:</b> Periodo de estabilidad biológica donde la persona asume proyectos laborales, relaciones afectivas maduras y compromisos ciudadanos dentro de la comunidad.<br><br>• <b>Vejez / Adultez Mayor:</b> Etapa de introspección, consolidación de la sabiduría adquirida y adaptación a cambios corporales.",
+                title: "Desarrollo evolutivo y cambios psicológicos del ser humano",
+                intro: "<b>La transformación constante a lo largo de la vida:</b> La <b>Psicología Evolutiva</b> estudia cómo cambian nuestros procesos mentales, emociones y conductas desde que nacemos hasta que morimos. Ninguna etapa ocurre en el vacío: el <b>apoyo que proporciona el medio</b> (la familia, la escuela, los amigos y la comunidad) es determinante para el éxito del desarrollo psicológico.<br><br><b>Las cuatro grandes etapas evolutivas y su impacto psicológico:</b><br><br>• <b>Infancia (Construcción de la seguridad y el lenguaje):</b><br><i>Impacto psicológico:</i> Durante los primeros años se forma el <b>apego afectivo primario</b> con los cuidadores. Un apego seguro genera un individuo confiado; un ambiente de abandono produce ansiedad e inseguridad futura. Es el periodo de aprendizaje del lenguaje y de las normas básicas de convivencia.<br><i>Apoyo del medio:</i> La familia provee estimulación temprana, protección física y contención emocional.<br><br>• <b>Adolescencia (Transición, crisis e identidad):</b><br><i>Impacto psicológico:</i> Ocurre una reestructuración cerebral y hormonal profunda. Aparece el <b>pensamiento abstracto o formal</b> (capacidad de razonar sobre hipótesis y conceptos complejos). Su tarea psicológica crucial es la <b>búsqueda y consolidación de la identidad personal</b> (responder a la pregunta <i>¿quién soy yo?</i>) y la independencia de los padres.<br><i>Apoyo del medio:</i> Los grupos de pares (amigos) cobran vital importancia como refugio de validación social, mientras que la escuela y la familia deben ofrecer límites claros pero flexibles.<br><br>• <b>Adultez (Productividad y vínculos de compromiso):</b><br><i>Impacto psicológico:</i> Alcanzada la madurez biológica y cognitiva, el enfoque psicológico cambia hacia la consolidación de proyectos de vida, la estabilidad emocional, el trabajo y la responsabilidad social.<br><i>Apoyo del medio:</i> Las redes laborales, la pareja y la integración comunitaria brindan el sostén necesario para prevenir el estancamiento.<br><br>• <b>Vejez / Adultez Mayor (Sabiduría e introspección):</b><br><i>Impacto psicológico:</i> Proceso de adaptación a las transformaciones físicas y al retiro laboral. El reto mental es lograr la <b>integridad del Yo</b> (sentir que la vida vivida valió la pena) frente a la desesperación.<br><i>Apoyo del medio:</i> El respeto familiar, el acompañamiento afectivo y los espacios de inclusión social evitan el aislamiento.",
                 keypoints: [
-                    "Psicología Evolutiva: Estudio de los cambios del comportamiento a lo largo de las etapas del ciclo vital.",
-                    "Infancia: Construcción del apego afectivo y adquisición del lenguaje.",
-                    "Adolescencia: Búsqueda y afirmación de la propia identidad personal.",
-                    "El truco para el examen: Si la pregunta indaga sobre el conflicto o tarea central de la etapa adolescente, la respuesta es LA BÚSQUEDA DE LA IDENTIDAD."
+                    "Psicología Evolutiva: Estudio sistemático de las transformaciones biológicas, cognitivas y afectivas a lo largo del ciclo vital.",
+                    "El Apoyo del Medio: Entorno social y familiar que facilita o dificulta la resolución de las crisis de cada etapa.",
+                    "Infancia: Desarrollo del apego primario, lenguaje y socialización inicial.",
+                    "Adolescencia: Pensamiento abstracto y consolidación de la Identidad Personal.",
+                    "Adultez: Enfoque en la productividad, madurez afectiva y proyectos de vida.",
+                    "Vejez: Integración de la experiencia vivida (sabiduría) y adaptación a cambios corporales.",
+                    "El truco de oro para el examen: Si la pregunta indaga por la tarea central o el conflicto distintivo de la etapa adolescente, la respuesta es LA BÚSQUEDA Y CONSOLIDACIÓN DE LA IDENTIDAD."
                 ],
                 quiz: {
-                    question: "¿Cuál es la principal tarea o crisis psicológica que enfrenta el ser humano durante la etapa de la adolescencia?",
+                    question: "¿Cuál es la tarea o desafío psicológico central que enfrenta un individuo durante la etapa de la adolescencia?",
                     options: [
                         { text: "La búsqueda y consolidación de la identidad personal", correct: true },
-                        { text: "El aprendizaje primario del lenguaje", correct: false },
-                        { text: "La reflexión sobre la sabiduría de la vida pasada", correct: false }
+                        { text: "La adquisición del apego afectivo primario", correct: false },
+                        { text: "La adaptación a la jubilación y al retiro laboral", correct: false }
                     ],
-                    explanation: "El reto crucial de la adolescencia consiste en responder a la pregunta '¿Quién soy?' definiendo la propia identidad."
+                    explanation: "En la adolescencia, el reto fundamental consiste en construir una identidad propia frente a los cambios corporales y la presión social."
                 }
             },
             {
                 id: "3.7.3.1",
                 title: "Fases de la investigación científica",
-                intro: "La ciencia no trabaja al azar ni se guía por simples intuiciones. Requiere aplicar el <b>Método Científico</b> mediante un proceso riguroso dividido en fases secuenciales:<br><br>1. <b>Planteamiento del Problema:</b> Delimitar con precisión qué fenómeno se va a estudiar y formular la pregunta central de investigación.<br><br>2. <b>Elaboración del Marco Teórico:</b> Revisar la literatura, libros e investigaciones previas para fundamentar científicamente el objeto de estudio.<br><br>3. <b>Formulación de Hipótesis:</b> Proponer una <b>respuesta o suposición tentativa</b> que explica el problema y que deberá ser probada mediante evidencia empírica.<br><br>4. <b>Diseño del Marco Metodológico:</b> Definir las técnicas, muestras y herramientas con las que se recolectarán los datos de campo.<br><br>5. <b>Análisis de Resultados y Conclusiones:</b> Interpretar la información procesada para confirmar o rechazar la hipótesis planteada.",
+                intro: "<b>El camino estructurado hacia el conocimiento:</b> La investigación científica en ciencias biológicas y sociales no avanza por ocurrencias o intuiciones. Utiliza el <b>Método Científico</b>, un proceso riguroso y sistemático compuesto por fases interconectadas donde cada paso sostiene al siguiente:<br><br>1. <b>Planteamiento del Problema:</b> Es el punto de partida. Consiste en delimitar con precisión qué fenómeno o incógnita de la realidad se va a investigar, estableciendo las preguntas principales y los objetivos del estudio.<br><br>2. <b>Marco Conceptual (y Teórico):</b> Es el respaldo académico. Consiste en definir con precisión los <b>conceptos clave, términos técnicos y teorías existentes</b> que sirven de guía para entender el problema de estudio. Evita que el investigador invente cosas que ya están probadas.<br><br>3. <b>Formulación de Hipótesis:</b> Es una <b>suposición o respuesta tentativa</b> que el investigador propone para resolver el problema planteado. Debe ser clara y estar redactada de forma que pueda ser comprobada o refutada empíricamente.<br><br>4. <b>Diseño del Marco Metodológico:</b> Es el plan de acción. Define <i>cómo</i> se levantará la información: la población, la muestra, las técnicas de recolección y los instrumentos que se utilizarán.<br><br>5. <b>Resultados y Conclusiones:</b> Se procesan los datos obtenidos en el campo o laboratorio, se analizan estadísticamente y se elabora el juicio final que <b>confirma o descarta la hipótesis</b> inicial.",
                 keypoints: [
-                    "Fases ordenadas: Problema → Marco Teórico → Hipótesis → Metodología → Resultados/Conclusiones.",
+                    "Secuencia rigurosa: Planteamiento del Problema → Marco Conceptual/Teórico → Hipótesis → Marco Metodológico → Resultados y Conclusiones.",
+                    "Marco Conceptual: Definición precisa de los términos y conceptos clave que delimitan el estudio.",
                     "Hipótesis: Suposición o respuesta tentativa previa que se somete a prueba empírica.",
-                    "Marco Metodológico: El diseño sistemático de 'cómo' se obtendrán los datos.",
-                    "El truco para el examen: Palabra clave: 'Respuesta o suposición tentativa' siempre corresponde a la HIPÓTESIS."
+                    "Marco Metodológico: Diseño de la ruta práctica, técnicas e instrumentos para recolectar datos.",
+                    "Resultados y Conclusiones: Juicio científico final que valida o refuta la hipótesis.",
+                    "El truco de oro para el examen: Ante expresiones como 'respuesta tentativa' o 'conjetura por comprobar', la opción correcta es siempre HIPÓTESIS. Si se habla de 'definir los términos principales', es MARCO CONCEPTUAL."
                 ],
                 quiz: {
-                    question: "¿En qué fase de la investigación se establece una suposición tentativa que debe ser comprobada con datos?",
+                    question: "¿Cómo se le llama a la respuesta o suposición tentativa que propone el investigador antes de recoger los datos y que debe ser puesta a prueba?",
                     options: [
-                        { text: "Formulación de Hipótesis", correct: true },
-                        { text: "Planteamiento del Problema", correct: false },
-                        { text: "Marco Conceptual", correct: false }
+                        { text: "Hipótesis", correct: true },
+                        { text: "Marco Conceptual", correct: false },
+                        { text: "Planteamiento del Problema", correct: false }
                     ],
-                    explanation: "La hipótesis es precisamente esa conjetura o propuesta tentativa que el investigador busca validar o refutar."
+                    explanation: "La hipótesis es una proposición o respuesta tentativa que se busca comprobar mediante el proceso de investigación."
                 }
             },
             {
                 id: "3.7.3.2",
-                title: "Modelos de investigación (Cuantitativo y Cualitativo)",
-                intro: "En las ciencias sociales y de la salud existen dos enfoques metodológicos principales para encarar un estudio:<br><br>• <b>Enfoque Cuantitativo (Datos y Estadística):</b> Mide variables numéricas concretas. Es objetivo, estructurado y busca probar hipótesis para generalizar resultados a partir de muestras grandes de población.<br><i>Ejemplo:</i> Realizar una prueba estandarizada a 500 estudiantes para calcular el porcentaje exacto con niveles de ansiedad.<br><br>• <b>Enfoque Cualitativo (Experiencias y Significación):</b> Explora discursos, opiniones, significados y vivencias profundas de las personas en su contexto natural. No utiliza datos numéricos, sino descripciones en texto o audio.<br><i>Ejemplo:</i> Entrevistar a profundidad a 6 profesionales para entender cómo experimentan subjetivamente el estrés laboral.",
+                title: "Modelos de investigación y fuentes de ideas",
+                intro: "<b>1. Fuentes de ideas para investigar:</b> Toda investigación nace de una idea. ¿De dónde surgen esas ideas? Las fuentes principales son: la <b>observación de problemas en la vida cotidiana</b>, la lectura de <b>literatura científica</b> o libros existentes, las <b>experiencias individuales</b>, las necesidades sociales no resueltas y los avances tecnológicos.<br><br><b>2. Los dos grandes modelos de investigación:</b><br>Una vez concebida la idea, el investigador elige qué enfoque utilizará para analizar la realidad:<br><br>• <b>Modelo / Enfoque Cuantitativo:</b><br>Se basa en la <b>medición numérica, la recolección de datos duros y el análisis estadístico</b>. Es objetivo, estructurado y busca probar hipótesis preconcebidas en muestras grandes para generalizar los resultados a toda una población.<br><i>Ejemplo:</i> Contar los niveles exactos de glucosa en sangre de 200 pacientes para evaluar la efectividad de un medicamento.<br><br>• <b>Modelo / Enfoque Cualitativo:</b><br>Se enfoca en <b>comprender significados, experiencias, discursos y vivencias profundas</b> de las personas en su entorno natural. No busca medir números ni usar fórmulas estadísticas, sino describir la realidad a través de palabras, entrevistas o textos.<br><i>Ejemplo:</i> Entrevistar en profundidad a 8 personas para entender el impacto emocional que sintieron tras recibir un diagnóstico de diabetes.",
                 keypoints: [
-                    "Investigación Cuantitativa: Numérica, estadística, busca medir objetivamente y probar hipótesis con muestras masivas.",
-                    "Investigación Cualitativa: Descriptiva, basada en entrevistas e historias de vida para comprender experiencias profundas.",
-                    "El truco para el examen: Si en la pregunta ves términos como 'medición estadística, porcentajes o números', la respuesta es ENFOQUE CUANTITATIVO."
+                    "Fuentes de Ideas: Experiencias personales, literatura científica, observación de la realidad y vacíos de conocimiento.",
+                    "Investigación Cuantitativa: Numérica, objetiva, cuantitativa, busca probar hipótesis usando estadística en muestras amplias.",
+                    "Investigación Cualitativa: Descriptiva, subjetiva, busca comprender significados e historias de vida a través del lenguaje.",
+                    "El truco de oro para el examen: Si la pregunta involucra palabras como 'porcentajes, tablas de conteo o análisis estadístico', marca CUANTITATIVA. Si habla de 'comprensión de vivencias, percepciones o discursos', marca CUALITATIVA."
                 ],
                 quiz: {
-                    question: "Si un estudio busca medir numéricamente la relación estadística entre dos variables en 500 personas, ¿qué enfoque utiliza?",
+                    question: "¿Qué modelo de investigación se caracteriza por utilizar la recolección de datos numéricos y el análisis estadístico para comprobar una hipótesis?",
                     options: [
-                        { text: "Enfoque Cuantitativo", correct: true },
-                        { text: "Enfoque Cualitativo", correct: false },
-                        { text: "Enfoque Subjetivo", correct: false }
+                        { text: "Modelo Cuantitativo", correct: true },
+                        { text: "Modelo Cualitativo", correct: false },
+                        { text: "Modelo Especulativo", correct: false }
                     ],
-                    explanation: "El enfoque cuantitativo utiliza la recolección de datos numéricos y el análisis estadístico para comprobar hipótesis."
+                    explanation: "El modelo cuantitativo se fundamenta en la medición directa de variables mediante números y el uso de herramientas estadísticas."
                 }
             },
             {
                 id: "3.7.3.3",
                 title: "Instrumentos de recolección de información",
-                intro: "Una vez definido el enfoque metodológico, el investigador debe seleccionar el <b>instrumento adecuado</b> para levantar la información en el campo de estudio:<br><br>• <b>El Cuestionario / Encuesta:</b> Es un conjunto de preguntas estandarizadas (por lo general cerradas o de opción múltiple) escritas en un orden determinado. Es el <b>instrumento ideal para aplicar de forma masiva</b> a grandes grupos en poco tiempo y procesar datos numéricos.<br><br>• <b>La Entrevista:</b> Conversación directa en profundidad entre el investigador y el sujeto. Permite indagar en aspectos cualitativos y subjetivos.<br><br>• <b>La Observación Directa:</b> Registro sistemático y estructurado de conductas o fenómenos tal y como suceden espontáneamente en su entorno real.",
+                intro: "<b>Las herramientas para levantar datos en el campo:</b> Según el modelo de investigación seleccionado, se deben aplicar instrumentos específicos para obtener la información directamente de la realidad:<br><br>• <b>La Entrevista:</b><br>Es una conversación técnica y estructurada entre el investigador y el sujeto de estudio. Puede ser *estructurada* (preguntas fijas) o *semiestructurada* (diálogo abierto). Es el instrumento cualitativo por excelencia cuando se requiere profundización, matices y testimonios detallados.<br><br>• <b>El Cuestionario:</b><br>Es un conjunto de preguntas estandarizadas (en su mayoría cerradas o de opción múltiple) redactadas en un papel o formulario digital. Es el instrumento cuantitativo ideal para <b>aplicar de forma masiva y rápida a grupos grandes de personas</b>, garantizando el anonimato y la facilidad para tabular los datos en gráficos.<br><br>• <b>La Observación:</b><br>Consiste en el registro directo, atento y organizado de comportamientos, hechos o fenómenos tal y como suceden de forma natural en el ambiente. Utiliza guías o listas de cotejo para registrar lo visto sin intervenir en el fenómeno.",
                 keypoints: [
-                    "Cuestionario / Encuesta: Herramienta masiva y estandarizada para muestras amplias de población.",
-                    "Entrevista: Técnica cualitativa e interactiva para profundizar en relatos individuales.",
-                    "Observación: Registro directo del objeto de estudio sin alterar su ambiente natural.",
-                    "El truco para el examen: Si preguntan por la herramienta para 'recolectar datos masivos y uniformes en un grupo grande', la respuesta es EL CUESTIONARIO."
+                    "Entrevista: Diálogo directo y profundo con las personas; excelente para indagar percepciones cualitativas.",
+                    "Cuestionario: Herramienta de preguntas estandarizadas para recolectar datos cuantitativos de forma masiva y uniforme.",
+                    "Observación: Registro sistemático de eventos o conductas en su entorno real mediante guías de observación.",
+                    "El truco de oro para el examen: Si te plantean recolectar datos de 'una población numerosa en poco tiempo de forma estándar', la respuesta es EL CUESTIONARIO."
                 ],
                 quiz: {
-                    question: "¿Qué instrumento de recolección de datos es el más recomendado para aplicar preguntas a una muestra masiva de personas de manera uniforme?",
+                    question: "¿Cuál es el instrumento de recolección de datos más adecuado cuando se busca recopilar información estandarizada de forma masiva en un grupo grande de personas?",
                     options: [
                         { text: "El Cuestionario", correct: true },
-                        { text: "La Entrevista en profundidad", correct: false },
-                        { text: "La Observación participante", correct: false }
+                        { text: "La Entrevista a profundidad", correct: false },
+                        { text: "La Historia de vida", correct: false }
                     ],
-                    explanation: "El cuestionario permite recolectar datos uniformes de manera rápida y masiva en grupos numerosos."
+                    explanation: "El cuestionario está diseñado para recopilar datos uniformes de manera rápida y masiva en muestras amplias de población."
                 }
             },
             {
                 id: "3.7.3.4",
                 title: "Informe de la investigación",
-                intro: "La etapa final de todo proceso científico consiste en consolidar los descubrimientos en un <b>Informe de Investigación</b> para divulgarlos a la comunidad académica:<br><br>• <b>Síntesis y Organización Gráfica:</b> Uso de tablas, mapas conceptuales y <b>gráficas estadísticas</b> para hacer comprensibles los hallazgos.<br><br>• <b>Conclusiones:</b> Representan la síntesis final del estudio. Dan <b>respuesta directa y fundamentada a las hipótesis y objetivos</b> planteados al inicio del proyecto.<br><br>• <b>Recomendaciones:</b> Sugerencias prácticas planteadas por el investigador para aplicar los descubrimientos en la resolución del problema o para orientar futuros estudios.",
+                intro: "<b>Comunicar los hallazgos a la comunidad:</b> El trabajo científico no termina al recoger los datos. Debe redactarse un <b>Informe de Investigación</b> estructurado que sintetice el proceso y comunique los resultados con claridad:<br><br>• <b>Organización Gráfica (Gráficas, Cuadros y Tablas):</b><br>Los datos cuantitativos crudos deben ordenarse visualmente. Se emplean <b>tablas o cuadros de frecuencia</b> para resumir valores exactos y <b>gráficas estadísticas</b> (barras, sectores/pastel, histogramas) para permitir que el lector comprenda tendencias de un solo vistazo.<br><br>• <b>Elaboración de Conclusiones:</b><br>Son las afirmaciones o sintesis finales del proyecto. Tienen la función indispensable de <b>responder directamente a la hipótesis y a los objetivos iniciales</b>. Una conclusión no es un resumen del texto, sino la constatación de qué se demostró o aprendió con los datos.<br><br>• <b>Elaboración de Recomendaciones:</b><br>Son sugerencias y aportes prácticos que el investigador formula al terminar el estudio. Orientan sobre **cómo resolver el problema en la práctica** o sugieren nuevas líneas de investigación para futuros científicos.",
                 keypoints: [
-                    "Conclusiones: Respuestas concretas que confirman o descartan la hipótesis inicial.",
-                    "Recomendaciones: Propuestas y aportes prácticos derivados de los descubrimientos.",
-                    "Visualización: Gráficas y tablas que sintetizan la información recogida.",
-                    "El truco para el examen: Relación directa: 'Respuesta final a la hipótesis' = CONCLUSIONES | 'Propuestas a futuro' = RECOMENDACIONES."
+                    "Gráficas, Cuadros y Tablas: Recursos visuales para organizar, resumir e interpretar los datos recolectados de forma clara.",
+                    "Conclusiones: Respuestas directas y fundamentadas que confirman o rechazan las hipótesis y evalúan los objetivos.",
+                    "Recomendaciones: Propuestas metodológicas o aplicaciones prácticas sugeridas a partir de los hallazgos.",
+                    "El truco de oro para el examen: Si la pregunta dice 'sección que responde si la hipótesis inicial se cumplió o no', elige CONCLUSIONES. Si habla de 'propuestas para aplicar la solución', elige RECOMENDACIONES."
                 ],
                 quiz: {
-                    question: "¿En qué sección final del informe de investigación se resumen los hallazgos principales que responden a la hipótesis planteada?",
+                    question: "¿Qué sección del informe de investigación contiene las afirmaciones finales que responden directamente si la hipótesis inicial fue confirmada o rechazada?",
                     options: [
-                        { text: "En las Conclusiones", correct: true },
-                        { text: "En el Marco Teórico", correct: false },
-                        { text: "En la Justificación", correct: false }
+                        { text: "Las Conclusiones", correct: true },
+                        { text: "Las Recomendaciones", correct: false },
+                        { text: "El Marco Conceptual", correct: false }
                     ],
-                    explanation: "Las conclusiones resumen los resultados y determinan si se cumplieron los objetivos y la hipótesis de la investigación."
+                    explanation: "Las conclusiones condensan los resultados obtenidos y determinan con claridad la validez de la hipótesis planteada al inicio."
                 }
             }
         ]
