@@ -83,16 +83,46 @@
 *::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge, Opera */
 }
+
+/* Mejora de lectura para lecciones en móvil */
+#view-topics, 
+#topics-list-container,
+.lesson-content {
+    font-size: 0.95rem; /* ~15px en vez de 12px */
+    line-height: 1.6;   /* Da respiro entre líneas */
+    color: #334155;     /* slate-700 para contraste suave */
+}
+
+/* Títulos y subtítulos dentro de lecciones */
+#topics-list-container h3, 
+.lesson-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Párrafos e ítems de lista */
+#topics-list-container p, 
+#topics-list-container li {
+    font-size: 0.925rem;
+    margin-bottom: 0.75rem;
+}
     </style>
 </head>
 <body class="h-full flex flex-col justify-between max-w-md mx-auto bg-slate-100 text-slate-800 shadow-2xl relative overflow-x-hidden">
 
-    <!-- HEADER (Con transición limpia sin recortes negros) -->
+   <!-- HEADER (Con transición limpia sin recortes negros) -->
     <header class="bg-landivar-blue text-white pt-10 pb-6 px-5 shadow-md relative z-20">
         <div class="flex justify-between items-center mb-3">
             <div class="flex items-center space-x-3">
-                <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center text-amber-300 font-bold text-xl active:scale-95 transition-transform cursor-pointer shadow-inner" title="Palabritas de Ánimo">
-                    🎓
+                <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner relative overflow-visible" title="Palabritas de Ánimo">
+                    <!-- Contenedor del Corazón Ilustrado + Brillos -->
+                    <div class="relative w-6 h-6 flex items-center justify-center">
+                        <!-- Icono Corazón vectorial de FontAwesome -->
+                        <i class="fa-solid fa-heart text-rose-500 text-xl drop-shadow-sm"></i>
+                        <!-- Destello / Brillo Dorado arriba a la derecha -->
+                        <i class="fa-solid fa-sparkles text-amber-300 text-[10px] absolute -top-1 -right-1 drop-shadow"></i>
+                    </div>
                 </button>
                 <div>
                     <h1 class="text-xs uppercase tracking-wider text-amber-300 font-semibold">Guía de Estudio URL</h1>
@@ -268,9 +298,9 @@
         </button>
     </footer>
 
-    <!-- MODAL DE ÁNIMO PERSONALIZADO (BOTÓN 🎓) -->
-    <div id="tip-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-pink-100 text-center space-y-4 relative">
+   <!-- MODAL DE ÁNIMO PERSONALIZADO (BOTÓN 🎓) -->
+    <div id="tip-modal" onclick="closeTipModal()" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div onclick="event.stopPropagation()" class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-pink-100 text-center space-y-4 relative">
             <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mx-auto shadow-inner">
                 💖
             </div>
@@ -293,8 +323,8 @@
     </div>
 
     <!-- NUEVO MODAL CUSTOM DE REINICIAR PROGRESO (Reemplaza el de Chrome) -->
-    <div id="reset-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-slate-100 text-center space-y-4 relative">
+    <div id="reset-modal" onclick="closeResetModal()" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div onclick="event.stopPropagation()" class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl border border-slate-100 text-center space-y-4 relative">
             <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mx-auto shadow-inner">
                 <i class="fa-solid fa-rotate-right"></i>
             </div>
