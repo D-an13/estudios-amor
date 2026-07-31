@@ -65,10 +65,10 @@
 
         /* Estilo para los botones activos en el footer */
         .nav-btn-active {
-            color: #831843 !important;
-            font-weight: 800 !important;
-            transform: translateY(-2px);
-        }
+    color: var(--theme-primary) !important;
+    font-weight: 800 !important;
+    transform: translateY(-2px);
+}
         .nav-btn-active i {
             transform: scale(1.15);
         }
@@ -127,65 +127,193 @@
     *::-webkit-scrollbar {
         display: none;
     }
+
+:root {
+    /* Tema predeterminado (Guinda Tradicional) */
+    --theme-primary: #801B40;
+    --theme-primary-light: #FDF2F5;
+    --theme-primary-border: #F9A8C9;
+}
+
+/* --- 10 TEMAS ELEGANTES DE ALTO CONTRASTE --- */
+body.theme-guinda {
+    --theme-primary: #801B40; /* Guinda Clásico */
+    --theme-primary-light: #FDF2F5;
+    --theme-primary-border: #F9A8C9;
+}
+
+body.theme-vino {
+    --theme-primary: #4A0E17; /* Vino Tinto Profundo */
+    --theme-primary-light: #FBF2F3;
+    --theme-primary-border: #E8B4B8;
+}
+
+body.theme-mora {
+    --theme-primary: #831843; /* Rosa Mora Oscuro */
+    --theme-primary-light: #FDF2F8;
+    --theme-primary-border: #FBCFE8;
+}
+
+body.theme-terracota {
+    --theme-primary: #9A3412; /* Terracota / Teja Oscuro */
+    --theme-primary-light: #FFF7ED;
+    --theme-primary-border: #FFEDD5;
+}
+
+body.theme-bronce {
+    --theme-primary: #854D0E; /* Ámbar Bronce Oscuro */
+    --theme-primary-light: #FEFCE8;
+    --theme-primary-border: #FEF08A;
+}
+
+body.theme-morado {
+    --theme-primary: #581C87; /* Morado Profundo / Berenjena */
+    --theme-primary-light: #FAF5FF;
+    --theme-primary-border: #E9D5FF;
+}
+
+body.theme-marino {
+    --theme-primary: #0C4A6E; /* Azul Marino Noche */
+    --theme-primary-light: #F0F9FF;
+    --theme-primary-border: #BAE6FD;
+}
+
+body.theme-petroleo {
+    --theme-primary: #164E63; /* Azul Petróleo Oscuro */
+    --theme-primary-light: #ECFEFF;
+    --theme-primary-border: #A5F3FC;
+}
+
+body.theme-bosque {
+    --theme-primary: #064E3B; /* Verde Bosque Profundo */
+    --theme-primary-light: #ECFDF5;
+    --theme-primary-border: #A7F3D0;
+}
+
+body.theme-dark {
+    --theme-primary: #0F172A; /* Slate Grafito Oscuro */
+    --theme-primary-light: #F8FAFC;
+    --theme-primary-border: #E2E8F0;
+}
+
+/* Clases de utilidad */
+.bg-theme { background-color: var(--theme-primary) !important; }
+.text-theme { color: var(--theme-primary) !important; }
+.border-theme { border-color: var(--theme-primary-border) !important; }
+.bg-theme-light { background-color: var(--theme-primary-light) !important; }
+
+/* Transición suave para todos los elementos */
+header, 
+.bg-theme,
+.text-theme,
+.nav-btn-active,
+body {
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border-color 0.4s ease-in-out !important;
+}
     </style>
 </head>
 <body class="h-full flex flex-col justify-between max-w-md mx-auto bg-slate-100 text-slate-800 shadow-2xl relative overflow-x-hidden">
 
-   <!-- HEADER -->
-<header class="bg-landivar-blue text-white pt-8 pb-5 px-5 shadow-md relative z-20">
-    <div class="flex justify-between items-center mb-3">
+<!-- HEADER COMPACTO Y LIMPIO -->
+<header class="bg-theme text-white pt-3 pb-3 px-4 shadow-md relative z-20">
+    <div class="flex justify-between items-center mb-2">
         <!-- Lado Izquierdo: Corazón y Título Fijo -->
-        <div class="flex items-center space-x-3">
-            <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner relative overflow-visible" title="Palabritas de Ánimo">
-                <div class="relative w-6 h-6 flex items-center justify-center">
-                    <i class="fa-solid fa-heart text-rose-500 text-xl drop-shadow-sm"></i>
-                    <i class="fa-solid fa-sparkles text-amber-300 text-[10px] absolute -top-1 -right-1 drop-shadow"></i>
+        <div class="flex items-center space-x-2.5">
+            <button onclick="showTipModal()" class="w-8 h-8 rounded-xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner relative overflow-visible shrink-0" title="Palabritas de Ánimo">
+                <div class="relative w-5 h-5 flex items-center justify-center">
+                    <i class="fa-solid fa-heart text-rose-500 text-base drop-shadow-sm"></i>
+                    <i class="fa-solid fa-sparkles text-amber-300 text-[8px] absolute -top-1 -right-1 drop-shadow"></i>
                 </div>
             </button>
             <div>
-                <h1 class="text-[10px] uppercase tracking-wider text-amber-300 font-bold leading-none">Guía de Estudio URL</h1>
-                <p class="text-base font-extrabold text-white leading-tight mt-0.5">Espacio de Katy</p>
+                <h1 class="text-[8px] uppercase tracking-wider text-amber-300 font-bold leading-none">Guía de Estudio URL</h1>
+                <p class="text-sm font-extrabold text-white leading-tight mt-0.5">Espacio de Katy</p>
             </div>
         </div>
-        
-        <!-- Lado Derecho: Controles -->
-        <div class="flex items-center space-x-2">
-           <!-- BARRITA DE TAMAÑO (Oculta por defecto con opacity-0) -->
-<div id="font-slider-container" class="flex items-center bg-white/10 rounded-full px-2.5 py-1 border border-white/10 space-x-1.5 opacity-0 pointer-events-none transition-all duration-300">
-    <span class="text-[9px] text-white/70 font-bold">A</span>
-    <input 
-        type="range" 
-        id="font-slider" 
-        min="1.0" 
-        max="1.35" 
-        step="0.01" 
-        value="1.25" 
-        oninput="updateFontSize(this.value)"
-        class="w-12 h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-amber-300"
-    >
-    <span class="text-xs text-amber-300 font-bold">A</span>
-</div>
 
-            <button onclick="openResetModal()" title="Reiniciar progreso" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-xs text-white/80 transition active:scale-95 shrink-0">
-                <i class="fa-solid fa-rotate-right"></i>
-            </button>
+        <!-- Lado Derecho: Controles (Barra de tamaño + Botones) -->
+        <div class="flex items-center space-x-2">
+            <!-- BARRITA DE TAMAÑO -->
+            <div id="font-slider-container" class="flex items-center bg-white/10 rounded-full px-3 py-1 border border-white/10 space-x-2 opacity-0 pointer-events-none transition-all duration-300 shrink-0">
+                <span class="text-[9px] text-white/70 font-bold select-none">A</span>
+                <input 
+                    type="range" 
+                    id="font-slider" 
+                    min="1.0" 
+                    max="1.35" 
+                    step="0.01" 
+                    value="1.25" 
+                    oninput="updateFontSize(this.value)"
+                    class="w-20 h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-amber-300"
+                >
+                <span class="text-xs text-amber-300 font-bold select-none">A</span>
+            </div>
+
+            <!-- BOTONES PINTURA Y REINICIAR -->
+            <div class="flex items-center gap-1.5 shrink-0">
+                <!-- 1. Bote de Pintura -->
+                <div class="relative">
+                    <button 
+                        id="theme-menu-btn" 
+                        onclick="toggleThemeMenu()"
+                        class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all duration-200 active:scale-95 shadow-sm focus:outline-none"
+                        title="Cambiar Tema"
+                    >
+                        <i class="fa-solid fa-paint-roller text-[10px]"></i>
+                    </button>
+
+                    <!-- Popover desplegable Dark Glass -->
+<div 
+    id="theme-popover" 
+    class="hidden absolute right-0 top-9 w-48 bg-slate-900/95 backdrop-blur-md rounded-2xl shadow-2xl p-2.5 border border-white/20 z-50 transition-all duration-200"
+>
+    <div class="text-[8px] font-extrabold text-amber-300 uppercase tracking-wider mb-2 text-center drop-shadow-sm">
+        Color de Tema
+    </div>
+    <div class="grid grid-cols-5 gap-2 justify-items-center">
+        <!-- Fila 1: Gamas Cálidas Profundas -->
+        <button onclick="setTheme('guinda')" class="w-5 h-5 rounded-full bg-[#801B40] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Guinda"></button>
+        <button onclick="setTheme('vino')" class="w-5 h-5 rounded-full bg-[#4A0E17] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Vino Tinto"></button>
+        <button onclick="setTheme('mora')" class="w-5 h-5 rounded-full bg-[#831843] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Rosa Mora"></button>
+        <button onclick="setTheme('terracota')" class="w-5 h-5 rounded-full bg-[#9A3412] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Terracota"></button>
+        <button onclick="setTheme('bronce')" class="w-5 h-5 rounded-full bg-[#854D0E] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Bronce"></button>
+
+        <!-- Fila 2: Gamas Frías Profundas -->
+        <button onclick="setTheme('morado')" class="w-5 h-5 rounded-full bg-[#581C87] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Morado Berenjena"></button>
+        <button onclick="setTheme('marino')" class="w-5 h-5 rounded-full bg-[#0C4A6E] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Azul Marino"></button>
+        <button onclick="setTheme('petroleo')" class="w-5 h-5 rounded-full bg-[#164E63] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Petróleo"></button>
+        <button onclick="setTheme('bosque')" class="w-5 h-5 rounded-full bg-[#064E3B] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Verde Bosque"></button>
+        <button onclick="setTheme('dark')" class="w-5 h-5 rounded-full bg-[#0F172A] hover:scale-110 active:scale-95 transition-all shadow-md ring-1 ring-white/40 hover:ring-white" title="Grafito Oscuro"></button>
+    </div>
+</div>
+                </div>
+
+                <!-- 2. Botón de Reiniciar -->
+                <button 
+                    onclick="openResetModal()" 
+                    class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white/80 flex items-center justify-center transition-all duration-200 active:scale-95 shadow-sm focus:outline-none"
+                    title="Reiniciar progreso"
+                >
+                    <i class="fa-solid fa-rotate-right text-[10px]"></i>
+                </button>
+            </div>
         </div>
     </div>
 
-    <!-- Barra de progreso -->
-    <div class="bg-white/10 p-3 rounded-2xl border border-white/10 backdrop-blur-md">
-        <div class="flex justify-between items-center mb-1 text-xs font-semibold">
+    <!-- Barra de progreso general (AFUERA de los controles) -->
+    <div class="bg-white/10 px-3 py-1.5 rounded-xl border border-white/10 backdrop-blur-md">
+        <div class="flex justify-between items-center mb-0.5 text-[10px] font-semibold">
             <span class="text-white/80">Tu Progreso General</span>
             <span id="overall-percentage" class="text-amber-300 font-bold">0%</span>
         </div>
         
-        <div class="w-full h-2.5 bg-slate-900/40 rounded-full overflow-hidden p-0.5 border border-white/15">
+        <div class="w-full h-1.5 bg-slate-900/40 rounded-full overflow-hidden border border-white/10">
             <div id="overall-progress-bar" class="h-full bg-gradient-to-r from-emerald-300 via-amber-200 to-rose-300 rounded-full transition-all duration-500 shadow-sm" style="width: 0%"></div>
         </div>
         
-        <div class="flex justify-between items-center mt-1.5 text-[10px] text-slate-300 font-medium">
+        <div class="flex justify-between items-center mt-1 text-[9px] text-slate-300 font-medium">
             <span id="completed-count">0 de 0 lecciones</span>
-            <span id="streak-badge" class="bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-md border border-amber-400/30 font-semibold">🔥 ¡A darle con todo mi amor!</span>
+            <span id="streak-badge" class="bg-amber-400/20 text-amber-300 px-1.5 py-0.2 rounded border border-amber-400/30 font-semibold text-[8px]">🔥 ¡A darle con todo mi amor!</span>
         </div>
     </div>
 </header>
@@ -253,12 +381,12 @@
 <div id="view-topics" class="hidden space-y-3">
     <!-- Encabezado con título alineado a la derecha -->
     <div class="flex items-center justify-between mb-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 gap-2">
-        <button onclick="showDashboard()" class="flex items-center space-x-1.5 text-xs font-bold text-slate-600 hover:text-landivar-blue transition px-3 py-1.5 rounded-xl bg-slate-100 active:scale-95 shrink-0">
+        <button onclick="showDashboard()" class="flex items-center space-x-1.5 text-xs font-bold text-slate-600 hover:text-theme transition px-3 py-1.5 rounded-xl bg-slate-100 active:scale-95 shrink-0">
             <i class="fa-solid fa-arrow-left"></i><span>Volver</span>
         </button>
         
         <!-- Titulo alineado a la derecha con auto-ajuste de tamaño -->
-        <h2 id="topics-title" class="text-xs font-extrabold text-landivar-blue uppercase tracking-wider text-right flex-1 truncate">
+        <h2 id="topics-title" class="text-xs font-extrabold text-theme uppercase tracking-wider text-right flex-1 truncate">
             Materia
         </h2>
     </div>
@@ -268,7 +396,7 @@
         <!-- LESSON DETAIL -->
         <div id="view-lesson" class="hidden">
             <div class="flex items-center justify-between mb-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-200">
-                <button onclick="backToTopicsList()" class="flex items-center space-x-1.5 text-xs font-bold text-slate-600 hover:text-landivar-blue transition px-2 py-1 rounded-lg bg-slate-100 active:scale-95">
+                <button onclick="backToTopicsList()" class="flex items-center space-x-1.5 text-xs font-bold text-slate-600 hover:text-theme transition px-2 py-1 rounded-lg bg-slate-100 active:scale-95">
                     <i class="fa-solid fa-arrow-left"></i><span>Volver a la lista</span>
                 </button>
                 <span id="lesson-status-badge" class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">⚪ No completado</span>
@@ -281,10 +409,10 @@
                 </div>
 
                 <div class="space-y-3">
-                    <div id="lesson-intro-container" class="bg-pink-50/70 rounded-2xl p-4 border border-pink-100">
-                        <div id="lesson-intro-header" class="flex items-center space-x-2 text-pink-900 font-bold text-xs uppercase tracking-wider mb-2">
-                            <i class="fa-solid fa-comments text-pink-600"></i><span>Explicación Sencilla</span>
-                        </div>
+                    <div id="lesson-intro-container" class="bg-theme-light rounded-2xl p-4 border border-theme">
+    <div id="lesson-intro-header" class="flex items-center space-x-2 text-theme font-bold text-xs uppercase tracking-wider mb-2">
+        <i class="fa-solid fa-comments text-theme"></i><span>Explicación Sencilla</span>
+    </div>
                         <div id="lesson-intro" class="text-xs text-slate-700 leading-relaxed font-medium"></div>
                     </div>
 
@@ -449,7 +577,7 @@
                 const btn = document.getElementById(id);
                 if (btn) {
                     if (id === navId) {
-                        btn.className = "flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl nav-btn-active bg-pink-50/80";
+                        btn.className = "flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl nav-btn-active bg-theme-light";
                     } else {
                         btn.className = "flex flex-col items-center space-y-0.5 transition-all duration-200 px-3 py-1 rounded-xl text-slate-400 hover:text-slate-600";
                     }
@@ -552,104 +680,104 @@
 }
 
         function renderTopicsList(topics) {
-            const container = document.getElementById('topics-list-container');
-            container.innerHTML = '';
-            topics.forEach((topic, index) => {
-                const isCompleted = !!userProgress[topic.id];
-                const card = document.createElement('div');
-                card.className = `p-4 rounded-2xl border transition cursor-pointer flex items-center justify-between active:scale-[0.98] ${
-                    isCompleted ? 'bg-emerald-50/80 border-emerald-200 hover:bg-emerald-100/80' : 'bg-white border-slate-200/80 hover:bg-slate-50'
-                }`;
-                card.onclick = () => openLesson(topic, index + 1);
-                card.innerHTML = `
-                    <div class="flex items-center space-x-3 pr-2">
-                        <div class="w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs ${
-                            isCompleted ? 'bg-emerald-500 text-white shadow-sm' : 'bg-slate-100 text-slate-600'
-                        }">${isCompleted ? '<i class="fa-solid fa-check"></i>' : index + 1}</div>
-                        <div>
-                            <span class="text-[10px] font-bold ${isCompleted ? 'text-emerald-700' : 'text-amber-600'} block">
-                                Lección ${index + 1} <span class="text-slate-400 font-normal">(${topic.id})</span>
-                            </span>
-                            <h4 class="text-xs font-bold ${isCompleted ? 'text-emerald-950 line-through/50' : 'text-slate-800'}">${topic.title}</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="text-[10px] font-extrabold px-2.5 py-1 rounded-full ${
-                            isCompleted ? 'bg-emerald-200/80 text-emerald-800' : 'bg-slate-100 text-slate-500'
-                        }">${isCompleted ? 'Repasar' : 'Estudiar'}</span>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
+    const container = document.getElementById('topics-list-container');
+    container.innerHTML = '';
+    topics.forEach((topic, index) => {
+        const isCompleted = !!userProgress[topic.id];
+        const card = document.createElement('div');
+        card.className = `p-4 rounded-2xl border transition cursor-pointer flex items-center justify-between active:scale-[0.98] ${
+            isCompleted ? 'bg-emerald-50/80 border-emerald-200 hover:bg-emerald-100/80' : 'bg-white border-slate-200/80 hover:bg-slate-50'
+        }`;
+        card.onclick = () => openLesson(topic, index + 1);
+        card.innerHTML = `
+            <div class="flex items-center space-x-3 pr-2">
+                <div class="w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs ${
+                    isCompleted ? 'bg-emerald-500 text-white shadow-sm' : 'bg-slate-100 text-slate-600'
+                }">${isCompleted ? '<i class="fa-solid fa-check"></i>' : index + 1}</div>
+                <div>
+                    <span class="text-[10px] font-bold ${isCompleted ? 'text-emerald-700' : 'text-theme'} block">
+                        Lección ${index + 1} <span class="text-slate-400 font-normal">(${topic.id})</span>
+                    </span>
+                    <h4 class="text-xs font-bold ${isCompleted ? 'text-emerald-950 line-through/50' : 'text-slate-800'}">${topic.title}</h4>
+                </div>
+            </div>
+            <div>
+                <span class="text-[10px] font-extrabold px-2.5 py-1 rounded-full ${
+                    isCompleted ? 'bg-emerald-200/80 text-emerald-800' : 'bg-theme-light text-theme'
+                }">${isCompleted ? 'Repasar' : 'Estudiar'}</span>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
 
-        function openLesson(topic, lessonNumber) {
-            playSound('click');
-            currentTopic = topic;
-            currentLessonNum = lessonNumber;
-            currentQuestionIndex = 0;
+function openLesson(topic, lessonNumber) {
+    playSound('click');
+    currentTopic = topic;
+    currentLessonNum = lessonNumber;
+    currentQuestionIndex = 0;
 
-            document.getElementById('lesson-code').innerText = `Lección ${lessonNumber} (${topic.id})`;
-            document.getElementById('lesson-title').innerText = topic.title;
-            document.getElementById('lesson-intro').innerHTML = topic.intro;
+    document.getElementById('lesson-code').innerText = `Lección ${lessonNumber} (${topic.id})`;
+    document.getElementById('lesson-title').innerText = topic.title;
+    document.getElementById('lesson-intro').innerHTML = topic.intro;
 
-            const introHeader = document.getElementById('lesson-intro-header');
-            if (currentCategory === 'comprension') {
-                introHeader.innerHTML = `<i class="fa-solid fa-book-open text-amber-600"></i><span>Lectura Completa</span>`;
-                document.getElementById('lesson-keypoints-container').classList.add('hidden');
-            } else {
-                introHeader.innerHTML = `<i class="fa-solid fa-comments text-pink-600"></i><span>Explicación Sencilla</span>`;
-                document.getElementById('lesson-keypoints-container').classList.remove('hidden');
-            }
+    const introHeader = document.getElementById('lesson-intro-header');
+    if (currentCategory === 'comprension') {
+        introHeader.innerHTML = `<i class="fa-solid fa-book-open text-theme"></i><span>Lectura Completa</span>`;
+        document.getElementById('lesson-keypoints-container').classList.add('hidden');
+    } else {
+        introHeader.innerHTML = `<i class="fa-solid fa-comments text-theme"></i><span>Explicación Sencilla</span>`;
+        document.getElementById('lesson-keypoints-container').classList.remove('hidden');
+    }
 
-            const visualContainer = document.getElementById('lesson-visual-container');
-            if (topic.visualHTML) {
-                visualContainer.innerHTML = topic.visualHTML;
-                visualContainer.classList.remove('hidden');
-            } else {
-                visualContainer.classList.add('hidden');
-            }
+    const visualContainer = document.getElementById('lesson-visual-container');
+    if (topic.visualHTML) {
+        visualContainer.innerHTML = topic.visualHTML;
+        visualContainer.classList.remove('hidden');
+    } else {
+        visualContainer.classList.add('hidden');
+    }
 
-            const keypointsContainer = document.getElementById('lesson-keypoints');
-            keypointsContainer.innerHTML = '';
-            if (topic.keypoints) {
-                topic.keypoints.forEach(kp => {
-                    const li = document.createElement('li');
-                    li.className = 'flex items-start space-x-2';
-                    li.innerHTML = `<span class="text-amber-500 font-bold">•</span><span>${kp}</span>`;
-                    keypointsContainer.appendChild(li);
-                });
-            }
+    const keypointsContainer = document.getElementById('lesson-keypoints');
+    keypointsContainer.innerHTML = '';
+    if (topic.keypoints) {
+        topic.keypoints.forEach(kp => {
+            const li = document.createElement('li');
+            li.className = 'flex items-start space-x-2';
+            li.innerHTML = `<span class="text-theme font-bold">•</span><span>${kp}</span>`;
+            keypointsContainer.appendChild(li);
+        });
+    }
 
-            renderCurrentQuestion();
+    renderCurrentQuestion();
 
-            const isCompleted = !!userProgress[topic.id];
-            const badge = document.getElementById('lesson-status-badge');
-            const completeBtn = document.getElementById('btn-complete-lesson');
+    const isCompleted = !!userProgress[topic.id];
+    const badge = document.getElementById('lesson-status-badge');
+    const completeBtn = document.getElementById('btn-complete-lesson');
 
-            if (isCompleted) {
-                badge.className = "text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300";
-                badge.innerHTML = "✅ Completado";
-                completeBtn.disabled = false;
-                completeBtn.className = "w-full py-3.5 bg-emerald-600 text-white font-extrabold rounded-2xl shadow-md text-xs uppercase tracking-wider flex items-center justify-center space-x-2 cursor-pointer";
-                completeBtn.querySelector('span').innerText = "Volver al índice";
-            } else {
-                badge.className = "text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200";
-                badge.innerHTML = "⚪ No completado";
-                completeBtn.disabled = true;
-                completeBtn.className = "w-full py-3.5 bg-slate-300 text-slate-500 font-extrabold rounded-2xl shadow-sm text-xs uppercase tracking-wider flex items-center justify-center space-x-2 cursor-not-allowed";
-                completeBtn.querySelector('span').innerText = "Responde todas las preguntas para avanzar";
-            }
+    if (isCompleted) {
+        badge.className = "text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300";
+        badge.innerHTML = "✅ Completado";
+        completeBtn.disabled = false;
+        completeBtn.className = "w-full py-3.5 bg-emerald-600 text-white font-extrabold rounded-2xl shadow-md text-xs uppercase tracking-wider flex items-center justify-center space-x-2 cursor-pointer";
+        completeBtn.querySelector('span').innerText = "Volver al índice";
+    } else {
+        badge.className = "text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200";
+        badge.innerHTML = "⚪ No completado";
+        completeBtn.disabled = true;
+        completeBtn.className = "w-full py-3.5 bg-slate-300 text-slate-500 font-extrabold rounded-2xl shadow-sm text-xs uppercase tracking-wider flex items-center justify-center space-x-2 cursor-not-allowed";
+        completeBtn.querySelector('span').innerText = "Responde todas las preguntas para avanzar";
+    }
 
-            const viewTopics = document.getElementById('view-topics');
-            const viewLesson = document.getElementById('view-lesson');
+    const viewTopics = document.getElementById('view-topics');
+    const viewLesson = document.getElementById('view-lesson');
 
-            viewTopics.classList.add('hidden');
-            viewLesson.className = "slide-in-right";
-            viewLesson.classList.remove('hidden');
-            document.getElementById('main-view').scrollTop = 0;
-            showFontSlider();
-        }
+    viewTopics.classList.add('hidden');
+    viewLesson.className = "slide-in-right";
+    viewLesson.classList.remove('hidden');
+    document.getElementById('main-view').scrollTop = 0;
+    showFontSlider();
+}
 
         function backToTopicsList() {
     playSound('click');
@@ -882,7 +1010,7 @@ function playSound(type) {
     const now = audioCtx.currentTime;
 
     if (type === 'click') {
-        // Pop suave pero con MÁS VOLUMEN para que resalte al tocar cualquier cosa
+        // Pop suave para botones
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.connect(gain);
@@ -892,15 +1020,49 @@ function playSound(type) {
         osc.frequency.setValueAtTime(600, now);
         osc.frequency.exponentialRampToValueAtTime(850, now + 0.04);
 
-        gain.gain.setValueAtTime(0.14, now); // 👈 Subido solo este a 0.14
+        gain.gain.setValueAtTime(0.14, now);
         gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
 
         osc.start(now);
         osc.stop(now + 0.04);
 
+    } else if (type === 'paint') {
+        // 🎨 EFECTO BROCHAZO DE PINTURA (White Noise + Filter Sweep)
+        const bufferSize = audioCtx.sampleRate * 0.12; // Duración corta (120ms)
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+
+        // Generar ruido blanco
+        for (let i = 0; i < bufferSize; i++) {
+            data[i] = Math.random() * 2 - 1;
+        }
+
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+
+        // Filtro pasa-banda para simular la textura del pincel
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(1200, now);
+        filter.frequency.exponentialRampToValueAtTime(400, now + 0.12); // Barrido de frecuencia
+        filter.Q.value = 3;
+
+        // Envolvente de volumen (Suave al inicio y al final)
+        const gain = audioCtx.createGain();
+        gain.gain.setValueAtTime(0.01, now);
+        gain.gain.linearRampToValueAtTime(0.15, now + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+
+        noise.connect(filter);
+        filter.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        noise.start(now);
+        noise.stop(now + 0.12);
+
     } else if (type === 'correct') {
         // Acorde dulce y brillante
-        [523.25, 659.25, 783.99].forEach((freq, i) => { // Do - Mi - Sol
+        [523.25, 659.25, 783.99].forEach((freq, i) => {
             const osc = audioCtx.createOscillator();
             const gain = audioCtx.createGain();
             osc.connect(gain);
@@ -934,8 +1096,8 @@ function playSound(type) {
         osc.stop(now + 0.15);
 
     } else if (type === 'complete') {
-        // Fanfarria / Arpegio mágico
-        const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51]; // Do-Mi-Sol-Do-Mi
+        // Arpegio mágico
+        const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
         notes.forEach((freq, idx) => {
             const noteOsc = audioCtx.createOscillator();
             const noteGain = audioCtx.createGain();
@@ -953,6 +1115,73 @@ function playSound(type) {
         });
     }
 }
+
+// Función para cambiar el tema
+function setTheme(themeName) {
+    try { playSound('click'); } catch(e){}
+    
+    // Quita las clases de temas anteriores del body
+    document.body.classList.remove('theme-guinda', 'theme-rosa', 'theme-morado', 'theme-azul', 'theme-verde');
+    
+    // Aplica la nueva clase
+    document.body.classList.add(`theme-${themeName}`);
+    
+    // Guarda el color elegido en el navegador
+    localStorage.setItem('landivar_theme', themeName);
+}
+
+// Al cargar la página, recupera el tema guardado
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('landivar_theme') || 'guinda';
+    setTheme(savedTheme);
+});
+
+// Toggle para abrir/cerrar el modal de colores
+function toggleThemeMenu() {
+    try { playSound('click'); } catch(e){}
+    const popover = document.getElementById('theme-popover');
+    if (popover) {
+        popover.classList.toggle('hidden');
+    }
+}
+
+// Función unificada para aplicar el tema de los 10 colores elegantes
+function setTheme(themeName) {
+    try { playSound('paint'); } catch(e){}
+    
+    // 1. Remueve clases anteriores
+    document.body.classList.remove(
+        'theme-guinda', 'theme-vino', 'theme-mora', 'theme-terracota', 'theme-bronce',
+        'theme-morado', 'theme-marino', 'theme-petroleo', 'theme-bosque', 'theme-dark'
+    );
+    
+    // 2. Agrega la clase activa
+    document.body.classList.add(`theme-${themeName}`);
+    
+    // 3. Guarda la preferencia localmente
+    localStorage.setItem('landivar_theme', themeName);
+
+    // 4. Oculta el modal de temas
+    const popover = document.getElementById('theme-popover');
+    if (popover) {
+        popover.classList.add('hidden');
+    }
+}
+
+// Cerrar el modal automáticamente al hacer clic en cualquier otra parte
+document.addEventListener('click', function(e) {
+    const popover = document.getElementById('theme-popover');
+    const btn = document.getElementById('theme-menu-btn');
+    if (popover && btn && !popover.contains(e.target) && !btn.contains(e.target)) {
+        popover.classList.add('hidden');
+    }
+});
+
+// Cargar el tema guardado al iniciar la página
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('landivar_theme') || 'guinda';
+    setTheme(savedTheme);
+});
     </script>
 </body>
 </html>
