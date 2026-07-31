@@ -85,22 +85,15 @@
 }
 
 :root {
-        /* Factor de escala inicial (1.20 = 20% más grande por defecto) */
-        --font-scale: 1.20; 
+        --font-scale: 1.25; /* Valor inicial amplio */
     }
 
-    body { 
-        font-family: 'Plus Jakarta Sans', sans-serif; 
-        -webkit-tap-highlight-color: transparent; 
-        user-select: none; 
-    }
-
-    /* FORZAR A TAILWIND A ESCALAR EL TEXTO EN LAS LECCIONES Y PREGUNTAS */
+    /* ESCALADO DINÁMICO DESDE EL SLIDER */
     #main-view .text-xs,
     #main-view p,
     #main-view li,
-    #main-view span:not(#font-scale-indicator) {
-        font-size: calc(0.875rem * var(--font-scale)) !important; /* Base más grande (~16.8px) */
+    #main-view span:not(#streak-badge) {
+        font-size: calc(0.875rem * var(--font-scale)) !important;
         line-height: 1.6 !important;
     }
 
@@ -114,29 +107,18 @@
     #main-view h2 {
         font-size: calc(1.2rem * var(--font-scale)) !important;
     }
-
-    /* Ocultar barras de scroll */
-    * {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-    *::-webkit-scrollbar {
-        display: none;
-    }
     </style>
 </head>
 <body class="h-full flex flex-col justify-between max-w-md mx-auto bg-slate-100 text-slate-800 shadow-2xl relative overflow-x-hidden">
 
-   <!-- HEADER (Con transición limpia sin recortes negros) -->
+   <!-- HEADER -->
     <header class="bg-landivar-blue text-white pt-10 pb-6 px-5 shadow-md relative z-20">
         <div class="flex justify-between items-center mb-3">
+            <!-- Lado Izquierdo: Corazón y Título -->
             <div class="flex items-center space-x-3">
                 <button onclick="showTipModal()" class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center active:scale-95 transition-transform cursor-pointer shadow-inner relative overflow-visible" title="Palabritas de Ánimo">
-                    <!-- Contenedor del Corazón Ilustrado + Brillos -->
                     <div class="relative w-6 h-6 flex items-center justify-center">
-                        <!-- Icono Corazón vectorial de FontAwesome -->
                         <i class="fa-solid fa-heart text-rose-500 text-xl drop-shadow-sm"></i>
-                        <!-- Destello / Brillo Dorado arriba a la derecha -->
                         <i class="fa-solid fa-sparkles text-amber-300 text-[10px] absolute -top-1 -right-1 drop-shadow"></i>
                     </div>
                 </button>
@@ -145,9 +127,30 @@
                     <p class="text-lg font-extrabold text-white leading-tight">Espacio de Katy</p>
                 </div>
             </div>
-            <button onclick="openResetModal()" title="Reiniciar progreso" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-xs text-white/80 transition active:scale-95">
-                <i class="fa-solid fa-rotate-right"></i>
-            </button>
+            
+            <!-- Lado Derecho: Barrita de Fuente + Botón Reiniciar -->
+            <div class="flex items-center space-x-2">
+                <!-- BARRITA NUEVA DE TAMAÑO DE LETRA -->
+                <div class="flex items-center bg-white/10 rounded-full px-2.5 py-1 border border-white/10 space-x-1.5">
+                    <i class="fa-solid fa-font text-[9px] text-white/60"></i>
+                    <input 
+                        type="range" 
+                        id="font-slider" 
+                        min="1.0" 
+                        max="1.25" 
+                        step="0.01" 
+                        value="1.25" 
+                        oninput="updateFontSize(this.value)"
+                        class="w-14 h-1.5 bg-white/30 rounded-lg appearance-none cursor-pointer accent-amber-300"
+                    >
+                    <i class="fa-solid fa-font text-xs text-amber-300 font-bold"></i>
+                </div>
+
+                <!-- Botón Reiniciar (Tu botón original) -->
+                <button onclick="openResetModal()" title="Reiniciar progreso" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-xs text-white/80 transition active:scale-95">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+            </div>
         </div>
 
         <div class="bg-white/10 p-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
@@ -156,7 +159,6 @@
                 <span id="overall-percentage" class="text-amber-300 font-bold">0%</span>
             </div>
             
-            <!-- BARRA DE PROGRESO CON COLORES FEMENINOS DESTACADOS -->
             <div class="w-full h-3 bg-slate-900/40 rounded-full overflow-hidden p-0.5 border border-white/15">
                 <div id="overall-progress-bar" class="h-full bg-gradient-to-r from-emerald-300 via-amber-200 to-rose-300 rounded-full transition-all duration-500 shadow-sm" style="width: 0%"></div>
             </div>
@@ -763,6 +765,27 @@
                 modal.classList.add('hidden');
             }, 200);
         }
+
+// Inicia en 1.25 (el tamaño más grande) o el guardado previamente por Katy
+    let savedScale = parseFloat(localStorage.getItem('katy_font_scale')) || 1.25;
+
+    function applyFontScale(scale) {
+        document.documentElement.style.setProperty('--font-scale', scale);
+        localStorage.setItem('katy_font_scale', scale);
+    }
+
+    function updateFontSize(val) {
+        applyFontScale(val);
+    }
+
+    // Asegura mantener la posición del slider al cargar
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('font-slider');
+        if (slider) {
+            slider.value = savedScale;
+        }
+        applyFontScale(savedScale);
+    });
     </script>
 </body>
 </html>
